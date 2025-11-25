@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="ja" class="scroll-smooth">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>AI ARCHITECTURE CIRCLE | 実務特化型コミュニティ</title>
+    <meta name="description" content="AI×建築の実務ノウハウとコミュニティの力で、仕事を本気でラクにする。" />
+    
+    <!-- OGP / Social Media Tags -->
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://ai-archi-circle.com/" />
+    <meta property="og:title" content="AI ARCHITECTURE CIRCLE | 実務特化型コミュニティ" />
+    <meta property="og:description" content="AI×建築の実務ノウハウとコミュニティの力で、仕事を本気でラクにする。Sena開発ツール無料開放中。" />
+    <meta property="og:image" content="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?q=80&w=1200&auto=format&fit=crop" />
+    
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="AI ARCHITECTURE CIRCLE | 実務特化型コミュニティ" />
+    <meta name="twitter:description" content="建築実務の「めんどくさい」をAIでなくす。月額5,000円でツール使い放題。" />
+    <meta name="twitter:image" content="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?q=80&w=1200&auto=format&fit=crop" />
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        darkMode: 'class',
+        theme: {
+          extend: {
+            colors: {
+              bg: {
+                DEFAULT: '#ffffff', // Pure White
+                paper: '#f8fafc',   // Slate 50
+                card: '#ffffff',
+              },
+              brand: {
+                DEFAULT: '#ff3300', // International Orange (Kept for high contrast)
+                hover: '#cc2900',
+                light: '#ff5c33',
+                dim: 'rgba(255, 51, 0, 0.05)',
+              },
+              mono: {
+                50: '#18181b', // Inverted for Light Mode (Darkest)
+                100: '#27272a',
+                200: '#3f3f46',
+                300: '#52525b',
+                400: '#71717a',
+                500: '#a1a1aa',
+                600: '#d4d4d8',
+                700: '#e4e4e7',
+                800: '#f4f4f5',
+                900: '#fafafa', // Lightest
+              }
+            },
+            fontFamily: {
+              sans: ['"Helvetica Neue"', 'Arial', '"Hiragino Kaku Gothic ProN"', 'Meiryo', 'sans-serif'],
+              mono: ['"Menlo"', '"Monaco"', '"Consolas"', '"Courier New"', 'monospace'],
+            },
+            animation: {
+              'fade-in-up': 'fadeInUp 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards',
+              'reveal': 'reveal 1.5s cubic-bezier(0.77, 0, 0.175, 1) forwards',
+              'scroll': 'scroll 40s linear infinite',
+              'pulse-fast': 'pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite',
+            },
+            keyframes: {
+              fadeInUp: {
+                '0%': { opacity: '0', transform: 'translateY(40px)' },
+                '100%': { opacity: '1', transform: 'translateY(0)' },
+              },
+              reveal: {
+                '0%': { transform: 'translateY(100%)' },
+                '100%': { transform: 'translateY(0)' },
+              },
+              scroll: {
+                '0%': { transform: 'translateX(0)' },
+                '100%': { transform: 'translateX(-50%)' },
+              },
+            },
+            backgroundImage: {
+              'grid-cad': "linear-gradient(to right, #e5e7eb 1px, transparent 1px), linear-gradient(to bottom, #e5e7eb 1px, transparent 1px)",
+            }
+          },
+        },
+      };
+    </script>
+    <style>
+      body { 
+        background-color: #ffffff; 
+        color: #18181b; /* Zinc-900 */
+        font-feature-settings: "palt" 1;
+      }
+      
+      /* Subtle Paper Noise */
+      body::before {
+        content: "";
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)' opacity='0.03'/%3E%3C/svg%3E");
+        pointer-events: none;
+        z-index: 50;
+        opacity: 0.4;
+      }
+      
+      /* CAD Grid Background */
+      .bg-cad-grid {
+        background-size: 40px 40px;
+        mask-image: radial-gradient(circle at center, black 40%, transparent 100%);
+        -webkit-mask-image: radial-gradient(circle at center, black 40%, transparent 100%);
+      }
+
+      .text-stroke {
+        -webkit-text-stroke: 1px rgba(0,0,0,0.1);
+        color: transparent;
+      }
+
+      /* Glass Effect - Frosted White */
+      .glass {
+        background: rgba(255, 255, 255, 0.7);
+        backdrop-filter: blur(12px);
+        -webkit-backdrop-filter: blur(12px);
+        border: 1px solid rgba(0, 0, 0, 0.05);
+      }
+
+      .glass-card {
+        background: rgba(255, 255, 255, 0.8);
+        backdrop-filter: blur(20px);
+        border: 1px solid rgba(0, 0, 0, 0.05);
+        box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05), 0 2px 4px -1px rgba(0, 0, 0, 0.03);
+      }
+      
+      .glass-panel-strong {
+         background: linear-gradient(145deg, #ffffff, #f3f4f6);
+         border: 1px solid rgba(0,0,0,0.05);
+         box-shadow: 0 10px 30px -10px rgba(0,0,0,0.1);
+      }
+
+      /* Typography Adjustments */
+      h1, h2, h3, h4, h5, h6 {
+        letter-spacing: -0.03em;
+      }
+
+      /* Custom Selection */
+      ::selection {
+        background-color: #ff3300;
+        color: white;
+      }
+      
+      .clip-path-slant {
+        clip-path: polygon(10% 0, 100% 0, 100% 100%, 0% 100%);
+      }
+      
+      .clip-path-ticket {
+        clip-path: polygon(
+          0% 0%, 100% 0%, 100% 100%, 0% 100%, 
+          0% 80%, 5% 75%, 0% 70%,
+          0% 30%, 5% 25%, 0% 20%
+        );
+      }
+    </style>
+    <script type="importmap">
+    {
+      "imports": {
+        "react/": "https://aistudiocdn.com/react@^19.2.0/",
+        "react": "https://aistudiocdn.com/react@^19.2.0",
+        "react-dom/": "https://aistudiocdn.com/react-dom@^19.2.0/",
+        "lucide-react": "https://aistudiocdn.com/lucide-react@^0.554.0"
+      }
+    }
+    </script>
+  </head>
+  <body>
+    <div id="root"></div>
+  </body>
+</html>
