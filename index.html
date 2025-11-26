@@ -19,10 +19,10 @@
     <meta name="twitter:description" content="建築実務の「めんどくさい」をAIでなくす。月額5,000円でツール使い放題。" />
     <meta name="twitter:image" content="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?q=80&w=1200&auto=format&fit=crop" />
 
-    <!-- Tailwind CSS -->
+    <!-- Tailwind CSS (CDN) -->
     <script src="https://cdn.tailwindcss.com"></script>
     
-    <!-- Lucide Icons -->
+    <!-- Lucide Icons (CDN) -->
     <script src="https://unpkg.com/lucide@latest"></script>
 
     <script>
@@ -168,8 +168,18 @@
       .vertical-rl {
         writing-mode: vertical-rl;
       }
+
+      /* Hide Scrollbar for Chrome, Safari and Opera */
+      .no-scrollbar::-webkit-scrollbar {
+          display: none;
+      }
+      /* Hide scrollbar for IE, Edge and Firefox */
+      .no-scrollbar {
+          -ms-overflow-style: none;  /* IE and Edge */
+          scrollbar-width: none;  /* Firefox */
+      }
     </style>
-  <script type="importmap">
+<script type="importmap">
 {
   "imports": {
     "react": "https://aistudiocdn.com/react@^19.2.0",
@@ -408,7 +418,7 @@
                   <div class="w-12 h-12 bg-slate-100 rounded-xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
                       <i data-lucide="pen-tool" class="w-6 h-6 text-brand"></i>
                   </div>
-                  <h3 className="text-xl font-bold text-slate-900 mb-4">実務ツールの提供</h3>
+                  <h3 class="text-xl font-bold text-slate-900 mb-4">実務ツールの提供</h3>
                   <p class="text-slate-600 text-sm leading-relaxed">
                       汎用的なAIだけでなく、Senaが開発した「建築実務専用ツール（図面チェック・管理等）」をメンバーに提供。学ぶだけでなく、明日からの業務が物理的に楽になります。
                   </p>
@@ -417,7 +427,7 @@
                   <div class="w-12 h-12 bg-slate-100 rounded-xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
                       <i data-lucide="zap" class="w-6 h-6 text-brand"></i>
                   </div>
-                  <h3 className="text-xl font-bold text-slate-900 mb-4">実験と検証の場</h3>
+                  <h3 class="text-xl font-bold text-slate-900 mb-4">実験と検証の場</h3>
                   <p class="text-slate-600 text-sm leading-relaxed">
                       「このAI、実務でどう使う？」をメンバー同士で検証。「すごかった」事例だけでなく、「使えなかった」失敗談も共有し、最短ルートで最適解を導き出します。
                   </p>
@@ -426,7 +436,7 @@
                   <div class="w-12 h-12 bg-slate-100 rounded-xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
                       <i data-lucide="users" class="w-6 h-6 text-brand"></i>
                   </div>
-                  <h3 className="text-xl font-bold text-slate-900 mb-4">現役設計者の視点</h3>
+                  <h3 class="text-xl font-bold text-slate-900 mb-4">現役設計者の視点</h3>
                   <p class="text-slate-600 text-sm leading-relaxed">
                       エンジニアではなく「建築家」が運営しています。だからこそ、現場特有の悩み、法的なリスク、クライアントワークの機微を前提とした、地に足のついた議論が可能です。
                   </p>
