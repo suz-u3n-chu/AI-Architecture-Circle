@@ -1,5 +1,5 @@
 
-import React from 'react';
+import React, { useEffect } from 'react';
 import Header from './components/Header';
 import TopicTicker from './components/TopicTicker';
 import Hero from './components/Hero';
@@ -20,6 +20,18 @@ import FAQ from './components/FAQ';
 import Footer from './components/Footer';
 
 function App() {
+  // Ensure the loader is removed when the app mounts
+  useEffect(() => {
+    const loader = document.getElementById('initial-loader');
+    if (loader) {
+      loader.style.opacity = '0';
+      // Allow transition to finish before removing from DOM
+      setTimeout(() => {
+        loader.remove();
+      }, 500);
+    }
+  }, []);
+
   return (
     <div className="min-h-screen bg-white text-slate-900 selection:bg-brand selection:text-white font-sans overflow-x-hidden">
       <Header />
