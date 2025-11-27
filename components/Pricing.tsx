@@ -85,7 +85,7 @@ const Pricing: React.FC = () => {
                   </div>
 
                   <a
-                    href="https://chat.google.com/room/AAQAVp8sdgg/z9w2QCXn7oI/z9w2QCXn7oI?cls=10"
+                    href="https://buy.stripe.com/dRm00l0J75OR3eV8Cbf7i00"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="w-full group bg-black text-white py-5 text-lg font-bold flex items-center justify-center gap-4 hover:bg-brand transition-colors duration-300 shadow-lg"

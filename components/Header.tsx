@@ -49,7 +49,7 @@ const Header: React.FC = () => {
           ))}
 
           <a
-            href="https://chat.google.com/room/AAQAVp8sdgg/z9w2QCXn7oI/z9w2QCXn7oI?cls=10"
+            href="https://buy.stripe.com/dRm00l0J75OR3eV8Cbf7i00"
             target="_blank"
             rel="noopener noreferrer"
             className="group relative inline-flex items-center gap-2 px-6 py-2.5 bg-black text-white text-sm font-bold tracking-tight hover:bg-brand transition-all duration-300 clip-path-slant shadow-lg shadow-black/10"
@@ -83,7 +83,7 @@ const Header: React.FC = () => {
               </a>
             ))}
             <a
-              href="https://chat.google.com/room/AAQAVp8sdgg/z9w2QCXn7oI/z9w2QCXn7oI?cls=10"
+              href="https://buy.stripe.com/dRm00l0J75OR3eV8Cbf7i00"
               target="_blank"
               rel="noopener noreferrer"
               className="text-2xl font-bold text-brand"
