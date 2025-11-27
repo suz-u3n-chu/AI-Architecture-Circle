@@ -289,10 +289,10 @@
 
             <!-- Main Headline -->
             <div class="relative mb-12">
-              <h1 class="text-4xl sm:text-5xl md:text-8xl lg:text-9xl font-black text-black leading-[0.9] tracking-tighter uppercase animate-fade-in-up [animation-delay:100ms]">
-                Architect<br/>
-                <span class="text-transparent text-stroke hover:text-black transition-colors duration-500 cursor-default">Intelligence</span><br/>
-                Circle.
+              <h1 class="text-5xl sm:text-7xl md:text-9xl font-black text-black leading-[1.1] tracking-tighter animate-fade-in-up [animation-delay:100ms]">
+                AI<br/>
+                <span class="text-brand inline-block ml-2 md:ml-4">×</span><br/>
+                建築サークル
               </h1>
               
               <!-- Floating Badge -->
@@ -323,9 +323,11 @@
         </div>
 
         <!-- Scroll Indicator -->
-        <div class="absolute bottom-12 left-6 md:left-12 flex items-center gap-4 animate-bounce text-slate-400">
-          <i data-lucide="arrow-down" class="w-5 h-5"></i>
-          <span class="font-mono text-xs tracking-widest uppercase vertical-rl">SCROLL TO EXPLORE</span>
+        <div class="absolute bottom-8 left-1/2 transform -translate-x-1/2 flex flex-col items-center gap-3 z-20 cursor-pointer group" onclick="window.scrollTo({top: window.innerHeight, behavior: 'smooth'})">
+          <span class="font-mono text-[10px] md:text-xs font-bold tracking-[0.2em] uppercase text-slate-400 group-hover:text-brand transition-colors">Scroll to Explore</span>
+          <div class="flex items-center justify-center w-12 h-12 bg-white rounded-full shadow-xl border border-slate-100 animate-bounce group-hover:border-brand/30 transition-colors">
+            <i data-lucide="arrow-down" class="w-5 h-5 text-brand"></i>
+          </div>
         </div>
       </section>
 
@@ -333,28 +335,67 @@
       <div class="w-full bg-white border-y border-slate-200 relative z-20 overflow-hidden h-10 flex items-center">
         <div class="absolute left-0 z-10 bg-white px-4 h-full flex items-center gap-2 border-r border-slate-200">
           <span class="relative flex h-2 w-2">
-            <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-brand-400 opacity-75"></span>
-            <span class="relative inline-flex rounded-full h-2 w-2 bg-brand-500"></span>
+            <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-brand opacity-75"></span>
+            <span class="relative inline-flex rounded-full h-2 w-2 bg-brand"></span>
           </span>
           <span class="text-[10px] font-bold text-slate-500 tracking-wider uppercase">Live Topics</span>
         </div>
         
         <div class="flex animate-scroll whitespace-nowrap hover:[animation-play-state:paused]">
-          <!-- Content duplicated for seamless loop -->
-          <div class="flex items-center gap-2 mx-6"><i data-lucide="message-circle" class="w-3 h-3 text-slate-400"></i><span class="text-xs font-medium text-slate-600 hover:text-brand cursor-pointer transition-colors">【New】Revisio 2.1の差分検知精度検証レポート公開</span></div>
-          <div class="flex items-center gap-2 mx-6"><i data-lucide="message-circle" class="w-3 h-3 text-slate-400"></i><span class="text-xs font-medium text-slate-600 hover:text-brand cursor-pointer transition-colors">【Q&A】確認申請のAIチェックで指摘された項目の対応方法について</span></div>
-          <div class="flex items-center gap-2 mx-6"><i data-lucide="message-circle" class="w-3 h-3 text-slate-400"></i><span class="text-xs font-medium text-slate-600 hover:text-brand cursor-pointer transition-colors">【Gallery】Midjourney v7 alphaの建築パース試作を共有します</span></div>
-          <div class="flex items-center gap-2 mx-6"><i data-lucide="message-circle" class="w-3 h-3 text-slate-400"></i><span class="text-xs font-medium text-slate-600 hover:text-brand cursor-pointer transition-colors">【Event】今夜20時〜「BIM×AI」ワークフロー実演会（講師: sena）</span></div>
-          <div class="flex items-center gap-2 mx-6"><i data-lucide="message-circle" class="w-3 h-3 text-slate-400"></i><span class="text-xs font-medium text-slate-600 hover:text-brand cursor-pointer transition-colors">【Case】中小工務店でのAI導入成功事例インタビュー vol.3</span></div>
-          <div class="flex items-center gap-2 mx-6"><i data-lucide="message-circle" class="w-3 h-3 text-slate-400"></i><span class="text-xs font-medium text-slate-600 hover:text-brand cursor-pointer transition-colors">【Tool】図面整理AI「PlanSorter」のAPI連携テスト中</span></div>
-
-          <!-- Duplicate -->
-          <div class="flex items-center gap-2 mx-6"><i data-lucide="message-circle" class="w-3 h-3 text-slate-400"></i><span class="text-xs font-medium text-slate-600 hover:text-brand cursor-pointer transition-colors">【New】Revisio 2.1の差分検知精度検証レポート公開</span></div>
-          <div class="flex items-center gap-2 mx-6"><i data-lucide="message-circle" class="w-3 h-3 text-slate-400"></i><span class="text-xs font-medium text-slate-600 hover:text-brand cursor-pointer transition-colors">【Q&A】確認申請のAIチェックで指摘された項目の対応方法について</span></div>
-          <div class="flex items-center gap-2 mx-6"><i data-lucide="message-circle" class="w-3 h-3 text-slate-400"></i><span class="text-xs font-medium text-slate-600 hover:text-brand cursor-pointer transition-colors">【Gallery】Midjourney v7 alphaの建築パース試作を共有します</span></div>
-          <div class="flex items-center gap-2 mx-6"><i data-lucide="message-circle" class="w-3 h-3 text-slate-400"></i><span class="text-xs font-medium text-slate-600 hover:text-brand cursor-pointer transition-colors">【Event】今夜20時〜「BIM×AI」ワークフロー実演会（講師: sena）</span></div>
-          <div class="flex items-center gap-2 mx-6"><i data-lucide="message-circle" class="w-3 h-3 text-slate-400"></i><span class="text-xs font-medium text-slate-600 hover:text-brand cursor-pointer transition-colors">【Case】中小工務店でのAI導入成功事例インタビュー vol.3</span></div>
-          <div class="flex items-center gap-2 mx-6"><i data-lucide="message-circle" class="w-3 h-3 text-slate-400"></i><span class="text-xs font-medium text-slate-600 hover:text-brand cursor-pointer transition-colors">【Tool】図面整理AI「PlanSorter」のAPI連携テスト中</span></div>
+          <div class="flex items-center">
+            <div class="flex items-center gap-2 mx-6">
+              <i data-lucide="message-circle" class="w-3 h-3 text-slate-400"></i>
+              <span class="text-xs font-medium text-slate-600 hover:text-brand cursor-pointer transition-colors">【New】Revisio 2.1の差分検知精度検証レポート公開</span>
+            </div>
+            <div class="flex items-center gap-2 mx-6">
+              <i data-lucide="message-circle" class="w-3 h-3 text-slate-400"></i>
+              <span class="text-xs font-medium text-slate-600 hover:text-brand cursor-pointer transition-colors">【Q&A】確認申請のAIチェックで指摘された項目の対応方法について</span>
+            </div>
+            <div class="flex items-center gap-2 mx-6">
+              <i data-lucide="message-circle" class="w-3 h-3 text-slate-400"></i>
+              <span class="text-xs font-medium text-slate-600 hover:text-brand cursor-pointer transition-colors">【Gallery】Midjourney v7 alphaの建築パース試作を共有します</span>
+            </div>
+            <div class="flex items-center gap-2 mx-6">
+              <i data-lucide="message-circle" class="w-3 h-3 text-slate-400"></i>
+              <span class="text-xs font-medium text-slate-600 hover:text-brand cursor-pointer transition-colors">【Event】今夜20時〜「BIM×AI」ワークフロー実演会（講師: sena）</span>
+            </div>
+            <div class="flex items-center gap-2 mx-6">
+              <i data-lucide="message-circle" class="w-3 h-3 text-slate-400"></i>
+              <span class="text-xs font-medium text-slate-600 hover:text-brand cursor-pointer transition-colors">【Case】中小工務店でのAI導入成功事例インタビュー vol.3</span>
+            </div>
+            <div class="flex items-center gap-2 mx-6">
+              <i data-lucide="message-circle" class="w-3 h-3 text-slate-400"></i>
+              <span class="text-xs font-medium text-slate-600 hover:text-brand cursor-pointer transition-colors">【Tool】COMPASS開発進捗：α版テストユーザー募集中</span>
+            </div>
+          </div>
+          
+          <!-- Duplicate for infinite scroll -->
+          <div class="flex items-center">
+            <div class="flex items-center gap-2 mx-6">
+              <i data-lucide="message-circle" class="w-3 h-3 text-slate-400"></i>
+              <span class="text-xs font-medium text-slate-600 hover:text-brand cursor-pointer transition-colors">【New】Revisio 2.1の差分検知精度検証レポート公開</span>
+            </div>
+            <div class="flex items-center gap-2 mx-6">
+              <i data-lucide="message-circle" class="w-3 h-3 text-slate-400"></i>
+              <span class="text-xs font-medium text-slate-600 hover:text-brand cursor-pointer transition-colors">【Q&A】確認申請のAIチェックで指摘された項目の対応方法について</span>
+            </div>
+            <div class="flex items-center gap-2 mx-6">
+              <i data-lucide="message-circle" class="w-3 h-3 text-slate-400"></i>
+              <span class="text-xs font-medium text-slate-600 hover:text-brand cursor-pointer transition-colors">【Gallery】Midjourney v7 alphaの建築パース試作を共有します</span>
+            </div>
+            <div class="flex items-center gap-2 mx-6">
+              <i data-lucide="message-circle" class="w-3 h-3 text-slate-400"></i>
+              <span class="text-xs font-medium text-slate-600 hover:text-brand cursor-pointer transition-colors">【Event】今夜20時〜「BIM×AI」ワークフロー実演会（講師: sena）</span>
+            </div>
+            <div class="flex items-center gap-2 mx-6">
+              <i data-lucide="message-circle" class="w-3 h-3 text-slate-400"></i>
+              <span class="text-xs font-medium text-slate-600 hover:text-brand cursor-pointer transition-colors">【Case】中小工務店でのAI導入成功事例インタビュー vol.3</span>
+            </div>
+            <div class="flex items-center gap-2 mx-6">
+              <i data-lucide="message-circle" class="w-3 h-3 text-slate-400"></i>
+              <span class="text-xs font-medium text-slate-600 hover:text-brand cursor-pointer transition-colors">【Tool】COMPASS開発進捗：α版テストユーザー募集中</span>
+            </div>
+          </div>
         </div>
         
         <div class="absolute right-0 z-10 bg-gradient-to-l from-white to-transparent w-20 h-full pointer-events-none"></div>
