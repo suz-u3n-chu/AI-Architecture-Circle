@@ -10,19 +10,19 @@ const Pricing: React.FC = () => {
 
       <div className="container mx-auto px-6 relative z-10">
         <div className="flex flex-col lg:flex-row gap-16 items-center">
-          
+
           {/* Left: Value Prop */}
           <div className="lg:w-1/2">
             <h2 className="text-5xl md:text-7xl font-black text-slate-900 mb-8 leading-[0.9]">
-              セミナー1回分で、<br/>
+              セミナー1回分で、<br />
               <span className="text-brand">すべて手に入る。</span>
             </h2>
             <p className="text-xl text-slate-600 mb-12 leading-relaxed border-l-4 border-brand pl-6 font-medium">
-              通常、単発のAIセミナーに参加すると3,000円〜5,000円かかります。<br/>
-              このサークルなら、同額で<span className="text-black font-bold">セミナーも、ツールも、コミュニティも</span>すべて使い放題。<br/>
+              通常、単発のAIセミナーに参加すると3,000円〜5,000円かかります。<br />
+              このサークルなら、同額で<span className="text-black font-bold">セミナーも、ツールも、コミュニティも</span>すべて使い放題。<br />
               圧倒的なコストパフォーマンスです。
             </p>
-            
+
             <div className="space-y-6">
               <div className="flex items-start gap-4 p-4 bg-slate-50 rounded-xl border border-slate-200">
                 <div className="w-10 h-10 bg-brand/10 rounded-lg flex items-center justify-center shrink-0">
@@ -55,7 +55,7 @@ const Pricing: React.FC = () => {
             <div className="relative bg-black text-white p-1 clip-path-ticket transform transition-transform hover:-translate-y-2 duration-500 shadow-2xl shadow-black/20">
               {/* Decorative Tape */}
               <div className="absolute -top-3 left-1/2 -translate-x-1/2 w-32 h-6 bg-brand/90 backdrop-blur-sm rotate-[-2deg] shadow-sm"></div>
-              
+
               <div className="bg-white border-2 border-black p-8 md:p-12 relative overflow-hidden">
                 <div className="absolute top-0 right-0 p-4 bg-black text-white font-mono text-xs font-bold uppercase">
                   人数限定
@@ -77,27 +77,32 @@ const Pricing: React.FC = () => {
                   <div className="p-4 bg-slate-50 border border-slate-200">
                     <p className="text-xs font-bold text-slate-500 mb-1 uppercase">含まれるもの</p>
                     <ul className="text-sm font-bold text-black space-y-1">
-                      <li className="flex items-center gap-2"><Check className="w-3 h-3 text-brand"/> 全セミナーへの無料参加</li>
-                      <li className="flex items-center gap-2"><Check className="w-3 h-3 text-brand"/> アーカイブ動画 見放題</li>
-                      <li className="flex items-center gap-2"><Check className="w-3 h-3 text-brand"/> Sena開発ツール 利用権</li>
-                      <li className="flex items-center gap-2"><Check className="w-3 h-3 text-brand"/> Discordコミュニティ参加</li>
+                      <li className="flex items-center gap-2"><Check className="w-3 h-3 text-brand" /> 全セミナーへの無料参加</li>
+                      <li className="flex items-center gap-2"><Check className="w-3 h-3 text-brand" /> アーカイブ動画 見放題</li>
+                      <li className="flex items-center gap-2"><Check className="w-3 h-3 text-brand" /> Sena開発ツール 利用権</li>
+                      <li className="flex items-center gap-2"><Check className="w-3 h-3 text-brand" /> Discordコミュニティ参加</li>
                     </ul>
                   </div>
 
-                  <button className="w-full group bg-black text-white py-5 text-lg font-bold flex items-center justify-center gap-4 hover:bg-brand transition-colors duration-300 shadow-lg">
+                  <a
+                    href="https://chat.google.com/room/AAQAVp8sdgg/z9w2QCXn7oI/z9w2QCXn7oI?cls=10"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="w-full group bg-black text-white py-5 text-lg font-bold flex items-center justify-center gap-4 hover:bg-brand transition-colors duration-300 shadow-lg"
+                  >
                     <span>メンバー登録する</span>
                     <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
-                  </button>
-                  
+                  </a>
+
                   <p className="text-center text-xs text-slate-400 font-medium">
                     ※いつでも解約可能 / 安心のStripe決済
                   </p>
                 </div>
-                
+
                 {/* Barcode Decoration */}
                 <div className="mt-8 pt-8 border-t-2 border-dashed border-slate-200 flex justify-between items-end opacity-70">
-                   <div className="font-mono text-[10px] text-black">ID: 8829-AX-2025</div>
-                   <div className="h-8 w-32 bg-[url('https://upload.wikimedia.org/wikipedia/commons/5/5d/UPC-A-036000291452.svg')] bg-cover bg-center"></div>
+                  <div className="font-mono text-[10px] text-black">ID: 8829-AX-2025</div>
+                  <div className="h-8 w-32 bg-[url('https://upload.wikimedia.org/wikipedia/commons/5/5d/UPC-A-036000291452.svg')] bg-cover bg-center"></div>
                 </div>
               </div>
             </div>

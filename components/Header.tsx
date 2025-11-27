@@ -21,10 +21,9 @@ const Header: React.FC = () => {
   ];
 
   return (
-    <header 
-      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-        isScrolled ? 'bg-white/80 backdrop-blur-md border-b border-slate-200 py-3 shadow-sm' : 'bg-transparent py-6'
-      }`}
+    <header
+      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${isScrolled ? 'bg-white/80 backdrop-blur-md border-b border-slate-200 py-3 shadow-sm' : 'bg-transparent py-6'
+        }`}
     >
       <div className="container mx-auto px-6 flex items-center justify-between">
         <div className="flex items-center gap-3 cursor-pointer group" onClick={() => window.scrollTo(0, 0)}>
@@ -40,17 +39,19 @@ const Header: React.FC = () => {
         {/* Desktop Nav */}
         <nav className="hidden md:flex items-center gap-8">
           {navLinks.map((link) => (
-            <a 
-              key={link.name} 
+            <a
+              key={link.name}
               href={link.href}
               className="text-sm font-bold text-slate-600 hover:text-black transition-colors tracking-wide"
             >
               {link.name}
             </a>
           ))}
-          
-          <a 
-            href="#pricing"
+
+          <a
+            href="https://chat.google.com/room/AAQAVp8sdgg/z9w2QCXn7oI/z9w2QCXn7oI?cls=10"
+            target="_blank"
+            rel="noopener noreferrer"
             className="group relative inline-flex items-center gap-2 px-6 py-2.5 bg-black text-white text-sm font-bold tracking-tight hover:bg-brand transition-all duration-300 clip-path-slant shadow-lg shadow-black/10"
           >
             <span>メンバー登録</span>
@@ -59,7 +60,7 @@ const Header: React.FC = () => {
         </nav>
 
         {/* Mobile Menu Button */}
-        <button 
+        <button
           className="md:hidden text-black p-2"
           onClick={() => setIsMenuOpen(!isMenuOpen)}
         >
@@ -72,8 +73,8 @@ const Header: React.FC = () => {
         <div className="md:hidden absolute top-full left-0 right-0 bg-white border-b border-slate-200 h-screen z-50">
           <div className="flex flex-col p-8 space-y-8">
             {navLinks.map((link) => (
-              <a 
-                key={link.name} 
+              <a
+                key={link.name}
                 href={link.href}
                 className="text-2xl font-bold text-slate-800 hover:text-brand"
                 onClick={() => setIsMenuOpen(false)}
@@ -81,8 +82,10 @@ const Header: React.FC = () => {
                 {link.name}
               </a>
             ))}
-            <a 
-              href="#pricing"
+            <a
+              href="https://chat.google.com/room/AAQAVp8sdgg/z9w2QCXn7oI/z9w2QCXn7oI?cls=10"
+              target="_blank"
+              rel="noopener noreferrer"
               className="text-2xl font-bold text-brand"
               onClick={() => setIsMenuOpen(false)}
             >
