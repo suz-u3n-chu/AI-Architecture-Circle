@@ -1,3 +1,4 @@
+
 import React from 'react';
 import { MessageCircle, Radio } from 'lucide-react';
 
@@ -8,15 +9,15 @@ const TopicTicker: React.FC = () => {
     "【Gallery】Midjourney v7 alphaの建築パース試作を共有します",
     "【Event】今夜20時〜「BIM×AI」ワークフロー実演会（講師: sena）",
     "【Case】中小工務店でのAI導入成功事例インタビュー vol.3",
-    "【Tool】図面整理AI「PlanSorter」のAPI連携テスト中",
+    "【Tool】COMPASS開発進捗：α版テストユーザー募集中",
   ];
 
   return (
     <div className="w-full bg-white border-y border-slate-200 relative z-20 overflow-hidden h-10 flex items-center">
       <div className="absolute left-0 z-10 bg-white px-4 h-full flex items-center gap-2 border-r border-slate-200">
         <span className="relative flex h-2 w-2">
-          <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-brand-400 opacity-75"></span>
-          <span className="relative inline-flex rounded-full h-2 w-2 bg-brand-500"></span>
+          <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-brand opacity-75"></span>
+          <span className="relative inline-flex rounded-full h-2 w-2 bg-brand"></span>
         </span>
         <span className="text-[10px] font-bold text-slate-500 tracking-wider uppercase">Live Topics</span>
       </div>

@@ -10,7 +10,11 @@ const Message: React.FC = () => {
           <Quote className="absolute top-8 left-8 w-12 h-12 text-brand/10" />
           
           <div className="relative z-10">
-            <h2 className="text-2xl md:text-4xl font-black text-slate-900 mb-8 leading-tight font-sans">
+            {/* Using inline style for font-family to prioritize system fonts over Inter, ensuring numbers match Japanese text weight */}
+            <h2 
+              className="text-2xl md:text-4xl font-bold text-slate-900 mb-8 leading-tight" 
+              style={{ fontFamily: '"Helvetica Neue", Arial, "Hiragino Kaku Gothic ProN", "Hiragino Sans", Meiryo, sans-serif' }}
+            >
               大手ゼネコンだけが<br />
               「AIの恩恵」を受ける。<br />
               そんな未来は面白くない。
@@ -37,9 +41,9 @@ const Message: React.FC = () => {
 
             <div className="mt-12 flex items-center gap-4">
               <img 
-                src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?q=80&w=200&auto=format&fit=crop" 
+                src="./profile.JPEG" 
                 alt="Sena" 
-                className="w-14 h-14 rounded-full border border-slate-200 grayscale"
+                className="w-14 h-14 rounded-full border border-slate-200 object-cover"
               />
               <div>
                 <p className="text-sm font-bold text-slate-900">櫻本 聖成 / Sena Sakuramoto</p>

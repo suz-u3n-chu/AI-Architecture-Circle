@@ -1,3 +1,4 @@
+
 import React from 'react';
 import { Twitter, Instagram, Building2 } from 'lucide-react';
 
@@ -13,19 +14,19 @@ const Profile: React.FC = () => {
               <div className="flex-shrink-0 text-center md:text-left">
                 <div className="w-32 h-32 md:w-40 md:h-40 relative mb-6 mx-auto md:mx-0">
                   <img 
-                    src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?q=80&w=1000&auto=format&fit=crop" 
+                    src="./profile.JPEG" 
                     alt="Sena Sakuramoto" 
-                    className="w-full h-full object-cover rounded-2xl border border-slate-200 shadow-lg grayscale hover:grayscale-0 transition-all duration-500"
+                    className="w-full h-full object-cover rounded-2xl border border-slate-200 shadow-lg"
                   />
                   <div className="absolute -bottom-3 -right-3 bg-black p-2 rounded-lg border border-slate-800">
                     <Building2 className="w-5 h-5 text-white" />
                   </div>
                 </div>
                 <div className="flex gap-3 justify-center md:justify-start">
-                  <a href="#" className="p-2 bg-slate-100 rounded-full hover:bg-brand hover:text-white transition-all text-slate-500">
+                  <a href="https://x.com/sena03448961" target="_blank" rel="noopener noreferrer" className="p-2 bg-slate-100 rounded-full hover:bg-black hover:text-white transition-all text-slate-500">
                     <Twitter className="w-4 h-4" />
                   </a>
-                  <a href="#" className="p-2 bg-slate-100 rounded-full hover:bg-rose-500 hover:text-white transition-all text-slate-500">
+                  <a href="https://www.instagram.com/sena_archisoft/?hl=ja" target="_blank" rel="noopener noreferrer" className="p-2 bg-slate-100 rounded-full hover:bg-rose-500 hover:text-white transition-all text-slate-500">
                     <Instagram className="w-4 h-4" />
                   </a>
                 </div>
@@ -50,12 +51,12 @@ const Profile: React.FC = () => {
                 
                 <div className="mt-8 pt-8 border-t border-slate-100 flex flex-wrap gap-8 text-sm">
                   <div>
-                    <span className="block text-slate-400 text-xs mb-1">SPECIALTY</span>
-                    <span className="text-slate-900 font-bold">建築設計 / AIワークフロー構築</span>
+                    <span className="block text-slate-400 text-xs mb-1 uppercase tracking-wider">STYLE</span>
+                    <span className="text-slate-900 font-bold">「建築」と「AI」の通訳</span>
                   </div>
                   <div>
-                    <span className="block text-slate-400 text-xs mb-1">VISION</span>
-                    <span className="text-slate-900 font-bold">建築実務の民主化と高度化</span>
+                    <span className="block text-slate-400 text-xs mb-1 uppercase tracking-wider">PHILOSOPHY</span>
+                    <span className="text-slate-900 font-bold">クリエイティブな時間を、設計者に取り戻す</span>
                   </div>
                 </div>
               </div>

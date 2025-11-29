@@ -1,6 +1,6 @@
 
 import React from 'react';
-import { ScanEye, Layers, ArrowRight, FileCheck } from 'lucide-react';
+import { ScanEye, Compass, ArrowRight, FileCheck, Layers } from 'lucide-react';
 
 const SenaTools: React.FC = () => {
   return (
@@ -65,7 +65,7 @@ const SenaTools: React.FC = () => {
                        <div className="absolute top-2 left-2 text-[10px] text-brand font-bold">NEW VER</div>
                        <div className="mt-4 space-y-2">
                         <div className="h-2 bg-slate-200 w-3/4"></div>
-                        <div className="h-2 bg-brand/20 w-1/2"></div> {/* Changed */}
+                        <div className="h-2 bg-brand/20 w-1/2"></div>
                         <div className="h-20 border-2 border-brand/50 bg-brand/5 rounded relative">
                             <div className="absolute -top-2 -right-2 bg-brand text-white text-[8px] px-1 rounded">CHANGED</div>
                         </div>
@@ -108,31 +108,46 @@ const SenaTools: React.FC = () => {
             </div>
           </div>
 
-          {/* Tool 2: PlanSorter (Coming Soon) */}
-          <div className="relative group opacity-90">
-            <div className="relative bg-slate-50 rounded-2xl border border-dashed border-slate-300 overflow-hidden flex flex-col md:flex-row-reverse">
+          {/* Tool 2: COMPASS */}
+          <div className="relative group">
+            <div className="relative bg-white rounded-2xl border border-slate-200 overflow-hidden flex flex-col md:flex-row-reverse shadow-lg hover:shadow-xl transition-all duration-300">
               
               {/* UI Mockup Area */}
-              <div className="md:w-3/5 bg-white/50 p-8 border-l border-slate-200 relative flex items-center justify-center">
-                 <div className="absolute inset-0 bg-grid-cad opacity-20"></div>
-                 <div className="text-center">
-                    <Layers className="w-16 h-16 text-slate-300 mx-auto mb-4" />
-                    <div className="inline-block bg-slate-200 text-slate-600 text-xs font-bold px-3 py-1 rounded-full">
-                        In Development
+              <div className="md:w-3/5 bg-slate-900 p-8 border-l border-slate-200 relative flex items-center justify-center overflow-hidden">
+                <div className="absolute inset-0 bg-[linear-gradient(to_right,#ffffff05_1px,transparent_1px),linear-gradient(to_bottom,#ffffff05_1px,transparent_1px)] bg-[size:20px_20px]"></div>
+                
+                {/* Mockup */}
+                <div className="w-full max-w-sm bg-slate-800 rounded-xl border border-slate-700 shadow-2xl p-4 relative z-10 transform group-hover:scale-105 transition-transform duration-500">
+                    <div className="flex gap-4 mb-4">
+                      <div className="w-1/4 h-20 bg-slate-700/50 rounded-lg animate-pulse"></div>
+                      <div className="w-3/4 space-y-2">
+                          <div className="h-4 bg-brand/20 rounded w-1/3"></div>
+                          <div className="h-2 bg-slate-600 rounded w-full"></div>
+                          <div className="h-2 bg-slate-600 rounded w-5/6"></div>
+                      </div>
                     </div>
-                 </div>
+                    <div className="grid grid-cols-3 gap-2">
+                      <div className="h-24 bg-slate-700/30 rounded-lg border-t-2 border-blue-500 p-2"><div className="h-1 w-8 bg-slate-600 rounded"></div></div>
+                      <div className="h-24 bg-slate-700/30 rounded-lg border-t-2 border-yellow-500 p-2"><div className="h-1 w-8 bg-slate-600 rounded"></div></div>
+                      <div className="h-24 bg-slate-700/30 rounded-lg border-t-2 border-green-500 p-2"><div className="h-1 w-8 bg-slate-600 rounded"></div></div>
+                    </div>
+                </div>
               </div>
 
               {/* Description Area */}
               <div className="md:w-2/5 p-10 flex flex-col justify-center">
-                <div className="w-12 h-12 bg-slate-200 rounded-xl flex items-center justify-center mb-6">
-                  <Layers className="w-6 h-6 text-slate-500" />
+                <div className="w-12 h-12 bg-slate-900 text-white rounded-xl flex items-center justify-center mb-6 shadow-md">
+                  <Compass className="w-6 h-6" />
                 </div>
-                <h3 className="text-2xl font-bold text-slate-900 mb-2">PlanSorter</h3>
-                <p className="text-sm font-bold text-slate-400 mb-6 uppercase tracking-wider">図面自動整理・リネームAI</p>
-                <p className="text-slate-600 leading-relaxed">
-                  バラバラのファイル名で送られてくる図面データを、AIが中身を解析して自動でリネーム＆フォルダ分け。「01_平面図」「02_立面図」など、指定したルールで一瞬で整理します。
+                <h3 className="text-2xl font-bold text-slate-900 mb-2">COMPASS</h3>
+                <p className="text-sm font-bold text-slate-400 mb-6 uppercase tracking-wider">AI建築プロジェクト管理システム</p>
+                <p className="text-slate-600 leading-relaxed mb-6">
+                  建築プロジェクトの「情報・図面・進捗」を1ページに集約。汎用ツールでは管理しきれない図面バージョン管理や、AIによる議事録要約・指示書生成を搭載。迷わないUIで、実務の混乱をゼロにします。
                 </p>
+                <div className="flex gap-2 flex-wrap">
+                  <span className="text-xs font-bold px-2 py-1 bg-slate-100 text-slate-600 rounded border border-slate-200">BIM級の管理体験</span>
+                  <span className="text-xs font-bold px-2 py-1 bg-brand/10 text-brand rounded border border-brand/20">Coming Soon</span>
+                </div>
               </div>
 
             </div>

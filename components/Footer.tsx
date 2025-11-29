@@ -1,5 +1,6 @@
+
 import React from 'react';
-import { Box, Twitter, Instagram, Linkedin, Mail } from 'lucide-react';
+import { Box, Twitter, Instagram } from 'lucide-react';
 
 const Footer: React.FC = () => {
   return (
@@ -16,7 +17,7 @@ const Footer: React.FC = () => {
               <div className="bg-white/10 p-2 rounded-lg border border-white/10">
                  <Box className="w-6 h-6 text-white" />
               </div>
-              <span className="text-xl font-bold text-white tracking-tight">AI×建築サークル</span>
+              <span className="text-xl font-bold text-white tracking-tight">AI×建築</span>
             </div>
             <p className="text-slate-400 text-sm leading-relaxed">
               建築実務の「めんどくさい」をAIでほぐし、<br/>
@@ -24,14 +25,12 @@ const Footer: React.FC = () => {
               実践型コミュニティ＆ツールボックス。
             </p>
             <div className="flex gap-4">
-              <a href="#" className="w-10 h-10 rounded-full bg-white/5 border border-white/10 flex items-center justify-center text-slate-400 hover:text-brand hover:border-brand/50 transition-all">
-                <Twitter className="w-4 h-4" />
+              <a href="https://x.com/sena03448961" target="_blank" rel="noopener noreferrer" className="w-10 h-10 rounded-full bg-white/5 border border-white/10 flex items-center justify-center text-slate-400 hover:text-white hover:bg-black transition-all">
+                {/* X Logo SVG */}
+                <svg viewBox="0 0 24 24" aria-hidden="true" className="w-4 h-4 fill-current"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"></path></svg>
               </a>
-              <a href="#" className="w-10 h-10 rounded-full bg-white/5 border border-white/10 flex items-center justify-center text-slate-400 hover:text-rose-400 hover:border-rose-500/50 transition-all">
+              <a href="https://www.instagram.com/sena_archisoft/?hl=ja" target="_blank" rel="noopener noreferrer" className="w-10 h-10 rounded-full bg-white/5 border border-white/10 flex items-center justify-center text-slate-400 hover:text-rose-400 hover:border-rose-500/50 transition-all">
                 <Instagram className="w-4 h-4" />
-              </a>
-              <a href="#" className="w-10 h-10 rounded-full bg-white/5 border border-white/10 flex items-center justify-center text-slate-400 hover:text-blue-400 hover:border-blue-500/50 transition-all">
-                <Linkedin className="w-4 h-4" />
               </a>
             </div>
           </div>
@@ -58,29 +57,11 @@ const Footer: React.FC = () => {
             </ul>
           </div>
 
-          {/* Newsletter Column */}
-          <div className="md:col-span-3">
-            <h4 className="text-white font-bold mb-6">メルマガ登録</h4>
-            <p className="text-slate-400 text-xs mb-4">
-              最新のAI建築ニュースやセミナー情報を不定期でお届けします。
-            </p>
-            <div className="flex flex-col gap-2">
-              <input 
-                type="email" 
-                placeholder="メールアドレス" 
-                className="bg-white/5 border border-white/10 text-white px-4 py-2 rounded-lg text-sm focus:outline-none focus:border-brand transition-colors"
-              />
-              <button className="bg-brand text-white px-4 py-2 rounded-lg text-sm font-bold hover:bg-brand-light transition-colors">
-                登録する
-              </button>
-            </div>
-          </div>
-
         </div>
 
         <div className="border-t border-white/10 pt-8 flex flex-col md:flex-row justify-between items-center gap-4">
           <div className="text-slate-500 text-xs">
-            &copy; {new Date().getFullYear()} Archi-Prisma Design works Inc. All rights reserved.
+            &copy; 2025 Archi-Prisma Design works Inc. All rights reserved.
           </div>
           <div className="flex items-center gap-2 text-xs text-slate-500">
              <span className="w-2 h-2 rounded-full bg-green-500 shadow-[0_0_10px_rgba(34,197,94,0.5)]"></span>

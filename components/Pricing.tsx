@@ -13,13 +13,13 @@ const Pricing: React.FC = () => {
           
           {/* Left: Value Prop */}
           <div className="lg:w-1/2">
-            <h2 className="text-5xl md:text-7xl font-black text-slate-900 mb-8 leading-[0.9]">
-              セミナー1回分で、<br/>
+            <h2 className="text-5xl md:text-7xl font-black text-slate-900 mb-8 leading-[1.1]">
+              セミナー1回分で<br/>
               <span className="text-brand">すべて手に入る。</span>
             </h2>
             <p className="text-xl text-slate-600 mb-12 leading-relaxed border-l-4 border-brand pl-6 font-medium">
-              通常、単発のAIセミナーに参加すると3,000円〜5,000円かかります。<br/>
-              このサークルなら、同額で<span className="text-black font-bold">セミナーも、ツールも、コミュニティも</span>すべて使い放題。<br/>
+              通常、実務レベルのAI講座やセミナーに参加すると3,000円〜100,000円かかります。<br/>
+              このサークルなら、わずか5,000円で<span className="text-black font-bold">セミナーも、ツールも、コミュニティも</span>すべて使い放題。<br/>
               圧倒的なコストパフォーマンスです。
             </p>
             
@@ -57,14 +57,11 @@ const Pricing: React.FC = () => {
               <div className="absolute -top-3 left-1/2 -translate-x-1/2 w-32 h-6 bg-brand/90 backdrop-blur-sm rotate-[-2deg] shadow-sm"></div>
               
               <div className="bg-white border-2 border-black p-8 md:p-12 relative overflow-hidden">
-                <div className="absolute top-0 right-0 p-4 bg-black text-white font-mono text-xs font-bold uppercase">
-                  人数限定
-                </div>
 
                 <div className="mb-8">
                   <h3 className="font-bold text-slate-500 tracking-widest uppercase mb-2 text-sm">スタンダードプラン</h3>
                   <div className="flex items-baseline gap-1 text-black">
-                    <span className="text-6xl md:text-7xl font-black tracking-tighter">¥5,000</span>
+                    <span className="text-5xl md:text-7xl font-black tracking-tighter">¥5,000</span>
                     <span className="font-bold text-slate-500">/ 月 (税込)</span>
                   </div>
                   <p className="text-sm font-bold mt-2 text-brand flex items-center gap-2">
@@ -84,10 +81,10 @@ const Pricing: React.FC = () => {
                     </ul>
                   </div>
 
-                  <button className="w-full group bg-black text-white py-5 text-lg font-bold flex items-center justify-center gap-4 hover:bg-brand transition-colors duration-300 shadow-lg">
+                  <a href="https://buy.stripe.com/dRm00l0J75OR3eV8Cbf7i00" className="w-full group bg-black text-white py-5 text-lg font-bold flex items-center justify-center gap-4 hover:bg-brand transition-colors duration-300 shadow-lg">
                     <span>メンバー登録する</span>
                     <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
-                  </button>
+                  </a>
                   
                   <p className="text-center text-xs text-slate-400 font-medium">
                     ※いつでも解約可能 / 安心のStripe決済
