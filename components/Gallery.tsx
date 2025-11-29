@@ -1,30 +1,26 @@
+
 import React from 'react';
-import { ArrowUpRight } from 'lucide-react';
 
 const Gallery: React.FC = () => {
   const works = [
     {
-      url: "https://images.unsplash.com/photo-1511818966892-d7d671e672a2?q=80&w=1000&auto=format&fit=crop",
-      title: "Organic Facade Study",
-      desc: "Midjourney v6 + Rhino",
+      url: "./外観パース.jpg",
+      title: "Exterior Perspective",
       span: "md:col-span-2 md:row-span-2"
     },
     {
-      url: "https://images.unsplash.com/photo-1506146332389-18140dc7b2fb?q=80&w=1000&auto=format&fit=crop",
-      title: "Interior Light Sim",
-      desc: "Stable Diffusion + ControlNet",
+      url: "./内観パース.jpg",
+      title: "Interior Perspective",
       span: "md:col-span-1 md:row-span-1"
     },
     {
-      url: "https://images.unsplash.com/photo-1479839672679-a46483c0e7c8?q=80&w=1000&auto=format&fit=crop",
-      title: "Urban Development",
-      desc: "Generative Fill",
+      url: "./ダイアグラム.jpg",
+      title: "Concept Diagram",
       span: "md:col-span-1 md:row-span-2"
     },
     {
-      url: "https://images.unsplash.com/photo-1503387762-592deb58ef4e?q=80&w=1000&auto=format&fit=crop",
-      title: "Parametric Structure",
-      desc: "Grasshopper AI Plugin",
+      url: "./提案書類.jpg",
+      title: "Proposal Documents",
       span: "md:col-span-1 md:row-span-1"
     },
   ];
@@ -62,10 +58,6 @@ const Gallery: React.FC = () => {
               
               <div className="absolute bottom-0 left-0 right-0 p-6 z-30 translate-y-4 group-hover:translate-y-0 transition-transform duration-300">
                 <h3 className="text-xl font-bold text-white mb-1">{work.title}</h3>
-                <p className="text-brand-light text-sm flex items-center gap-2">
-                  {work.desc}
-                  <ArrowUpRight className="w-4 h-4 opacity-0 group-hover:opacity-100 transition-opacity" />
-                </p>
               </div>
             </div>
           ))}
