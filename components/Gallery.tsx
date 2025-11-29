@@ -56,7 +56,7 @@ const Gallery: React.FC = () => {
               <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent opacity-60 z-20"></div>
               
               <div className="absolute bottom-0 left-0 right-0 p-6 z-30 translate-y-4 group-hover:translate-y-0 transition-transform duration-300">
-                <h3 className="text-xl font-bold text-white mb-1">{work.title}</h3>
+                <h3 class="text-xl font-bold text-white mb-1">{work.title}</h3>
               </div>
             </div>
           ))}
