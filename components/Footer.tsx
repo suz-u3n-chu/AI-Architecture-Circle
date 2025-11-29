@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { Box, Twitter, Instagram } from 'lucide-react';
 

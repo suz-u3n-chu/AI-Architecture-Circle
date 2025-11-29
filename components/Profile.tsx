@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { Twitter, Instagram, Building2 } from 'lucide-react';
 

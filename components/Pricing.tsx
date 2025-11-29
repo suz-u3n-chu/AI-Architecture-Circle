@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { Check, Zap, ArrowRight, Video, Download, Laptop } from 'lucide-react';
 

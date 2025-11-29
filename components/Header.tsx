@@ -1,4 +1,3 @@
-
 import React, { useState, useEffect } from 'react';
 import { Menu, X, SquareTerminal, ArrowUpRight } from 'lucide-react';
 
