@@ -3,7 +3,7 @@ import { MessageCircle, Radio } from 'lucide-react';
 
 const TopicTicker: React.FC = () => {
   const topics = [
-    "【New】Revisio 2.1の差分検知精度検証レポート公開",
+    "【New】SpotPDF 2.0の差分検知精度検証レポート公開",
     "【Q&A】確認申請のAIチェックで指摘された項目の対応方法について",
     "【Gallery】Midjourney v7 alphaの建築パース試作を共有します",
     "【Event】今夜20時〜「BIM×AI」ワークフロー実演会（講師: sena）",

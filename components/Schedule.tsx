@@ -6,14 +6,14 @@ const Schedule: React.FC = () => {
     {
       week: "WEEK 1",
       title: "Live Webinar",
-      desc: "実務ワークフロー実演（60分）。アーカイブあり。",
+      desc: "実務ワークフロー実演（60分）アーカイブ有。",
       icon: <Video className="w-5 h-5 text-white" />,
       bg: "bg-brand"
     },
     {
       week: "WEEK 2",
       title: "Tool & Prompt Drop",
-      desc: "新しいプロンプト辞書やツールのアップデート配布。",
+      desc: "最新のプロンプト辞書やツールのアプデ配布。",
       icon: <Download className="w-5 h-5 text-slate-600" />,
       bg: "bg-slate-200"
     },

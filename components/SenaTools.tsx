@@ -33,7 +33,7 @@ const SenaTools: React.FC = () => {
 
         <div className="space-y-24">
           
-          {/* Tool 1: Revisio */}
+          {/* Tool 1: SpotPDF */}
           <div className="relative group">
             <div className="absolute -inset-4 bg-white border border-slate-200 rounded-3xl shadow-xl transform rotate-1 group-hover:rotate-0 transition-all duration-500"></div>
             <div className="relative bg-white rounded-2xl border border-slate-200 overflow-hidden flex flex-col md:flex-row">
@@ -49,7 +49,7 @@ const SenaTools: React.FC = () => {
                       <div className="w-3 h-3 rounded-full bg-yellow-400"></div>
                       <div className="w-3 h-3 rounded-full bg-green-400"></div>
                     </div>
-                    <div className="text-xs font-mono text-slate-400">Revisio v2.0 - Diff Check</div>
+                    <div className="text-xs font-mono text-slate-400">SpotPDF v2.0 - Diff Check</div>
                   </div>
                   <div className="flex gap-4 h-48">
                     <div className="flex-1 bg-slate-50 border border-slate-200 rounded p-2 relative">
@@ -86,7 +86,7 @@ const SenaTools: React.FC = () => {
                 <div className="w-12 h-12 bg-brand/10 rounded-xl flex items-center justify-center mb-6">
                   <ScanEye className="w-6 h-6 text-brand" />
                 </div>
-                <h3 className="text-2xl font-bold text-slate-900 mb-2">Revisio</h3>
+                <h3 className="text-2xl font-bold text-slate-900 mb-2">SpotPDF</h3>
                 <p className="text-sm font-bold text-slate-400 mb-6 uppercase tracking-wider">図面差分高速チェックツール</p>
                 <p className="text-slate-600 leading-relaxed mb-8">
                   「どこが変わった？」を目視で探す時間はもう終わりです。新旧のPDF図面を放り込むだけで、変更箇所をAIが自動で赤入れして抽出。確認申請の変更届や、現場への指示図作成が数秒で完了します。
@@ -127,8 +127,8 @@ const SenaTools: React.FC = () => {
                     </div>
                     <div className="grid grid-cols-3 gap-2">
                       <div className="h-24 bg-slate-700/30 rounded-lg border-t-2 border-blue-500 p-2"><div className="h-1 w-8 bg-slate-600 rounded"></div></div>
-                      <div className="h-24 bg-slate-700/30 rounded-lg border-t-2 border-yellow-500 p-2"><div className="h-1 w-8 bg-slate-600 rounded"></div></div>
-                      <div className="h-24 bg-slate-700/30 rounded-lg border-t-2 border-green-500 p-2"><div className="h-1 w-8 bg-slate-600 rounded"></div></div>
+                      <div className="h-24 bg-slate-700/30 rounded-lg border-t-2 border-yellow-500 p-2"><div class="h-1 w-8 bg-slate-600 rounded"></div></div>
+                      <div className="h-24 bg-slate-700/30 rounded-lg border-t-2 border-green-500 p-2"><div class="h-1 w-8 bg-slate-600 rounded"></div></div>
                     </div>
                 </div>
               </div>
@@ -141,7 +141,7 @@ const SenaTools: React.FC = () => {
                 <h3 className="text-2xl font-bold text-slate-900 mb-2">COMPASS</h3>
                 <p className="text-sm font-bold text-slate-400 mb-6 uppercase tracking-wider">AI建築プロジェクト管理システム</p>
                 <p className="text-slate-600 leading-relaxed mb-6">
-                  建築プロジェクトの「情報・図面・進捗」を1ページに集約。汎用ツールでは管理しきれない図面バージョン管理や、AIによる議事録要約・指示書生成を搭載。迷わないUIで、実務の混乱をゼロにします。
+                  建築プロジェクトの「情報・図面・進捗」を1ページに集約。汎用ツールでは管理しきれない建築業務に特化した様々な管理を搭載。迷わないUIで、実務の混乱をゼロにします。
                 </p>
                 <div className="flex gap-2 flex-wrap">
                   <span className="text-xs font-bold px-2 py-1 bg-slate-100 text-slate-600 rounded border border-slate-200">BIM級の管理体験</span>
