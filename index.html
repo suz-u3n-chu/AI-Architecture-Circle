@@ -130,15 +130,31 @@
       }
       @keyframes spin { 0% { transform: rotate(0deg); } 100% { transform: rotate(360deg); } }
       @keyframes pulse { 0%, 100% { opacity: 1; } 50% { opacity: 0.5; } }
+
+      /* Lightbox Transition */
+      #lightbox {
+        transition: opacity 0.3s ease, visibility 0.3s ease;
+      }
+      #lightbox.active {
+        opacity: 1;
+        visibility: visible;
+        pointer-events: auto;
+      }
+      #lightbox-img {
+        transition: transform 0.3s ease;
+      }
+      #lightbox.active #lightbox-img {
+        transform: scale(1);
+      }
     </style>
 <script type="importmap">
 {
   "imports": {
-    "react": "https://aistudiocdn.com/react@^19.2.0",
     "react-dom/": "https://aistudiocdn.com/react-dom@^19.2.0/",
     "react/": "https://aistudiocdn.com/react@^19.2.0/",
+    "react": "https://aistudiocdn.com/react@^19.2.0",
+    "vite": "https://aistudiocdn.com/vite@^7.2.6",
     "lucide-react": "https://aistudiocdn.com/lucide-react@^0.555.0",
-    "vite": "https://aistudiocdn.com/vite@^7.2.4",
     "@vitejs/plugin-react": "https://aistudiocdn.com/@vitejs/plugin-react@^5.1.1"
   }
 }
@@ -752,7 +768,7 @@
               </div>
               <h3 class="text-lg font-bold text-slate-900 mb-2">LIVE勉強会</h3>
               <p class="text-slate-600 text-sm">
-                月2回以上のライブ講義。「BIM×AI」など実務直結のテーマで実演します。アーカイブ視聴もOK。
+                月一回のライブ講義。「BIM×AI」など実務直結のテーマで実演します。アーカイブ視聴もOK。
               </p>
             </div>
 
@@ -838,6 +854,7 @@
               </div>
 
               <div class="relative z-10 group">
+                <div class="absolute left-6 top-16 bottom-[-2rem] w-1 bg-slate-100 md:hidden"></div>
                 <div class="bg-white p-6 rounded-2xl border border-slate-200 shadow-sm hover:shadow-md hover:border-brand/30 transition-all duration-300">
                   <div class="flex items-center gap-4 mb-4">
                     <div class="w-12 h-12 rounded-xl flex items-center justify-center shadow-sm bg-slate-200 group-hover:scale-110 transition-transform">
@@ -874,40 +891,52 @@
 
           <div class="grid grid-cols-1 md:grid-cols-4 gap-4 auto-rows-[300px]">
             <!-- Item 1 -->
-            <div class="group relative rounded-2xl overflow-hidden bg-slate-100 shadow-sm md:col-span-2 md:row-span-2">
+            <div class="group relative rounded-2xl overflow-hidden bg-slate-100 shadow-sm md:col-span-2 md:row-span-2 cursor-pointer" onclick="openLightbox('./外観パース.jpg', 'Exterior Perspective')">
               <div class="absolute inset-0 bg-slate-200 animate-pulse z-0"></div>
               <img src="./外観パース.jpg" alt="Exterior Perspective" class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-110 z-10 opacity-90 group-hover:opacity-100" />
               <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent opacity-60 z-20"></div>
+              <div class="absolute top-4 right-4 z-30 opacity-0 group-hover:opacity-100 transition-opacity duration-300 bg-white/20 backdrop-blur-md p-2 rounded-full">
+                 <i data-lucide="maximize-2" class="w-5 h-5 text-white"></i>
+              </div>
               <div class="absolute bottom-0 left-0 right-0 p-6 z-30 translate-y-4 group-hover:translate-y-0 transition-transform duration-300">
                 <h3 class="text-xl font-bold text-white mb-1">Exterior Perspective</h3>
               </div>
             </div>
 
             <!-- Item 2 -->
-            <div class="group relative rounded-2xl overflow-hidden bg-slate-100 shadow-sm md:col-span-1 md:row-span-1">
+            <div class="group relative rounded-2xl overflow-hidden bg-slate-100 shadow-sm md:col-span-1 md:row-span-1 cursor-pointer" onclick="openLightbox('./内観パース.jpg', 'Interior Perspective')">
               <div class="absolute inset-0 bg-slate-200 animate-pulse z-0"></div>
               <img src="./内観パース.jpg" alt="Interior Perspective" class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-110 z-10 opacity-90 group-hover:opacity-100" />
               <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent opacity-60 z-20"></div>
+              <div class="absolute top-4 right-4 z-30 opacity-0 group-hover:opacity-100 transition-opacity duration-300 bg-white/20 backdrop-blur-md p-2 rounded-full">
+                 <i data-lucide="maximize-2" class="w-5 h-5 text-white"></i>
+              </div>
               <div class="absolute bottom-0 left-0 right-0 p-6 z-30 translate-y-4 group-hover:translate-y-0 transition-transform duration-300">
                 <h3 class="text-xl font-bold text-white mb-1">Interior Perspective</h3>
               </div>
             </div>
 
             <!-- Item 3 -->
-            <div class="group relative rounded-2xl overflow-hidden bg-slate-100 shadow-sm md:col-span-1 md:row-span-2">
+            <div class="group relative rounded-2xl overflow-hidden bg-slate-100 shadow-sm md:col-span-1 md:row-span-2 cursor-pointer" onclick="openLightbox('./ダイアグラム.jpg', 'Concept Diagram')">
               <div class="absolute inset-0 bg-slate-200 animate-pulse z-0"></div>
               <img src="./ダイアグラム.jpg" alt="Concept Diagram" class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-110 z-10 opacity-90 group-hover:opacity-100" />
               <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent opacity-60 z-20"></div>
+              <div class="absolute top-4 right-4 z-30 opacity-0 group-hover:opacity-100 transition-opacity duration-300 bg-white/20 backdrop-blur-md p-2 rounded-full">
+                 <i data-lucide="maximize-2" class="w-5 h-5 text-white"></i>
+              </div>
               <div class="absolute bottom-0 left-0 right-0 p-6 z-30 translate-y-4 group-hover:translate-y-0 transition-transform duration-300">
                 <h3 class="text-xl font-bold text-white mb-1">Concept Diagram</h3>
               </div>
             </div>
 
             <!-- Item 4 -->
-            <div class="group relative rounded-2xl overflow-hidden bg-slate-100 shadow-sm md:col-span-1 md:row-span-1">
+            <div class="group relative rounded-2xl overflow-hidden bg-slate-100 shadow-sm md:col-span-1 md:row-span-1 cursor-pointer" onclick="openLightbox('./提案書類.jpg', 'Proposal Documents')">
               <div class="absolute inset-0 bg-slate-200 animate-pulse z-0"></div>
               <img src="./提案書類.jpg" alt="Proposal Documents" class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-110 z-10 opacity-90 group-hover:opacity-100" />
               <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent opacity-60 z-20"></div>
+              <div class="absolute top-4 right-4 z-30 opacity-0 group-hover:opacity-100 transition-opacity duration-300 bg-white/20 backdrop-blur-md p-2 rounded-full">
+                 <i data-lucide="maximize-2" class="w-5 h-5 text-white"></i>
+              </div>
               <div class="absolute bottom-0 left-0 right-0 p-6 z-30 translate-y-4 group-hover:translate-y-0 transition-transform duration-300">
                 <h3 class="text-xl font-bold text-white mb-1">Proposal Documents</h3>
               </div>
@@ -1241,9 +1270,9 @@
             <h4 class="text-white font-bold mb-6">法的表記</h4>
             <ul class="space-y-4 text-sm text-slate-400">
               <li><a href="#" class="hover:text-brand transition-colors">運営会社</a></li>
-              <li><a href="#" class="hover:text-brand transition-colors">利用規約</a></li>
-              <li><a href="#" class="hover:text-brand transition-colors">プライバシーポリシー</a></li>
-              <li><a href="#" class="hover:text-brand transition-colors">特定商取引法に基づく表記</a></li>
+              <li><button onclick="openModal('terms')" class="hover:text-brand transition-colors text-left">利用規約</button></li>
+              <li><button onclick="openModal('privacy')" class="hover:text-brand transition-colors text-left">プライバシーポリシー</button></li>
+              <li><button onclick="openModal('law')" class="hover:text-brand transition-colors text-left">特定商取引法に基づく表記</button></li>
             </ul>
           </div>
 
@@ -1255,6 +1284,151 @@
         </div>
       </div>
     </footer>
+
+    <!-- Modals -->
+    <!-- Terms Modal -->
+    <div id="terms" class="modal fixed inset-0 z-[100] flex items-center justify-center p-4 opacity-0 visibility-hidden transition-all duration-300 pointer-events-none">
+      <div class="absolute inset-0 bg-black/80 backdrop-blur-sm" onclick="closeModal('terms')"></div>
+      <div class="modal-content relative bg-white w-full max-w-2xl max-h-[80vh] overflow-y-auto rounded-2xl p-8 shadow-2xl transform scale-95 transition-transform duration-300">
+        <button onclick="closeModal('terms')" class="absolute top-4 right-4 p-2 text-slate-400 hover:text-black transition-colors">
+          <i data-lucide="x" class="w-6 h-6"></i>
+        </button>
+        <h2 class="text-2xl font-bold mb-6 border-b border-slate-200 pb-4">利用規約</h2>
+        <div class="prose prose-sm prose-slate text-slate-600 space-y-4">
+          <p>この利用規約（以下，「本規約」といいます。）は，AI ARCHITECTURE CIRCLE（以下，「本サークル」といいます。）が提供するサービス（以下，「本サービス」といいます。）の利用条件を定めるものです。</p>
+          
+          <h3 class="text-black font-bold text-lg mt-6">第1条（適用）</h3>
+          <p>本規約は，ユーザーと本サークルとの間の本サービスの利用に関わる一切の関係に適用されるものとします。</p>
+
+          <h3 class="text-black font-bold text-lg mt-6">第2条（利用登録）</h3>
+          <p>登録希望者が本サークルの定める方法によって利用登録を申請し，本サークルがこれを承認することによって，利用登録が完了するものとします。</p>
+
+          <h3 class="text-black font-bold text-lg mt-6">第3条（利用料金および支払方法）</h3>
+          <p>ユーザーは，本サービスの有料部分の対価として，本サークルが別途定め，本ウェブサイトに表示する利用料金を，本サークルが指定する方法により支払うものとします。</p>
+
+          <h3 class="text-black font-bold text-lg mt-6">第4条（禁止事項）</h3>
+          <p>ユーザーは，本サービスの利用にあたり，以下の行為をしてはなりません。</p>
+          <ul class="list-disc pl-5 space-y-1">
+            <li>法令または公序良俗に違反する行為</li>
+            <li>犯罪行為に関連する行為</li>
+            <li>本サークルのサーバーまたはネットワークの機能を破壊したり，妨害したりする行為</li>
+            <li>本サービスの運営を妨害するおそれのある行為</li>
+            <li>他のユーザーに関する個人情報等を収集または蓄積する行為</li>
+          </ul>
+
+          <h3 class="text-black font-bold text-lg mt-6">第5条（免責事項）</h3>
+          <p>本サークルの債務不履行責任は，本サークルの故意または重過失によらない場合には免責されるものとします。</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Privacy Modal -->
+    <div id="privacy" class="modal fixed inset-0 z-[100] flex items-center justify-center p-4 opacity-0 visibility-hidden transition-all duration-300 pointer-events-none">
+      <div class="absolute inset-0 bg-black/80 backdrop-blur-sm" onclick="closeModal('privacy')"></div>
+      <div class="modal-content relative bg-white w-full max-w-2xl max-h-[80vh] overflow-y-auto rounded-2xl p-8 shadow-2xl transform scale-95 transition-transform duration-300">
+        <button onclick="closeModal('privacy')" class="absolute top-4 right-4 p-2 text-slate-400 hover:text-black transition-colors">
+          <i data-lucide="x" class="w-6 h-6"></i>
+        </button>
+        <h2 class="text-2xl font-bold mb-6 border-b border-slate-200 pb-4">プライバシーポリシー</h2>
+        <div class="prose prose-sm prose-slate text-slate-600 space-y-4">
+          <p>AI ARCHITECTURE CIRCLE（以下，「本サークル」といいます。）は，本ウェブサイト上で提供するサービス（以下，「本サービス」といいます。）における，ユーザーの個人情報の取扱いについて，以下のとおりプライバシーポリシー（以下，「本ポリシー」といいます。）を定めます。</p>
+          
+          <h3 class="text-black font-bold text-lg mt-6">1. 個人情報の収集方法</h3>
+          <p>本サークルは，ユーザーが利用登録をする際に氏名，住所，電話番号，メールアドレス，クレジットカード番号などの個人情報をお尋ねすることがあります。</p>
+
+          <h3 class="text-black font-bold text-lg mt-6">2. 個人情報の利用目的</h3>
+          <p>本サークルが個人情報を収集・利用する目的は，以下のとおりです。</p>
+          <ul class="list-disc pl-5 space-y-1">
+             <li>本サービスの提供・運営のため</li>
+             <li>ユーザーからのお問い合わせに回答するため</li>
+             <li>ユーザーが利用中のサービスの新機能，更新情報，キャンペーン等及び本サークルが提供する他のサービスの案内のメールを送付するため</li>
+             <li>メンテナンス，重要なお知らせなど必要に応じたご連絡のため</li>
+          </ul>
+
+          <h3 class="text-black font-bold text-lg mt-6">3. 個人情報の第三者提供</h3>
+          <p>本サークルは，次に掲げる場合を除いて，あらかじめユーザーの同意を得ることなく，第三者に個人情報を提供することはありません。</p>
+
+          <h3 class="text-black font-bold text-lg mt-6">4. お問い合わせ窓口</h3>
+          <p>本ポリシーに関するお問い合わせは，サイト内の連絡先までお願いいたします。</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Law Modal -->
+    <div id="law" class="modal fixed inset-0 z-[100] flex items-center justify-center p-4 opacity-0 visibility-hidden transition-all duration-300 pointer-events-none">
+      <div class="absolute inset-0 bg-black/80 backdrop-blur-sm" onclick="closeModal('law')"></div>
+      <div class="modal-content relative bg-white w-full max-w-2xl max-h-[80vh] overflow-y-auto rounded-2xl p-8 shadow-2xl transform scale-95 transition-transform duration-300">
+        <button onclick="closeModal('law')" class="absolute top-4 right-4 p-2 text-slate-400 hover:text-black transition-colors">
+          <i data-lucide="x" class="w-6 h-6"></i>
+        </button>
+        <h2 class="text-2xl font-bold mb-6 border-b border-slate-200 pb-4">特定商取引法に基づく表記</h2>
+        <div class="space-y-6 text-sm text-slate-600">
+          <div class="grid grid-cols-1 md:grid-cols-3 gap-4 border-b border-slate-100 pb-4">
+            <div class="font-bold text-slate-900">販売業者</div>
+            <div class="md:col-span-2">Archi-Prisma Design works株式会社</div>
+          </div>
+          <div class="grid grid-cols-1 md:grid-cols-3 gap-4 border-b border-slate-100 pb-4">
+            <div class="font-bold text-slate-900">運営統括責任者</div>
+            <div class="md:col-span-2">櫻本 聖成</div>
+          </div>
+          <div class="grid grid-cols-1 md:grid-cols-3 gap-4 border-b border-slate-100 pb-4">
+            <div class="font-bold text-slate-900">所在地</div>
+            <div class="md:col-span-2">
+              請求があり次第提供致します。必要な方はお問い合わせフォームよりご連絡ください。
+            </div>
+          </div>
+          <div class="grid grid-cols-1 md:grid-cols-3 gap-4 border-b border-slate-100 pb-4">
+            <div class="font-bold text-slate-900">販売価格</div>
+            <div class="md:col-span-2">
+              月額5,000円（税込）<br/>
+              ※初月無料キャンペーン適用時は、初回の請求は発生しません。
+            </div>
+          </div>
+          <div class="grid grid-cols-1 md:grid-cols-3 gap-4 border-b border-slate-100 pb-4">
+            <div class="font-bold text-slate-900">商品代金以外の必要料金</div>
+            <div class="md:col-span-2">
+              インターネット接続料金、通信料金等はお客様のご負担となります。
+            </div>
+          </div>
+          <div class="grid grid-cols-1 md:grid-cols-3 gap-4 border-b border-slate-100 pb-4">
+            <div class="font-bold text-slate-900">支払方法</div>
+            <div class="md:col-span-2">
+              クレジットカード決済（Stripe）
+            </div>
+          </div>
+          <div class="grid grid-cols-1 md:grid-cols-3 gap-4 border-b border-slate-100 pb-4">
+            <div class="font-bold text-slate-900">支払時期</div>
+            <div class="md:col-span-2">
+              初回申込時および翌月以降毎月の更新日
+            </div>
+          </div>
+          <div class="grid grid-cols-1 md:grid-cols-3 gap-4 border-b border-slate-100 pb-4">
+            <div class="font-bold text-slate-900">引渡時期</div>
+            <div class="md:col-span-2">
+              決済手続き完了後、直ちにご利用いただけます。Discord招待リンクをメールにて送付いたします。
+            </div>
+          </div>
+          <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+            <div class="font-bold text-slate-900">返品・キャンセルについて</div>
+            <div class="md:col-span-2">
+              デジタルコンテンツの性質上、返品・返金はお受けできません。<br/>
+              解約をご希望の場合は、いつでもマイページまたはお問い合わせにより次回の更新を停止することができます。更新停止後も、契約期間終了まではサービスをご利用いただけます。
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <!-- Lightbox Modal -->
+    <div id="lightbox" class="fixed inset-0 z-[100] bg-black/90 backdrop-blur-sm hidden flex items-center justify-center p-4 transition-opacity duration-300 opacity-0 pointer-events-none">
+        <button id="lightbox-close" class="absolute top-6 right-6 text-white/70 hover:text-white transition-colors bg-white/10 p-2 rounded-full">
+            <i data-lucide="x" class="w-8 h-8"></i>
+        </button>
+        <div class="relative max-w-7xl max-h-[90vh] w-full h-full flex flex-col items-center justify-center">
+            <img id="lightbox-img" src="" alt="Full View" class="max-w-full max-h-[85vh] object-contain shadow-2xl rounded-sm transform scale-95 transition-transform duration-300">
+            <h3 id="lightbox-caption" class="text-white text-xl font-bold mt-6 tracking-wide"></h3>
+        </div>
+    </div>
 
     <script>
       // Initialize Lucide Icons
@@ -1360,6 +1534,87 @@
           }, 500);
         }
       });
+
+      // Modal Logic
+      function openModal(id) {
+        const modal = document.getElementById(id);
+        if (modal) {
+          modal.classList.remove('opacity-0', 'visibility-hidden', 'pointer-events-none');
+          modal.classList.add('opacity-100', 'visibility-visible', 'pointer-events-auto');
+          const content = modal.querySelector('.modal-content');
+          if(content) {
+             content.classList.remove('scale-95');
+             content.classList.add('scale-100');
+          }
+          document.body.style.overflow = 'hidden';
+        }
+      }
+
+      function closeModal(id) {
+        const modal = document.getElementById(id);
+        if (modal) {
+          modal.classList.add('opacity-0', 'visibility-hidden', 'pointer-events-none');
+          modal.classList.remove('opacity-100', 'visibility-visible', 'pointer-events-auto');
+          const content = modal.querySelector('.modal-content');
+          if(content) {
+             content.classList.add('scale-95');
+             content.classList.remove('scale-100');
+          }
+          document.body.style.overflow = '';
+        }
+      }
+      
+      // Lightbox Logic
+      const lightbox = document.getElementById('lightbox');
+      const lightboxImg = document.getElementById('lightbox-img');
+      const lightboxCaption = document.getElementById('lightbox-caption');
+      const lightboxClose = document.getElementById('lightbox-close');
+
+      function openLightbox(src, title) {
+          if (!lightbox) return;
+          lightboxImg.src = src;
+          lightboxCaption.textContent = title;
+          lightbox.classList.remove('hidden');
+          // Trigger reflow or small delay to allow transition
+          requestAnimationFrame(() => {
+              lightbox.classList.remove('opacity-0', 'pointer-events-none');
+              lightbox.classList.add('opacity-100', 'pointer-events-auto');
+              lightboxImg.classList.remove('scale-95');
+              lightboxImg.classList.add('scale-100');
+          });
+          document.body.style.overflow = 'hidden';
+      }
+
+      function closeLightbox() {
+          if (!lightbox) return;
+          lightbox.classList.remove('opacity-100', 'pointer-events-auto');
+          lightbox.classList.add('opacity-0', 'pointer-events-none');
+          lightboxImg.classList.remove('scale-100');
+          lightboxImg.classList.add('scale-95');
+          setTimeout(() => {
+              lightbox.classList.add('hidden');
+              lightboxImg.src = '';
+          }, 300);
+          document.body.style.overflow = '';
+      }
+
+      // Close modal on ESC key
+      document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape') {
+          closeModal('terms');
+          closeModal('privacy');
+          closeModal('law');
+          closeLightbox();
+        }
+      });
+      
+      // Lightbox listeners
+      if (lightbox) {
+          lightboxClose.addEventListener('click', closeLightbox);
+          lightbox.addEventListener('click', (e) => {
+              if (e.target === lightbox) closeLightbox();
+          });
+      }
     </script>
   </body>
 </html>

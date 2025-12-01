@@ -74,7 +74,7 @@ const Offerings: React.FC = () => {
             </div>
             <h3 className="text-2xl font-bold text-slate-900 mb-2 group-hover:text-brand transition-colors">Sena開発ツールが使い放題</h3>
             <p className="text-slate-600 text-sm leading-relaxed">
-              Senaが実務のために開発した独自のAIソフト（図面差分チェック、積算補助、タスク管理連携など）を、メンバーは<span className="text-brand font-bold">追加料金なし</span>で利用できます。ツール代だけで会費以上の価値があります。
+              Senaが実務のために開発した独自のAIソフト（図面差分チェック、積算補助、タスク管理連携など）を、メンバーは<span class="text-brand font-bold">追加料金なし</span>で利用できます。ツール代だけで会費以上の価値があります。
             </p>
           </div>
 
@@ -96,7 +96,7 @@ const Offerings: React.FC = () => {
             </div>
             <h3 className="text-lg font-bold text-slate-900 mb-2">LIVE勉強会</h3>
             <p className="text-slate-600 text-sm">
-              月2回以上のライブ講義。「BIM×AI」など実務直結のテーマで実演します。アーカイブ視聴もOK。
+              月一回のライブ講義。「BIM×AI」など実務直結のテーマで実演します。アーカイブ視聴もOK。
             </p>
           </div>
 
