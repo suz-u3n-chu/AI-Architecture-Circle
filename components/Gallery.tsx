@@ -82,15 +82,18 @@ const Gallery: React.FC = () => {
           onClick={() => setSelectedImage(null)}
         >
           <button 
-            className="absolute top-6 right-6 p-2 text-white/50 hover:text-white transition-colors z-50"
-            onClick={() => setSelectedImage(null)}
+            className="absolute top-6 right-6 p-2 text-white/50 hover:text-white transition-colors z-50 rounded-full bg-white/10"
+            onClick={(e) => {
+              e.stopPropagation();
+              setSelectedImage(null);
+            }}
           >
             <X className="w-8 h-8" />
           </button>
           
           <div 
             className="relative max-w-7xl max-h-[90vh] w-full h-full flex flex-col items-center justify-center"
-            onClick={(e) => e.stopPropagation()} // Prevent closing when clicking image area
+            onClick={(e) => e.stopPropagation()} 
           >
             <img 
               src={selectedImage.url} 
