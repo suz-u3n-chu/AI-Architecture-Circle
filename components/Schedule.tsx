@@ -53,9 +53,7 @@ const Schedule: React.FC = () => {
           <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
             {weeks.map((item, index) => (
               <div key={index} className="relative z-10 group">
-                {/* Mobile Connector */}
-                <div className="absolute left-6 top-16 bottom-[-2rem] w-1 bg-slate-100 md:hidden"></div>
-
+                
                 <div className="bg-white p-6 rounded-2xl border border-slate-200 shadow-sm hover:shadow-md hover:border-brand/30 transition-all duration-300">
                   <div className="flex items-center gap-4 mb-4">
                     <div className={`w-12 h-12 rounded-xl flex items-center justify-center shadow-sm ${item.bg} group-hover:scale-110 transition-transform`}>
