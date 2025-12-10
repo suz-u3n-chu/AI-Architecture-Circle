@@ -18,7 +18,7 @@ const SenaTools: React.FC = () => {
               <span className="text-brand">「武器」</span>を配ります。
             </h2>
             <p className="text-lg text-slate-600 leading-relaxed font-medium">
-              サークル会員は、Senaが開発した実務特化型アプリケーションを<span className="text-brand font-bold">追加料金なし</span>で利用可能です。
+              サークル会員は、Senaが開発した実務特化型アプリケーションを<span class="text-brand font-bold">追加料金なし</span>で利用可能です。
               <br/>
               市販のSaaSなら月額数万円するレベルの機能を、あなたのデスクトップへ。
             </p>
@@ -127,8 +127,8 @@ const SenaTools: React.FC = () => {
                     </div>
                     <div className="grid grid-cols-3 gap-2">
                       <div className="h-24 bg-slate-700/30 rounded-lg border-t-2 border-blue-500 p-2"><div className="h-1 w-8 bg-slate-600 rounded"></div></div>
-                      <div className="h-24 bg-slate-700/30 rounded-lg border-t-2 border-yellow-500 p-2"><div className="h-1 w-8 bg-slate-600 rounded"></div></div>
-                      <div className="h-24 bg-slate-700/30 rounded-lg border-t-2 border-green-500 p-2"><div className="h-1 w-8 bg-slate-600 rounded"></div></div>
+                      <div className="h-24 bg-slate-700/30 rounded-lg border-t-2 border-yellow-500 p-2"><div class="h-1 w-8 bg-slate-600 rounded"></div></div>
+                      <div className="h-24 bg-slate-700/30 rounded-lg border-t-2 border-green-500 p-2"><div class="h-1 w-8 bg-slate-600 rounded"></div></div>
                     </div>
                 </div>
               </div>

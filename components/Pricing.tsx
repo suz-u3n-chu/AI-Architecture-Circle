@@ -1,36 +1,7 @@
-import React, { useState } from 'react';
-import { Check, Zap, ArrowRight, Video, Laptop } from 'lucide-react';
+import React from 'react';
+import { Check, Zap, ArrowRight, Video, Download, Laptop } from 'lucide-react';
 
 const Pricing: React.FC = () => {
-  const [email, setEmail] = useState('');
-  const [loading, setLoading] = useState(false);
-  const [error, setError] = useState<string | null>(null);
-
-  const handleSubmit = async (e: React.FormEvent) => {
-    e.preventDefault();
-    setLoading(true);
-    setError(null);
-
-    try {
-      const response = await fetch('https://stripe-discord-pro-417218426761.asia-northeast1.run.app/api/create-checkout-session', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ email })
-      });
-
-      const data = await response.json();
-
-      if (!response.ok) {
-        throw new Error(data.message || 'エラーが発生しました');
-      }
-
-      window.location.href = data.url;
-    } catch (err: any) {
-      setError(err.message || 'ネットワークエラーが発生しました');
-      setLoading(false);
-    }
-  };
-
   return (
     <section id="pricing" className="py-32 bg-white relative overflow-hidden">
       {/* Background Accent */}
@@ -109,43 +80,10 @@ const Pricing: React.FC = () => {
                     </ul>
                   </div>
 
-                  <form onSubmit={handleSubmit} className="w-full mt-4">
-                    <div className="mb-4 text-center bg-slate-50 p-3 rounded border border-slate-100">
-                      <p className="text-sm font-bold text-slate-500 mb-1">一般: 月額 ¥5,000</p>
-                      <p className="text-green-600 font-bold text-sm">学生: 月額 ¥2,000 <span className="text-xs font-normal text-slate-400 block sm:inline">(.ac.jp / .edu / .ed.jp)</span></p>
-                    </div>
-
-                    <input
-                      type="email"
-                      id="email-input"
-                      value={email}
-                      onChange={(e) => setEmail(e.target.value)}
-                      placeholder="メールアドレスを入力"
-                      required
-                      className="w-full p-4 mb-4 bg-white border border-slate-300 focus:border-brand focus:ring-1 focus:ring-brand outline-none transition-all font-medium text-slate-800 placeholder:text-slate-400 rounded-sm"
-                    />
-
-                    <button
-                      type="submit"
-                      disabled={loading}
-                      className="w-full group bg-black text-white py-5 text-lg font-bold flex items-center justify-center gap-4 hover:bg-brand transition-colors duration-300 shadow-lg cursor-pointer rounded-sm disabled:opacity-70 disabled:cursor-not-allowed"
-                    >
-                      {loading ? (
-                         <span className="animate-pulse">処理中...</span>
-                      ) : (
-                        <>
-                          <span>今すぐ参加</span>
-                          <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
-                        </>
-                      )}
-                    </button>
-
-                    {error && (
-                      <div className="text-brand text-sm font-bold mt-4 text-center">
-                        {error}
-                      </div>
-                    )}
-                  </form>
+                  <a href="https://buy.stripe.com/dRm00l0J75OR3eV8Cbf7i00" className="w-full group bg-black text-white py-5 text-lg font-bold flex items-center justify-center gap-4 hover:bg-brand transition-colors duration-300 shadow-lg">
+                    <span>メンバー登録する</span>
+                    <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
+                  </a>
                   
                   <p className="text-center text-xs text-slate-400 font-medium">
                     ※いつでも解約可能 / 安心のStripe決済
