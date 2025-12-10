@@ -1,37 +1,7 @@
-import React, { useState } from 'react';
-import { Check, Zap, ArrowRight, Video, Laptop, Loader2 } from 'lucide-react';
+import React from 'react';
+import { Check, Zap, ArrowRight, Video, Download, Laptop } from 'lucide-react';
 
 const Pricing: React.FC = () => {
-  const [email, setEmail] = useState('');
-  const [isLoading, setIsLoading] = useState(false);
-  const [error, setError] = useState<string | null>(null);
-
-  const handleSubmit = async (e: React.FormEvent) => {
-    e.preventDefault();
-    setIsLoading(true);
-    setError(null);
-
-    try {
-      const response = await fetch('https://stripe-discord-pro-417218426761.asia-northeast1.run.app/api/create-checkout-session', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ email }),
-      });
-
-      const data = await response.json();
-
-      if (!response.ok) {
-        throw new Error(data.message || 'エラーが発生しました');
-      }
-
-      // Redirect to Stripe Checkout
-      window.location.href = data.url;
-    } catch (err: any) {
-      setError(err.message || 'ネットワークエラーが発生しました');
-      setIsLoading(false);
-    }
-  };
-
   return (
     <section id="pricing" className="py-32 bg-white relative overflow-hidden">
       {/* Background Accent */}
@@ -110,50 +80,10 @@ const Pricing: React.FC = () => {
                     </ul>
                   </div>
 
-                  {/* Student Pricing & Form */}
-                  <div className="pt-2">
-                    <div className="text-center mb-4">
-                        <p className="text-emerald-600 font-bold text-sm">
-                        学生は月額 ¥2,000（.ac.jp / .edu / .ed.jp）
-                        </p>
-                    </div>
-
-                    <form onSubmit={handleSubmit} className="space-y-4">
-                        <input 
-                            type="email" 
-                            placeholder="メールアドレス" 
-                            required 
-                            value={email}
-                            onChange={(e) => setEmail(e.target.value)}
-                            disabled={isLoading}
-                            className="w-full px-4 py-3 border border-slate-300 rounded text-black placeholder-slate-400 focus:outline-none focus:border-brand focus:ring-1 focus:ring-brand transition-all disabled:bg-slate-100 disabled:text-slate-400"
-                        />
-
-                        <button 
-                            type="submit" 
-                            disabled={isLoading}
-                            className="w-full group bg-black text-white py-4 text-lg font-bold flex items-center justify-center gap-4 hover:bg-brand transition-colors duration-300 shadow-lg disabled:opacity-70 disabled:cursor-not-allowed"
-                        >
-                            {isLoading ? (
-                                <>
-                                    <Loader2 className="w-5 h-5 animate-spin" />
-                                    <span>処理中...</span>
-                                </>
-                            ) : (
-                                <>
-                                    <span>メンバー登録する</span>
-                                    <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
-                                </>
-                            )}
-                        </button>
-                    </form>
-
-                    {error && (
-                        <div className="mt-3 text-sm font-bold text-red-500 text-center animate-pulse">
-                            {error}
-                        </div>
-                    )}
-                  </div>
+                  <a href="https://buy.stripe.com/dRm00l0J75OR3eV8Cbf7i00" className="w-full group bg-black text-white py-5 text-lg font-bold flex items-center justify-center gap-4 hover:bg-brand transition-colors duration-300 shadow-lg">
+                    <span>メンバー登録する</span>
+                    <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
+                  </a>
                   
                   <p className="text-center text-xs text-slate-400 font-medium">
                     ※いつでも解約可能 / 安心のStripe決済
