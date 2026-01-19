@@ -6,7 +6,7 @@ const Flow: React.FC = () => {
     {
       icon: <CreditCard className="w-6 h-6 text-brand" />,
       title: "参加申し込み",
-      desc: "プランを選んでStripeで決済。初月無料キャンペーンもこちらで適用されます。"
+      desc: "プランを選んでStripeで決済。簡単に登録できます。"
     },
     {
       icon: <Mail className="w-6 h-6 text-brand" />,

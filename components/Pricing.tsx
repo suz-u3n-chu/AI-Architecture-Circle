@@ -63,10 +63,6 @@ const Pricing: React.FC = () => {
                     <span className="text-5xl md:text-7xl font-black tracking-tighter">¥5,000</span>
                     <span className="font-bold text-slate-500">/ 月 (税込)</span>
                   </div>
-                  <p className="text-sm font-bold mt-2 text-brand flex items-center gap-2">
-                    <Zap className="w-4 h-4 fill-current" />
-                    ローンチ記念：初月無料キャンペーン中
-                  </p>
                 </div>
 
                 <div className="space-y-6">
