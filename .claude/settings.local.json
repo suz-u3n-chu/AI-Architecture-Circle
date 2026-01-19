@@ -13,7 +13,8 @@
       "Bash(git rebase:*)",
       "Bash(GIT_EDITOR=true git rebase:*)",
       "Bash(git push:*)",
-      "Bash(git commit -m \"$\\(cat <<''EOF''\nfix: Restore React files to root directory\n\nThe site requires React components to render content.\n\nCo-Authored-By: Claude Opus 4.5 <noreply@anthropic.com>\nEOF\n\\)\")"
+      "Bash(git commit -m \"$\\(cat <<''EOF''\nfix: Restore React files to root directory\n\nThe site requires React components to render content.\n\nCo-Authored-By: Claude Opus 4.5 <noreply@anthropic.com>\nEOF\n\\)\")",
+      "Bash(git commit:*)"
     ]
   }
 }
