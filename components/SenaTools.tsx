@@ -192,9 +192,7 @@ const SenaTools: React.FC = () => {
               </div>
 
               <div className="md:w-2/5 p-10 flex flex-col justify-center">
-                <div className="w-12 h-12 bg-slate-900 text-white rounded-xl flex items-center justify-center mb-6 shadow-md">
-                  <Compass className="w-6 h-6" />
-                </div>
+                <img src="/images/Compass logo.png" alt="COMPASS" className="h-10 mb-6 object-contain" />
                 <h3 className="text-2xl font-bold text-slate-900 mb-2">COMPASS</h3>
                 <p className="text-sm font-bold text-slate-400 mb-6 uppercase tracking-wider">AI建築プロジェクト管理システム</p>
                 <p className="text-slate-600 leading-relaxed mb-6">
