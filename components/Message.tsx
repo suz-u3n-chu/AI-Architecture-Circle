@@ -23,7 +23,7 @@ const Message: React.FC = () => {
             <div className="space-y-6 text-slate-700 text-lg leading-relaxed font-medium">
               <p>
                 建築業界はいま、過渡期にあります。<br/>
-                「2024年問題」による残業規制、慢性的な人手不足、そしてAI技術の爆発的進化。
+                残業規制の本格施行、慢性的な人手不足、そしてAI技術の爆発的進化。
               </p>
               <p>
                 資金力のある大手組織は、自社で高価なシステムを開発し、AIを武器にし始めています。<br/>
@@ -41,7 +41,7 @@ const Message: React.FC = () => {
 
             <div className="mt-12 flex items-center gap-4">
               <img 
-                src="/profile.jpg" 
+                src="/images/profile.jpg" 
                 alt="Sena" 
                 className="w-14 h-14 rounded-full border border-slate-200 object-cover"
               />

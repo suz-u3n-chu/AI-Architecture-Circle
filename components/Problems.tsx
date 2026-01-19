@@ -5,8 +5,8 @@ const Problems: React.FC = () => {
   const problems = [
     {
       icon: <Clock className="w-6 h-6 text-brand" />,
-      title: "「2024年問題」が不安",
-      text: "残業規制が厳しくなる中で、今のままのやり方で業務を回せる自信がない。"
+      title: "残業規制で回らない",
+      text: "残業規制が厳しくなった今、今のままのやり方で業務を回せる自信がない。"
     },
     {
       icon: <FileX className="w-6 h-6 text-brand" />,
