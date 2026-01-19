@@ -135,7 +135,7 @@ const SenaTools: React.FC = () => {
                 </div>
               </div>
               <div className="md:w-2/5 p-10 flex flex-col justify-center">
-                <img src="/AI-Architecture-Circle/images/KAKOME logo.png" alt="KAKOME" className="w-12 h-12 mb-6 object-contain" />
+                <img src="/AI-Architecture-Circle/images/KAKOME logo.png" alt="KAKOME" className="h-16 mb-6 object-contain" />
                 <h3 className="text-2xl font-bold text-slate-900 mb-2">KAKOME</h3>
                 <p className="text-sm font-bold text-slate-400 mb-6 uppercase tracking-wider">指で囲んで、即PDF。写真指示の革命</p>
                 <p className="text-slate-600 leading-relaxed mb-8">
@@ -192,7 +192,7 @@ const SenaTools: React.FC = () => {
               </div>
 
               <div className="md:w-2/5 p-10 flex flex-col justify-center">
-                <img src="/AI-Architecture-Circle/images/Compass logo.png" alt="COMPASS" className="h-10 mb-6 object-contain" />
+                <img src="/AI-Architecture-Circle/images/Compass logo.png" alt="COMPASS" className="h-12 mb-6 object-contain" />
                 <h3 className="text-2xl font-bold text-slate-900 mb-2">COMPASS</h3>
                 <p className="text-sm font-bold text-slate-400 mb-6 uppercase tracking-wider">AI建築プロジェクト管理システム</p>
                 <p className="text-slate-600 leading-relaxed mb-6">
