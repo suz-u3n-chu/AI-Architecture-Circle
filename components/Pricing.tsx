@@ -18,7 +18,7 @@ const Pricing: React.FC = () => {
             </h2>
             <p className="text-xl text-slate-600 mb-12 leading-relaxed border-l-4 border-brand pl-6 font-medium">
               通常、実務レベルのAI講座やセミナーに参加すると3,000円〜100,000円かかります。<br/>
-              このサークルなら、わずか5,000円で<span className="text-black font-bold">セミナーも、ツールも、コミュニティも</span>すべて使い放題。<br/>
+              このサークルなら、わずか5,000円で<span className="text-black font-bold">セミナーも、ツールも,コミュニティも</span>すべて使い放題。<br/>
               圧倒的なコストパフォーマンスです。
             </p>
             
@@ -42,7 +42,7 @@ const Pricing: React.FC = () => {
                 <div>
                   <h4 className="font-bold text-slate-900">開発ツールが使い放題</h4>
                   <p className="text-sm text-slate-600">
-                    図面差分チェック「Revisio」など、実務支援ツールも無料で提供。ツール代だけで元が取れます。
+                    図面差分チェック「Revisio」など,実務支援ツールも無料で提供。ツール代だけで元が取れます。
                   </p>
                 </div>
               </div>
@@ -92,7 +92,7 @@ const Pricing: React.FC = () => {
                 
                 {/* Barcode Decoration */}
                 <div className="mt-8 pt-8 border-t-2 border-dashed border-slate-200 flex justify-between items-end opacity-70">
-                   <div className="font-mono text-[10px] text-black">ID: 8829-AX-2025</div>
+                   <div className="font-mono text-[10px] text-black">ID: 8829-AX-2026</div>
                    <div className="h-8 w-32 bg-[url('https://upload.wikimedia.org/wikipedia/commons/5/5d/UPC-A-036000291452.svg')] bg-cover bg-center"></div>
                 </div>
               </div>
