@@ -30,7 +30,7 @@ const Hero: React.FC = () => {
            </div>
            <div className="flex flex-col items-end text-[10px] md:text-xs font-mono tracking-[0.25em] uppercase text-white/70 text-right">
               <span>Archi-Prisma</span>
-              <span>Est. 2025</span>
+              <span>Est. 2026</span>
            </div>
         </div>
 

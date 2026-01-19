@@ -1,6 +1,6 @@
+
 import React, { useEffect } from 'react';
 import Header from './components/Header';
-import TopicTicker from './components/TopicTicker';
 import Hero from './components/Hero';
 import Message from './components/Message';
 import Concept from './components/Concept';
@@ -17,6 +17,8 @@ import Flow from './components/Flow';
 import Pricing from './components/Pricing';
 import FAQ from './components/FAQ';
 import Footer from './components/Footer';
+import ToolsMarquee from './components/ToolsMarquee';
+import Roadmap from './components/Roadmap';
 
 function App() {
   // Ensure the loader is removed when the app mounts
@@ -36,13 +38,14 @@ function App() {
       <Header />
       <main>
         <Hero />
-        <TopicTicker />
+        <ToolsMarquee />
         <Message />
         <Concept />
         <Problems />
         <SenaTools />
         <Benefits />
         <Offerings />
+        <Roadmap />
         <Schedule />
         <Gallery />
         <Target />
