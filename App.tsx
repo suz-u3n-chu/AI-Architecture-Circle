@@ -1,6 +1,6 @@
+
 import React, { useEffect } from 'react';
 import Header from './components/Header';
-import TopicTicker from './components/TopicTicker';
 import Hero from './components/Hero';
 import Message from './components/Message';
 import Concept from './components/Concept';
@@ -38,7 +38,6 @@ function App() {
       <Header />
       <main>
         <Hero />
-        <TopicTicker />
         <ToolsMarquee />
         <Message />
         <Concept />
