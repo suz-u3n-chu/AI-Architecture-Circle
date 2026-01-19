@@ -80,9 +80,7 @@ const SenaTools: React.FC = () => {
               </div>
 
               <div className="md:w-2/5 p-10 flex flex-col justify-center">
-                <div className="w-12 h-12 bg-brand/10 rounded-xl flex items-center justify-center mb-6">
-                  <ScanEye className="w-6 h-6 text-brand" />
-                </div>
+                <img src="/images/SpotPDF-logo.ico" alt="SpotPDF" className="w-12 h-12 mb-6" />
                 <h3 className="text-2xl font-bold text-slate-900 mb-2">SpotPDF</h3>
                 <p className="text-sm font-bold text-slate-400 mb-6 uppercase tracking-wider">図面差分高速チェックツール</p>
                 <p className="text-slate-600 leading-relaxed mb-8">
@@ -137,9 +135,7 @@ const SenaTools: React.FC = () => {
                 </div>
               </div>
               <div className="md:w-2/5 p-10 flex flex-col justify-center">
-                <div className="w-12 h-12 bg-brand/10 rounded-xl flex items-center justify-center mb-6">
-                  <LassoSelect className="w-6 h-6 text-brand" />
-                </div>
+                <img src="/images/KAKOME logo.png" alt="KAKOME" className="w-12 h-12 mb-6 object-contain" />
                 <h3 className="text-2xl font-bold text-slate-900 mb-2">KAKOME</h3>
                 <p className="text-sm font-bold text-slate-400 mb-6 uppercase tracking-wider">指で囲んで、即PDF。写真指示の革命</p>
                 <p className="text-slate-600 leading-relaxed mb-8">
