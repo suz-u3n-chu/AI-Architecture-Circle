@@ -135,8 +135,7 @@ const SenaTools: React.FC = () => {
                 </div>
               </div>
               <div className="md:w-2/5 p-10 flex flex-col justify-center">
-                <img src="/AI-Architecture-Circle/images/KAKOME logo.png" alt="KAKOME" className="h-44 mb-6 object-contain" />
-                <h3 className="text-2xl font-bold text-slate-900 mb-2">KAKOME</h3>
+                <img src="/AI-Architecture-Circle/images/KAKOME-logo-black.png" alt="KAKOME" className="h-32 mb-6 object-contain" />
                 <p className="text-sm font-bold text-slate-400 mb-6 uppercase tracking-wider">指で囲んで、即PDF。写真指示の革命</p>
                 <p className="text-slate-600 leading-relaxed mb-8">
                   気になる箇所を指でぐるっと囲むだけ。自動で「番号付きラベル」が付与され、9種類の指示タイプから色分け選択が可能。現場でボタン一つでPDF報告書が完成。事務所に戻ってExcel作業をする時間は、もう必要ありません。
@@ -192,8 +191,7 @@ const SenaTools: React.FC = () => {
               </div>
 
               <div className="md:w-2/5 p-10 flex flex-col justify-center">
-                <img src="/AI-Architecture-Circle/images/Compass logo.png" alt="COMPASS" className="h-40 mb-6 object-contain" />
-                <h3 className="text-2xl font-bold text-slate-900 mb-2">COMPASS</h3>
+                <img src="/AI-Architecture-Circle/images/Compass logo.png" alt="COMPASS" className="h-16 mb-6 object-contain" />
                 <p className="text-sm font-bold text-slate-400 mb-6 uppercase tracking-wider">AI建築プロジェクト管理システム</p>
                 <p className="text-slate-600 leading-relaxed mb-6">
                   建築プロジェクトの「情報・図面・進捗」を1ページに集約。汎用ツールでは管理しきれない建築業務に特化した様々な管理を搭載。迷わないUIで、実務の混乱をゼロにします。
