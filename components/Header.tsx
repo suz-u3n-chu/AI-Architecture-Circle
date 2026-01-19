@@ -35,7 +35,7 @@ const Header: React.FC = () => {
           </div>
           <div className="flex flex-col">
             <span className={`text-sm font-bold leading-none tracking-tight transition-colors ${isScrolled ? 'text-black' : 'text-white'}`}>ARCHI-CIRCLE</span>
-            <span className={`text-[10px] font-mono uppercase leading-none mt-1 transition-colors ${isScrolled ? 'text-slate-500' : 'text-white/60'}`}>EST. 2026</span>
+            <span className={`text-[10px] font-mono uppercase leading-none mt-1 transition-colors ${isScrolled ? 'text-slate-500' : 'text-white/60'}`}>EST. 2025</span>
           </div>
         </div>
 

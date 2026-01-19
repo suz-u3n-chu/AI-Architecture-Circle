@@ -60,7 +60,7 @@ const Footer: React.FC = () => {
 
         <div className="border-t border-white/10 pt-8 flex flex-col md:flex-row justify-between items-center gap-4">
           <div className="text-slate-500 text-xs">
-            &copy; 2026 Archi-Prisma Design works Inc. All rights reserved.
+            &copy; 2025 Archi-Prisma Design works Inc. All rights reserved.
           </div>
           <div className="flex items-center gap-2 text-xs text-slate-500">
              <span className="w-2 h-2 rounded-full bg-green-500 shadow-[0_0_10px_rgba(34,197,94,0.5)]"></span>

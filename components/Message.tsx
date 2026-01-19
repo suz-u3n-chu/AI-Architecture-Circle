@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { Quote } from 'lucide-react';
 
@@ -41,7 +40,7 @@ const Message: React.FC = () => {
 
             <div className="mt-12 flex items-center gap-4">
               <img 
-                src="/profile.JPEG" 
+                src="./profile.JPEG" 
                 alt="Sena" 
                 className="w-14 h-14 rounded-full border border-slate-200 object-cover"
               />

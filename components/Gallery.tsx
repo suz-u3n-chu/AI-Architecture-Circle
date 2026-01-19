@@ -1,4 +1,3 @@
-
 import React, { useState } from 'react';
 import { X, Maximize2 } from 'lucide-react';
 
@@ -7,22 +6,22 @@ const Gallery: React.FC = () => {
 
   const works = [
     {
-      url: "/exterior.jpg",
+      url: "./外観パース.jpg",
       title: "Exterior Perspective",
       span: "md:col-span-2 md:row-span-2"
     },
     {
-      url: "/interior.jpg",
+      url: "./内観パース.jpg",
       title: "Interior Perspective",
       span: "md:col-span-1 md:row-span-1"
     },
     {
-      url: "/diagram.jpg",
+      url: "./ダイアグラム.jpg",
       title: "Concept Diagram",
       span: "md:col-span-1 md:row-span-2"
     },
     {
-      url: "/proposal.jpg",
+      url: "./提案書類.jpg",
       title: "Proposal Documents",
       span: "md:col-span-1 md:row-span-1"
     },
