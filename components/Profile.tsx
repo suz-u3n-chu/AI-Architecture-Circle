@@ -14,7 +14,7 @@ const Profile: React.FC = () => {
               <div className="flex-shrink-0 text-center md:text-left">
                 <div className="w-32 h-32 md:w-40 md:h-40 relative mb-6 mx-auto md:mx-0">
                   <img 
-                    src="profile.jpg"
+                    src="./profile.JPEG" 
                     alt="Sena Sakuramoto" 
                     className="w-full h-full object-cover rounded-2xl border border-slate-200 shadow-lg"
                   />
