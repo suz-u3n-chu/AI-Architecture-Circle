@@ -191,7 +191,7 @@ const SenaTools: React.FC = () => {
               </div>
 
               <div className="md:w-2/5 p-10 flex flex-col justify-center">
-                <img src="/AI-Architecture-Circle/images/Compass logo.png" alt="COMPASS" className="h-16 mb-6 object-contain" />
+                <img src="/AI-Architecture-Circle/images/Compass logo.png" alt="COMPASS" className="h-32 mb-6 object-contain" />
                 <p className="text-sm font-bold text-slate-400 mb-6 uppercase tracking-wider">AI建築プロジェクト管理システム</p>
                 <p className="text-slate-600 leading-relaxed mb-6">
                   建築プロジェクトの「情報・図面・進捗」を1ページに集約。汎用ツールでは管理しきれない建築業務に特化した様々な管理を搭載。迷わないUIで、実務の混乱をゼロにします。
