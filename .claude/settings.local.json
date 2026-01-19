@@ -1,0 +1,17 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(git log:*)",
+      "Bash(source setup_vars.sh)",
+      "Bash(echo:*)",
+      "Bash(gcloud secrets versions add:*)",
+      "Bash(gcloud auth login:*)",
+      "Bash(gcloud auth:*)",
+      "Bash(gcloud config:*)",
+      "Bash(git show:*)",
+      "Bash(git add:*)",
+      "Bash(git rebase:*)",
+      "Bash(GIT_EDITOR=true git rebase:*)"
+    ]
+  }
+}
