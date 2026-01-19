@@ -42,7 +42,7 @@ const Pricing: React.FC = () => {
                 <div>
                   <h4 className="font-bold text-slate-900">開発ツールが使い放題</h4>
                   <p className="text-sm text-slate-600">
-                    図面差分チェック「Revisio」など,実務支援ツールも無料で提供。ツール代だけで元が取れます。
+                    図面差分チェック「SpotPDF」など、実務支援ツールも無料で提供。ツール代だけで元が取れます。
                   </p>
                 </div>
               </div>
