@@ -196,10 +196,18 @@ const SenaTools: React.FC = () => {
                 <p className="text-slate-600 leading-relaxed mb-6">
                   建築プロジェクトの「情報・図面・進捗」を1ページに集約。汎用ツールでは管理しきれない建築業務に特化した様々な管理を搭載。迷わないUIで、実務の混乱をゼロにします。
                 </p>
-                <div className="flex gap-2 flex-wrap">
+                <div className="flex gap-2 flex-wrap mb-6">
                   <span className="text-xs font-bold px-2 py-1 bg-slate-100 text-slate-600 rounded border border-slate-200">BIM級の管理体験</span>
-                  <span className="text-xs font-bold px-2 py-1 bg-brand/10 text-brand rounded border border-brand/20">Coming Soon</span>
+                  <span className="text-xs font-bold px-2 py-1 bg-emerald-500/10 text-emerald-600 rounded border border-emerald-500/20">Demo公開中</span>
                 </div>
+                <a
+                  href="https://compass-demo.web.app/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center gap-2 px-6 py-3 bg-black text-white rounded-lg font-bold hover:bg-brand transition-all shadow-md group"
+                >
+                  デモを見る <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
+                </a>
               </div>
 
             </div>
