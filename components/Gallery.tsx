@@ -7,22 +7,22 @@ const Gallery: React.FC = () => {
 
   const works = [
     {
-      url: "/AI-Architecture-Circle/images/exterior.jpg",
+      url: "/images/exterior.jpg",
       title: "Exterior Perspective",
       span: "md:col-span-2 md:row-span-2"
     },
     {
-      url: "/AI-Architecture-Circle/images/interior.jpg",
+      url: "/images/interior.jpg",
       title: "Interior Perspective",
       span: "md:col-span-1 md:row-span-1"
     },
     {
-      url: "/AI-Architecture-Circle/images/diagram.jpg",
+      url: "/images/diagram.jpg",
       title: "Concept Diagram",
       span: "md:col-span-1 md:row-span-2"
     },
     {
-      url: "/AI-Architecture-Circle/images/proposal.jpg",
+      url: "/images/proposal.jpg",
       title: "Proposal Documents",
       span: "md:col-span-1 md:row-span-1"
     },
