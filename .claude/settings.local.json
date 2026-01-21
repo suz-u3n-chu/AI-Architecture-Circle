@@ -17,7 +17,10 @@
       "Bash(git commit:*)",
       "Bash(ls:*)",
       "Bash(npm install)",
-      "Bash(gh run list:*)"
+      "Bash(gh run list:*)",
+      "Bash(npm run build:*)",
+      "Bash(firebase deploy:*)",
+      "Bash(npm run:*)"
     ]
   }
 }

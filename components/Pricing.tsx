@@ -76,7 +76,7 @@ const Pricing: React.FC = () => {
                     </ul>
                   </div>
 
-                  <a href="https://buy.stripe.com/dRm00l0J75OR3eV8Cbf7i00" className="w-full group bg-black text-white py-5 text-lg font-bold flex items-center justify-center gap-4 hover:bg-brand transition-colors duration-300 shadow-lg">
+                  <a href="https://stripe-discord-pro-417218426761.asia-northeast1.run.app/" className="w-full group bg-black text-white py-5 text-lg font-bold flex items-center justify-center gap-4 hover:bg-brand transition-colors duration-300 shadow-lg">
                     <span>メンバー登録する</span>
                     <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
                   </a>
