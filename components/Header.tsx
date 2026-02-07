@@ -14,9 +14,9 @@ const Header: React.FC = () => {
   }, []);
 
   const navLinks = [
+    { name: '無料ガイド', href: '#free-guide' },
     { name: '特徴・メリット', href: '#features' },
     { name: 'コンテンツ', href: '#offerings' },
-    { name: '制作事例', href: '#gallery' },
     { name: 'こんな人に', href: '#target' },
   ];
 
