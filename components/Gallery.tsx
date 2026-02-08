@@ -8,22 +8,22 @@ const Gallery: React.FC = () => {
   const works = [
     {
       url: "/images/exterior.jpg",
-      title: "Exterior Perspective",
+      title: "AI生成による外観パース",
       span: "md:col-span-2 md:row-span-2"
     },
     {
       url: "/images/interior.jpg",
-      title: "Interior Perspective",
+      title: "AI生成によるインテリアデザイン",
       span: "md:col-span-1 md:row-span-1"
     },
     {
-      url: "/images/diagram.jpg",
-      title: "Concept Diagram",
+      url: "/images/meeting.jpg",
+      title: "サークルメンバーとのミーティング風景",
       span: "md:col-span-1 md:row-span-2"
     },
     {
-      url: "/images/proposal.jpg",
-      title: "Proposal Documents",
+      url: "/images/tools.jpg",
+      title: "実務支援ツールの操作画面",
       span: "md:col-span-1 md:row-span-1"
     },
   ];
@@ -69,7 +69,7 @@ const Gallery: React.FC = () => {
 
               <div className="absolute bottom-0 left-0 right-0 p-6 z-30 translate-y-4 group-hover:translate-y-0 transition-transform duration-300">
                 <h3 className="text-xl font-bold text-white mb-1">{work.title}</h3>
-                <p className="text-xs text-slate-300 opacity-0 group-hover:opacity-100 transition-opacity duration-300">Click to expand</p>
+                <p className="text-xs text-slate-300 opacity-0 group-hover:opacity-100 transition-opacity duration-300">クリックで拡大</p>
               </div>
             </div>
           ))}
