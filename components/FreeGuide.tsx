@@ -4,12 +4,12 @@ import { FileText, Mail, Building2, User, ArrowRight, CheckCircle, Shield, BookO
 const CAPTURE_URL = 'https://stripe-discord-pro-417218426761.asia-northeast1.run.app/api/capture';
 
 const chapters = [
-  '4号特例縮小の全貌と対象範囲',
-  '省エネ適合義務化で必要になる書類',
-  '構造計算の外注コスト削減シミュレーション',
-  '省エネ計算を30秒で終わらせる方法',
-  'AI活用で法改正コストを1/10にした事例',
-  '2026年以降のロードマップと準備チェックリスト',
+  '4号特例の縮小 ── 何が変わるのか',
+  '新たに必要になる書類と手続き',
+  '構造計算・省エネ計算のコストシミュレーション',
+  'AIツールで計算業務を内製化する方法',
+  '外注 vs 内製化 ── 最適な判断基準',
+  '30日間アクションプランと準備チェックリスト',
 ];
 
 const FreeGuide: React.FC = () => {
@@ -49,7 +49,7 @@ const FreeGuide: React.FC = () => {
             まずは<span className="text-brand">無料</span>で備える。
           </h2>
           <p className="text-white/60 text-lg max-w-2xl mx-auto font-serif leading-relaxed">
-            2026年法改正の全貌と、AIで対応コストを劇的に下げる方法を<br className="hidden md:inline" />
+            2025年4月施行の建築基準法改正の全貌と、AIで対応コストを劇的に下げる方法を<br className="hidden md:inline" />
             40ページのPDFガイドにまとめました。
           </p>
         </div>
