@@ -68,7 +68,7 @@ const FreeGuide: React.FC = () => {
                   </div>
                   <div>
                     <p className="text-xs text-white/50 font-mono tracking-wider uppercase">PDF Guide</p>
-                    <p className="text-sm font-bold text-white">2026年建築法改正 完全対応マニュアル</p>
+                    <p className="text-sm font-bold text-white">2025年4月施行 建築基準法改正 完全対応ガイド</p>
                   </div>
                 </div>
 
