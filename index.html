@@ -29,6 +29,35 @@
       gtag('config', 'G-XXXXXXXXXX');
     </script>
 
+    <!-- Structured Data (JSON-LD) -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Organization",
+      "name": "AI建築サークル",
+      "alternateName": "AI Architecture Circle",
+      "url": "https://ai-archi-circle.archi-prisma.co.jp/",
+      "logo": "https://ai-archi-circle.archi-prisma.co.jp/ogp-main.png",
+      "description": "2025年4月施行の建築基準法改正（4号特例縮小・省エネ適合義務化）に対応するAIツール・コミュニティ",
+      "founder": {
+        "@type": "Person",
+        "name": "櫻本聖成",
+        "jobTitle": "代表"
+      },
+      "memberOf": {
+        "@type": "ProfessionalService",
+        "name": "Archi-Prisma Design Works"
+      },
+      "offers": {
+        "@type": "Offer",
+        "name": "AI建築サークル月額会員",
+        "price": "5000",
+        "priceCurrency": "JPY",
+        "description": "省エネ計算・構造計算AIツール使い放題、月2回のライブ勉強会"
+      }
+    }
+    </script>
+
     <!-- Favicon -->
     <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🏛️</text></svg>">
     <!-- Google Fonts -->
@@ -159,6 +188,31 @@
 
     <!-- React Root -->
     <div id="root"></div>
+
+    <!-- SEO fallback content for crawlers that don't execute JS -->
+    <noscript>
+      <div style="max-width:800px;margin:0 auto;padding:40px 20px;font-family:sans-serif;">
+        <h1>AI建築サークル | 実務特化型AIコミュニティ</h1>
+        <p>2025年4月施行の建築基準法改正（4号特例縮小・省エネ適合義務化）に対応するためのAIツールとコミュニティです。</p>
+        <h2>サービス内容</h2>
+        <ul>
+          <li>省エネ計算AIツール「KOKOME」使い放題</li>
+          <li>構造計算AIツール「KOUZOU」使い放題</li>
+          <li>月2回のライブ勉強会（AI×建築実務）</li>
+          <li>会員限定Discordコミュニティ</li>
+          <li>法改正対応テンプレート・マニュアル</li>
+        </ul>
+        <h2>料金</h2>
+        <p>月額¥5,000（税込）/ 学割：月額¥2,000 / 年額¥50,000</p>
+        <h2>4号特例縮小とは</h2>
+        <p>2025年4月から建築確認申請の審査省略制度が大幅縮小。新2号建築物（2階建て以上または延べ面積200㎡超、構造問わず）は構造関係図書・省エネ関係図書の提出が必須に。新3号（平屋かつ200㎡以下）のみ従来通りの審査省略が継続。</p>
+        <h2>省エネ適合義務化</h2>
+        <p>全ての新築住宅・非住宅に省エネ基準への適合が義務化。外皮性能（UA値）と一次エネルギー消費量の計算・適合証明が必要。</p>
+        <h2>無料ガイド</h2>
+        <p><a href="/guide/">2025年4月施行 建築基準法改正 完全対応ガイド（無料）</a></p>
+        <p>代表: 櫻本聖成 / Archi-Prisma Design Works</p>
+      </div>
+    </noscript>
 
     <!-- Entry Point -->
     <script type="module" src="/index.tsx"></script>
