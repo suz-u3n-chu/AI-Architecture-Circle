@@ -4,6 +4,25 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>【2025年4月施行】建築基準法改正 完全対応ガイド | AI建築サークル</title>
+<!-- OGP -->
+<meta property="og:title" content="【2025年4月施行】建築基準法改正 完全対応ガイド">
+<meta property="og:description" content="4号特例縮小と省エネ適合義務化の全貌。何が変わり、何をすればいいのか6章で解説。">
+<meta property="og:image" content="https://ai-archi-circle.archi-prisma.co.jp/ogp-guide.png">
+<meta property="og:url" content="https://ai-archi-circle.archi-prisma.co.jp/guide/">
+<meta property="og:type" content="article">
+<meta property="og:locale" content="ja_JP">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="【2025年4月施行】建築基準法改正 完全対応ガイド">
+<meta name="twitter:description" content="4号特例縮小と省エネ適合義務化の全貌。何が変わり、何をすればいいのか6章で解説。">
+<meta name="twitter:image" content="https://ai-archi-circle.archi-prisma.co.jp/ogp-guide.png">
+<!-- GA4 -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-XXXXXXXXXX');
+</script>
 <style>
   *{margin:0;padding:0;box-sizing:border-box}
   :root{--brand:#ff3300;--dark:#050505;--text:#1a1a1a;--muted:#666;--border:#e5e5e5;--bg:#fafafa}
@@ -262,6 +281,53 @@
   <p>AI建築サークル / Archi-Prisma Design Works / 代表: 櫻本聖成</p>
   <p style="margin-top:8px;font-size:11px;color:#999;">本ガイドは2025年4月施行の建築基準法・省エネ法改正に基づく一般的な情報提供です。<br>具体的な申請手続きについては、管轄の確認検査機関にご確認ください。</p>
 </div>
+
+<!-- Email Gate -->
+<div id="email-gate" style="display:none;position:fixed;inset:0;z-index:9999;background:rgba(0,0,0,.7);backdrop-filter:blur(8px);align-items:center;justify-content:center;">
+  <div style="background:#fff;max-width:440px;width:90%;border-radius:16px;padding:40px 32px;text-align:center;box-shadow:0 20px 60px rgba(0,0,0,.3);">
+    <div style="font-size:32px;margin-bottom:12px;">📘</div>
+    <h3 style="font-size:20px;font-weight:800;margin-bottom:8px;color:#1a1a1a;">続きを読むには</h3>
+    <p style="font-size:14px;color:#666;margin-bottom:24px;line-height:1.7;">メールアドレスを登録すると、<br>全6章を無料でお読みいただけます。</p>
+    <form id="gate-form" style="display:flex;flex-direction:column;gap:10px;">
+      <input type="email" id="gate-email" required placeholder="メールアドレス" style="width:100%;padding:12px 16px;border:1px solid #ddd;border-radius:8px;font-size:14px;outline:none;">
+      <button type="submit" style="width:100%;padding:14px;background:#ff3300;color:#fff;font-weight:700;font-size:14px;border:none;border-radius:8px;cursor:pointer;">無料で続きを読む</button>
+    </form>
+    <p style="font-size:11px;color:#999;margin-top:12px;">※ 登録後、法改正対策の情報を数回お届けします。</p>
+  </div>
+</div>
+<script>
+(function(){
+  if(localStorage.getItem('guide_unlocked')) return;
+  var gate = document.getElementById('email-gate');
+  var shown = false;
+  window.addEventListener('scroll', function(){
+    if(shown) return;
+    var chapters = document.querySelectorAll('.chapter');
+    if(chapters.length >= 2){
+      var rect = chapters[1].getBoundingClientRect();
+      if(rect.top < window.innerHeight * 0.5){
+        gate.style.display = 'flex';
+        document.body.style.overflow = 'hidden';
+        shown = true;
+      }
+    }
+  });
+  document.getElementById('gate-form').addEventListener('submit', function(e){
+    e.preventDefault();
+    var email = document.getElementById('gate-email').value;
+    if(!email) return;
+    fetch('https://stripe-discord-pro-417218426761.asia-northeast1.run.app/api/capture', {
+      method:'POST',
+      headers:{'Content-Type':'application/json'},
+      body:JSON.stringify({email:email, source:'guide_gate'})
+    }).catch(function(){});
+    localStorage.setItem('guide_unlocked','1');
+    gate.style.display = 'none';
+    document.body.style.overflow = '';
+    if(typeof gtag === 'function') gtag('event','guide_email_captured',{email_source:'guide_gate'});
+  });
+})();
+</script>
 
 </body>
 </html>
