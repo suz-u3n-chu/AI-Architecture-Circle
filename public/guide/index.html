@@ -6,7 +6,7 @@
 <title>2026年建築法改正 完全対応マニュアル | AI建築サークル</title>
 <style>
   *{margin:0;padding:0;box-sizing:border-box}
-  :root{--brand:#ff3300;--dark:#050505;--text:#1a1a1a;--muted:#666;--border:#e5e5e5;--bg:#fafafa}
+  :root{--brand:#ff3300;--dark:#050505;--text:#1a1a1a;--muted:#666;--border:#e5e5e5;--bg:#fafafa;--blue:#2563eb;--green:#16a34a;--orange:#ea580c}
   body{font-family:'Hiragino Kaku Gothic ProN','Hiragino Sans',Meiryo,'Noto Sans JP',sans-serif;color:var(--text);background:var(--bg);line-height:1.8}
   .header{background:var(--dark);padding:20px 24px;display:flex;align-items:center;justify-content:space-between}
   .header-logo{display:inline-flex;align-items:center;gap:12px;text-decoration:none}
@@ -14,12 +14,12 @@
   .header-logo .name{color:#fff;font-weight:700;font-size:13px;letter-spacing:2px}
   .pdf-btn{background:var(--brand);color:#fff;font-weight:700;font-size:13px;padding:10px 24px;border:none;border-radius:6px;cursor:pointer;transition:opacity .2s}
   .pdf-btn:hover{opacity:.85}
-  .hero{position:relative;color:#fff;overflow:hidden}
-  .hero-img{width:100%;height:400px;object-fit:cover;display:block}
-  .hero-overlay{position:absolute;inset:0;background:linear-gradient(135deg,rgba(5,5,5,.88),rgba(26,26,46,.75));display:flex;flex-direction:column;align-items:center;justify-content:center;padding:40px 24px;text-align:center}
-  .hero h1{font-size:clamp(1.6rem,4.5vw,2.6rem);font-weight:800;line-height:1.3;margin-bottom:16px}
+  .hero{position:relative;color:#fff;overflow:hidden;background:linear-gradient(135deg,#0a0a1a 0%,#1a1a3a 40%,#0d1b2a 100%);padding:80px 24px;text-align:center}
+  .hero::before{content:'';position:absolute;inset:0;background:repeating-linear-gradient(0deg,transparent,transparent 40px,rgba(255,255,255,.02) 40px,rgba(255,255,255,.02) 41px),repeating-linear-gradient(90deg,transparent,transparent 40px,rgba(255,255,255,.02) 40px,rgba(255,255,255,.02) 41px);pointer-events:none}
+  .hero-badge{display:inline-block;background:var(--brand);color:#fff;font-size:12px;font-weight:800;padding:6px 16px;border-radius:20px;letter-spacing:1px;margin-bottom:20px}
+  .hero h1{font-size:clamp(1.6rem,4.5vw,2.6rem);font-weight:800;line-height:1.3;margin-bottom:16px;position:relative}
   .hero h1 em{font-style:normal;color:var(--brand)}
-  .hero .sub{color:rgba(255,255,255,.65);font-size:15px;max-width:600px}
+  .hero .sub{color:rgba(255,255,255,.65);font-size:15px;max-width:600px;margin:0 auto;position:relative}
   .container{max-width:760px;margin:0 auto;padding:0 24px}
   .toc{padding:48px 0}
   .toc h2{font-size:20px;font-weight:800;margin-bottom:24px;padding-bottom:12px;border-bottom:3px solid var(--brand)}
@@ -36,7 +36,6 @@
   .chapter ul li{margin-bottom:8px}
   .chapter .highlight{background:#fff8f6;border-left:4px solid var(--brand);padding:16px 20px;margin:20px 0;border-radius:0 8px 8px 0}
   .chapter .highlight p{margin:0;font-size:14px;font-weight:600}
-  .chapter-img{width:100%;border-radius:12px;margin:24px 0;box-shadow:0 4px 24px rgba(0,0,0,.08)}
   .term{background:#f0f0f0;padding:2px 6px;border-radius:3px;font-size:13px;font-weight:600}
   .cta-section{background:var(--dark);color:#fff;padding:60px 24px;text-align:center;margin-top:48px}
   .cta-section h2{font-size:clamp(1.3rem,3vw,1.8rem);font-weight:800;margin-bottom:16px}
@@ -45,7 +44,102 @@
   .cta-btn:hover{opacity:.85}
   .footer{text-align:center;padding:32px 24px;color:var(--muted);font-size:12px}
   .note{background:#fffbe6;border:1px solid #ffe066;padding:12px 16px;border-radius:8px;font-size:13px;color:#665500;margin:16px 0}
-  @media print{.header,.pdf-btn,.cta-section{display:none!important}body{background:#fff}.hero-img{height:250px}.chapter-img{max-height:300px}.chapter{page-break-inside:avoid}}
+
+  /* ── Infographic: shared ── */
+  .info-diagram{border-radius:12px;margin:24px 0;padding:28px 24px;font-size:14px;line-height:1.6;overflow:hidden}
+
+  /* Ch01: Classification change */
+  .info-classify{background:linear-gradient(135deg,#f0f4ff,#e8eeff);border:1px solid #c7d2fe}
+  .classify-flow{display:flex;align-items:stretch;gap:16px;flex-wrap:wrap;justify-content:center}
+  .classify-box{flex:1;min-width:200px;border-radius:10px;padding:20px;text-align:center}
+  .classify-box.old{background:#fff;border:2px solid #94a3b8;position:relative}
+  .classify-box.old::after{content:'';position:absolute;right:-14px;top:50%;transform:translateY(-50%);width:0;height:0;border-left:12px solid #94a3b8;border-top:8px solid transparent;border-bottom:8px solid transparent}
+  .classify-box.new{background:#fff;border:2px solid var(--blue)}
+  .classify-label{font-size:11px;font-weight:700;letter-spacing:1px;margin-bottom:8px;text-transform:uppercase}
+  .classify-label.before{color:#64748b}
+  .classify-label.after{color:var(--blue)}
+  .classify-name{font-size:18px;font-weight:800;margin-bottom:4px}
+  .classify-desc{font-size:12px;color:var(--muted)}
+  .classify-new-group{flex:1;min-width:220px;display:flex;flex-direction:column;gap:10px}
+  .classify-tag{display:inline-block;font-size:11px;font-weight:700;padding:3px 10px;border-radius:12px;margin-top:8px}
+  .classify-tag.required{background:#fee2e2;color:#dc2626}
+  .classify-tag.ok{background:#dcfce7;color:#16a34a}
+
+  /* Ch02: Document checklist */
+  .info-docs{background:linear-gradient(135deg,#fefce8,#fef9c3);border:1px solid #fde047}
+  .doc-grid{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+  .doc-card{background:#fff;border-radius:8px;padding:14px 16px;border:1px solid #e5e7eb;display:flex;align-items:flex-start;gap:10px}
+  .doc-icon{width:32px;height:32px;border-radius:6px;display:flex;align-items:center;justify-content:center;font-size:16px;flex-shrink:0}
+  .doc-icon.struct{background:#dbeafe;color:var(--blue)}
+  .doc-icon.energy{background:#dcfce7;color:var(--green)}
+  .doc-card .doc-name{font-weight:700;font-size:13px;margin-bottom:2px}
+  .doc-card .doc-detail{font-size:11px;color:var(--muted)}
+  .doc-new-badge{display:inline-block;background:var(--brand);color:#fff;font-size:9px;font-weight:800;padding:1px 6px;border-radius:3px;margin-left:4px;vertical-align:middle}
+
+  /* Ch03: Cost bars */
+  .info-cost{background:linear-gradient(135deg,#fdf2f8,#fce7f3);border:1px solid #f9a8d4}
+  .cost-row{display:flex;align-items:center;gap:12px;margin-bottom:14px}
+  .cost-label{width:120px;font-weight:700;font-size:13px;text-align:right;flex-shrink:0}
+  .cost-bar-wrap{flex:1;background:#fff;border-radius:6px;height:36px;position:relative;overflow:hidden;border:1px solid #e5e7eb}
+  .cost-bar{height:100%;border-radius:6px;display:flex;align-items:center;padding:0 12px;font-size:12px;font-weight:700;color:#fff;white-space:nowrap}
+  .cost-bar.struct{background:linear-gradient(90deg,#3b82f6,#60a5fa);width:65%}
+  .cost-bar.energy{background:linear-gradient(90deg,#22c55e,#4ade80);width:35%}
+  .cost-bar.total{background:linear-gradient(90deg,var(--brand),#f97316);width:90%}
+  .cost-summary{display:flex;gap:12px;justify-content:center;margin-top:16px;flex-wrap:wrap}
+  .cost-pill{background:#fff;border:1px solid #e5e7eb;border-radius:8px;padding:10px 18px;text-align:center}
+  .cost-pill .yr{font-size:12px;color:var(--muted);margin-bottom:2px}
+  .cost-pill .amt{font-size:16px;font-weight:800;color:var(--brand)}
+
+  /* Ch04: AI tools */
+  .info-tools{background:linear-gradient(135deg,#ecfdf5,#d1fae5);border:1px solid #6ee7b7}
+  .tool-cols{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+  .tool-col{background:#fff;border-radius:10px;padding:20px;border:1px solid #e5e7eb}
+  .tool-col-title{font-weight:800;font-size:14px;margin-bottom:12px;display:flex;align-items:center;gap:8px}
+  .tool-col-title .dot{width:8px;height:8px;border-radius:50%;flex-shrink:0}
+  .tool-col-title .dot.blue{background:var(--blue)}
+  .tool-col-title .dot.green{background:var(--green)}
+  .tool-item{font-size:13px;padding:6px 0;border-bottom:1px dashed #f0f0f0;color:#444}
+  .tool-item:last-child{border-bottom:none}
+  .tool-item::before{content:'→ ';color:var(--brand);font-weight:700}
+
+  /* Ch05: Compare table */
+  .info-compare{background:linear-gradient(135deg,#f5f3ff,#ede9fe);border:1px solid #c4b5fd}
+  .compare-grid{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+  .compare-col{border-radius:10px;padding:20px;position:relative}
+  .compare-col.outsource{background:#fff;border:2px solid #94a3b8}
+  .compare-col.inhouse{background:#fff;border:2px solid var(--blue)}
+  .compare-col-label{font-size:11px;font-weight:800;letter-spacing:1px;margin-bottom:12px;padding:4px 12px;border-radius:4px;display:inline-block}
+  .compare-col.outsource .compare-col-label{background:#f1f5f9;color:#475569}
+  .compare-col.inhouse .compare-col-label{background:#dbeafe;color:var(--blue)}
+  .compare-list{list-style:none;margin:0;padding:0;font-size:13px}
+  .compare-list li{padding:5px 0;display:flex;align-items:flex-start;gap:6px}
+  .compare-list .icon-good{color:var(--green)}
+  .compare-list .icon-bad{color:#dc2626}
+  .compare-verdict{text-align:center;margin-top:16px;font-size:13px;font-weight:700;color:var(--blue);background:#fff;padding:12px;border-radius:8px;border:1px dashed var(--blue)}
+
+  /* Ch06: Steps */
+  .info-steps{background:linear-gradient(135deg,#f0fdfa,#ccfbf1);border:1px solid #5eead4}
+  .step-timeline{position:relative;padding-left:36px}
+  .step-timeline::before{content:'';position:absolute;left:14px;top:8px;bottom:8px;width:2px;background:#99f6e4}
+  .step-item{position:relative;margin-bottom:20px}
+  .step-item:last-child{margin-bottom:0}
+  .step-dot{position:absolute;left:-36px;top:2px;width:28px;height:28px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:12px;font-weight:800;color:#fff}
+  .step-dot.s1{background:#14b8a6}
+  .step-dot.s2{background:#0d9488}
+  .step-dot.s3{background:#0f766e}
+  .step-dot.s4{background:#115e59}
+  .step-title{font-weight:800;font-size:14px;margin-bottom:4px}
+  .step-desc{font-size:12px;color:var(--muted)}
+
+  @media(max-width:600px){
+    .classify-flow{flex-direction:column}
+    .classify-box.old::after{display:none}
+    .doc-grid{grid-template-columns:1fr}
+    .cost-label{width:80px;font-size:12px}
+    .tool-cols{grid-template-columns:1fr}
+    .compare-grid{grid-template-columns:1fr}
+  }
+  @media print{.header,.pdf-btn,.cta-section{display:none!important}body{background:#fff}.hero{padding:40px 24px}.info-diagram{break-inside:avoid}.chapter{page-break-inside:avoid}}
 </style>
 </head>
 <body>
@@ -59,11 +153,9 @@
 </div>
 
 <div class="hero">
-  <img class="hero-img" src="images/hero.png" alt="">
-  <div class="hero-overlay">
-    <h1>2026年 建築法改正<br><em>完全対応マニュアル</em></h1>
-    <p class="sub">「何が変わったの？」「何をすればいいの？」<br>この2つの疑問に、できるだけ分かりやすくお答えします。</p>
-  </div>
+  <span class="hero-badge">FREE GUIDE</span>
+  <h1>2026年 建築法改正<br><em>完全対応マニュアル</em></h1>
+  <p class="sub">「何が変わったの？」「何をすればいいの？」<br>この2つの疑問に、できるだけ分かりやすくお答えします。</p>
 </div>
 
 <div class="container">
@@ -82,7 +174,31 @@
   <div class="chapter">
     <div class="chapter-num">CHAPTER 01</div>
     <h2>そもそも何が変わった？</h2>
-    <img class="chapter-img" src="images/ch01.png" alt="">
+    <!-- Infographic: 分類変更の図解 -->
+    <div class="info-diagram info-classify">
+      <div class="classify-flow">
+        <div class="classify-box old">
+          <div class="classify-label before">改正前</div>
+          <div class="classify-name">4号建築物</div>
+          <div class="classify-desc">木造2階建て以下<br>延べ面積500m²以下</div>
+          <span class="classify-tag ok">構造図書 → 提出不要</span>
+        </div>
+        <div class="classify-new-group">
+          <div class="classify-box new">
+            <div class="classify-label after">改正後 ①</div>
+            <div class="classify-name">新2号建築物</div>
+            <div class="classify-desc">木造2階建て以上 or 200m²超</div>
+            <span class="classify-tag required">構造+省エネ図書 → 提出必須</span>
+          </div>
+          <div class="classify-box new">
+            <div class="classify-label after">改正後 ②</div>
+            <div class="classify-name">新3号建築物</div>
+            <div class="classify-desc">木造平屋かつ200m²以下</div>
+            <span class="classify-tag ok">図書提出 → 引き続き不要</span>
+          </div>
+        </div>
+      </div>
+    </div>
 
     <p>2025年4月、建築基準法が改正されました。一番大きな変更は<strong>「4号特例の縮小」</strong>です。</p>
 
@@ -102,7 +218,35 @@
   <div class="chapter">
     <div class="chapter-num">CHAPTER 02</div>
     <h2>新しく必要になる書類は？</h2>
-    <img class="chapter-img" src="images/ch02.png" alt="">
+    <!-- Infographic: 必要書類チェックリスト -->
+    <div class="info-diagram info-docs">
+      <div class="doc-grid">
+        <div class="doc-card">
+          <div class="doc-icon struct">📐</div>
+          <div><div class="doc-name">構造計算書<span class="doc-new-badge">NEW</span></div><div class="doc-detail">壁量計算・N値計算など</div></div>
+        </div>
+        <div class="doc-card">
+          <div class="doc-icon struct">📄</div>
+          <div><div class="doc-name">構造図<span class="doc-new-badge">NEW</span></div><div class="doc-detail">軸組図・伏図・詳細図</div></div>
+        </div>
+        <div class="doc-card">
+          <div class="doc-icon energy">🌡️</div>
+          <div><div class="doc-name">外皮性能計算書<span class="doc-new-badge">NEW</span></div><div class="doc-detail">UA値（断熱性能）の計算</div></div>
+        </div>
+        <div class="doc-card">
+          <div class="doc-icon energy">⚡</div>
+          <div><div class="doc-name">一次エネルギー消費量<span class="doc-new-badge">NEW</span></div><div class="doc-detail">冷暖房・給湯・照明の年間量</div></div>
+        </div>
+        <div class="doc-card">
+          <div class="doc-icon energy">📋</div>
+          <div><div class="doc-name">建材・設備仕様書<span class="doc-new-badge">NEW</span></div><div class="doc-detail">使用する断熱材・設備の仕様</div></div>
+        </div>
+        <div class="doc-card">
+          <div class="doc-icon struct">✅</div>
+          <div><div class="doc-name">従来の確認申請書類</div><div class="doc-detail">意匠図・配置図・面積表など</div></div>
+        </div>
+      </div>
+    </div>
 
     <p>改正省エネ法により、原則として<strong>全ての新築建築物</strong>に省エネ基準への適合が義務付けられました。</p>
 
@@ -128,7 +272,25 @@
   <div class="chapter">
     <div class="chapter-num">CHAPTER 03</div>
     <h2>外注するといくらかかる？</h2>
-    <img class="chapter-img" src="images/ch03.png" alt="">
+    <!-- Infographic: コスト比較バー -->
+    <div class="info-diagram info-cost">
+      <div class="cost-row">
+        <div class="cost-label">構造計算</div>
+        <div class="cost-bar-wrap"><div class="cost-bar struct">15〜30万円/棟</div></div>
+      </div>
+      <div class="cost-row">
+        <div class="cost-label">省エネ計算</div>
+        <div class="cost-bar-wrap"><div class="cost-bar energy">5〜15万円/棟</div></div>
+      </div>
+      <div class="cost-row">
+        <div class="cost-label" style="font-weight:800">合計</div>
+        <div class="cost-bar-wrap"><div class="cost-bar total">20〜45万円/棟</div></div>
+      </div>
+      <div class="cost-summary">
+        <div class="cost-pill"><div class="yr">年間10棟の場合</div><div class="amt">200〜450万円/年</div></div>
+        <div class="cost-pill"><div class="yr">年間30棟の場合</div><div class="amt">600〜1,350万円/年</div></div>
+      </div>
+    </div>
 
     <p>構造計算・省エネ計算を外注する場合の<strong>一般的な費用の目安</strong>です（規模や地域で異なります）：</p>
 
@@ -154,7 +316,25 @@
   <div class="chapter">
     <div class="chapter-num">CHAPTER 04</div>
     <h2>AIツールで何ができる？</h2>
-    <img class="chapter-img" src="images/ch04.png" alt="">
+    <!-- Infographic: AIツール比較 -->
+    <div class="info-diagram info-tools">
+      <div class="tool-cols">
+        <div class="tool-col">
+          <div class="tool-col-title"><span class="dot green"></span>省エネ計算ツール</div>
+          <div class="tool-item">建物仕様の入力でUA値を自動計算</div>
+          <div class="tool-item">一次エネルギー消費量の算出</div>
+          <div class="tool-item">確認申請用の書式で出力</div>
+          <div class="tool-item">仕様変更時の比較シミュレーション</div>
+        </div>
+        <div class="tool-col">
+          <div class="tool-col-title"><span class="dot blue"></span>構造計算ツール</div>
+          <div class="tool-item">壁量計算・N値計算の自動化</div>
+          <div class="tool-item">構造図の自動生成補助</div>
+          <div class="tool-item">計算結果のチェック・検証</div>
+          <div class="tool-item">法令基準との自動照合</div>
+        </div>
+      </div>
+    </div>
 
     <p>法改正で増えた計算業務を効率化するために、AIや計算ツールを活用する方法があります。</p>
 
@@ -179,7 +359,32 @@
   <div class="chapter">
     <div class="chapter-num">CHAPTER 05</div>
     <h2>外注 vs 内製化、どっちがいい？</h2>
-    <img class="chapter-img" src="images/ch05.png" alt="">
+    <!-- Infographic: 外注 vs 内製化 比較 -->
+    <div class="info-diagram info-compare">
+      <div class="compare-grid">
+        <div class="compare-col outsource">
+          <div class="compare-col-label">外注</div>
+          <ul class="compare-list">
+            <li><span class="icon-good">◎</span> すぐに対応可能</li>
+            <li><span class="icon-good">◎</span> 専門家に任せる安心感</li>
+            <li><span class="icon-bad">✕</span> 1棟ごとにコスト発生</li>
+            <li><span class="icon-bad">✕</span> 納期が外注先に依存</li>
+            <li><span class="icon-bad">✕</span> 設計変更で追加費用</li>
+          </ul>
+        </div>
+        <div class="compare-col inhouse">
+          <div class="compare-col-label">内製化（ツール活用）</div>
+          <ul class="compare-list">
+            <li><span class="icon-good">◎</span> 棟数が増えてもコスト一定</li>
+            <li><span class="icon-good">◎</span> 設計変更に即対応</li>
+            <li><span class="icon-good">◎</span> 社内にノウハウ蓄積</li>
+            <li><span class="icon-bad">✕</span> ツール習得に時間が必要</li>
+            <li><span class="icon-bad">✕</span> 最初は計算ミスのリスク</li>
+          </ul>
+        </div>
+      </div>
+      <div class="compare-verdict">年間5棟以下 → 外注で十分 ／ 年間10棟以上 → 内製化を検討</div>
+    </div>
 
     <p>正解は事務所の状況によって異なります。それぞれのメリット・デメリットを整理します。</p>
 
@@ -216,7 +421,31 @@
   <div class="chapter">
     <div class="chapter-num">CHAPTER 06</div>
     <h2>まず何から始めればいい？</h2>
-    <img class="chapter-img" src="images/ch06.png" alt="">
+    <!-- Infographic: ステップタイムライン -->
+    <div class="info-diagram info-steps">
+      <div class="step-timeline">
+        <div class="step-item">
+          <div class="step-dot s1">1</div>
+          <div class="step-title">現状を把握する</div>
+          <div class="step-desc">年間の新2号該当棟数、現在の対応状況を確認</div>
+        </div>
+        <div class="step-item">
+          <div class="step-dot s2">2</div>
+          <div class="step-title">情報を集める</div>
+          <div class="step-desc">検査機関に地域ルールを確認、ツールの無料トライアル</div>
+        </div>
+        <div class="step-item">
+          <div class="step-dot s3">3</div>
+          <div class="step-title">小さく始める</div>
+          <div class="step-desc">まず1棟、自分で省エネ計算。外注と並行して結果を比較</div>
+        </div>
+        <div class="step-item">
+          <div class="step-dot s4">4</div>
+          <div class="step-title">体制を整える</div>
+          <div class="step-desc">計算フローのマニュアル化、スタッフへの共有・研修</div>
+        </div>
+      </div>
+    </div>
 
     <p>いきなり全てを変える必要はありません。以下のステップで段階的に進めましょう。</p>
 
