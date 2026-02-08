@@ -9,7 +9,7 @@ const chapters = [
   '構造計算の外注コスト削減シミュレーション',
   '省エネ計算を30秒で終わらせる方法',
   'AI活用で法改正コストを1/10にした事例',
-  '2025年以降のロードマップと準備チェックリスト',
+  '2026年以降のロードマップと準備チェックリスト',
 ];
 
 const FreeGuide: React.FC = () => {
@@ -49,7 +49,7 @@ const FreeGuide: React.FC = () => {
             まずは<span className="text-brand">無料</span>で備える。
           </h2>
           <p className="text-white/60 text-lg max-w-2xl mx-auto font-serif leading-relaxed">
-            2025年法改正の全貌と、AIで対応コストを劇的に下げる方法を<br className="hidden md:inline" />
+            2026年法改正の全貌と、AIで対応コストを劇的に下げる方法を<br className="hidden md:inline" />
             40ページのPDFガイドにまとめました。
           </p>
         </div>
@@ -68,7 +68,7 @@ const FreeGuide: React.FC = () => {
                   </div>
                   <div>
                     <p className="text-xs text-white/50 font-mono tracking-wider uppercase">PDF Guide</p>
-                    <p className="text-sm font-bold text-white">2025年建築法改正 完全対応マニュアル</p>
+                    <p className="text-sm font-bold text-white">2026年建築法改正 完全対応マニュアル</p>
                   </div>
                 </div>
 
