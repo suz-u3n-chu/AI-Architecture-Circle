@@ -23,48 +23,227 @@
   gtag('js', new Date());
   gtag('config', 'G-ENCGXC9ZFV');
 </script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400&family=Noto+Sans+JP:wght@300;400;500;600;700;900&family=Noto+Serif+JP:wght@400;500;600;700;900&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
 <style>
   *{margin:0;padding:0;box-sizing:border-box}
-  :root{--brand:#ff3300;--dark:#050505;--text:#1a1a1a;--muted:#666;--border:#e5e5e5;--bg:#fafafa}
-  body{font-family:'Hiragino Kaku Gothic ProN','Hiragino Sans',Meiryo,'Noto Sans JP',sans-serif;color:var(--text);background:var(--bg);line-height:1.8}
-  .header{background:var(--dark);padding:20px 24px;display:flex;align-items:center;justify-content:space-between}
+
+  :root{
+    --brand:#c23616;
+    --brand-light:#e84118;
+    --dark:#0a0a0f;
+    --dark-warm:#1a1a2e;
+    --text:#2d2d3a;
+    --text-light:#5a5a6e;
+    --muted:#8e8e9e;
+    --border:#e2e2e8;
+    --bg:#f8f7f4;
+    --bg-warm:#faf9f6;
+    --bg-chapter:#ffffff;
+    --cream:#f5f0e8;
+    --gold:#b8860b;
+    --serif:'Noto Serif JP','Hiragino Mincho ProN','Yu Mincho',serif;
+    --sans:'Noto Sans JP','Hiragino Kaku Gothic ProN',sans-serif;
+    --display:'Cormorant Garamond',var(--serif);
+    --mono:'JetBrains Mono',monospace;
+  }
+
+  html{scroll-behavior:smooth}
+  body{font-family:var(--sans);color:var(--text);background:var(--bg);line-height:1.95;font-size:15px;-webkit-font-smoothing:antialiased}
+
+  /* ── Header ── */
+  .header{background:var(--dark);padding:16px 28px;display:flex;align-items:center;justify-content:space-between;position:sticky;top:0;z-index:100;backdrop-filter:blur(12px)}
   .header-logo{display:inline-flex;align-items:center;gap:12px;text-decoration:none}
-  .header-logo .mark{background:var(--brand);color:#fff;font-weight:800;font-size:18px;padding:6px 14px;letter-spacing:-0.5px}
-  .header-logo .name{color:#fff;font-weight:700;font-size:13px;letter-spacing:2px}
-  .pdf-btn{background:var(--brand);color:#fff;font-weight:700;font-size:13px;padding:10px 24px;border:none;border-radius:6px;cursor:pointer;transition:opacity .2s}
-  .pdf-btn:hover{opacity:.85}
-  .hero{position:relative;color:#fff;overflow:hidden}
-  .hero-img{width:100%;height:400px;object-fit:cover;display:block}
-  .hero-overlay{position:absolute;inset:0;background:linear-gradient(135deg,rgba(5,5,5,.85),rgba(26,26,46,.7));display:flex;flex-direction:column;align-items:center;justify-content:center;padding:40px 24px;text-align:center}
-  .hero h1{font-size:clamp(1.6rem,4.5vw,2.6rem);font-weight:800;line-height:1.3;margin-bottom:16px}
-  .hero h1 em{font-style:normal;color:var(--brand)}
-  .hero .sub{color:rgba(255,255,255,.65);font-size:15px;max-width:600px}
-  .container{max-width:760px;margin:0 auto;padding:0 24px}
-  .toc{padding:48px 0}
-  .toc h2{font-size:20px;font-weight:800;margin-bottom:24px;padding-bottom:12px;border-bottom:3px solid var(--brand)}
-  .toc-item{display:flex;gap:16px;padding:16px 0;border-bottom:1px solid var(--border)}
-  .toc-item .num{color:var(--brand);font-weight:800;font-size:14px;font-family:monospace;min-width:32px;padding-top:2px}
-  .toc-item .title{font-weight:700;font-size:15px;margin-bottom:4px}
-  .toc-item .desc{color:var(--muted);font-size:13px;line-height:1.7}
-  .chapter{padding:48px 0;border-bottom:1px solid var(--border)}
-  .chapter:last-of-type{border-bottom:none}
-  .chapter-num{color:var(--brand);font-weight:800;font-size:13px;font-family:monospace;letter-spacing:2px;margin-bottom:8px}
-  .chapter h2{font-size:clamp(1.2rem,3vw,1.6rem);font-weight:800;margin-bottom:20px;line-height:1.4}
-  .chapter p{margin-bottom:16px;font-size:15px;color:#333}
-  .chapter ul{margin:16px 0 16px 20px;font-size:15px;color:#333}
-  .chapter ul li{margin-bottom:8px}
-  .chapter .highlight{background:#fff8f6;border-left:4px solid var(--brand);padding:16px 20px;margin:20px 0;border-radius:0 8px 8px 0}
-  .chapter .highlight p{margin:0;font-size:14px;font-weight:600}
-  .chapter-img{width:100%;border-radius:12px;margin:24px 0;box-shadow:0 4px 24px rgba(0,0,0,.08)}
-  .term{background:#f0f0f0;padding:2px 6px;border-radius:3px;font-size:13px;font-weight:600}
-  .cta-section{background:var(--dark);color:#fff;padding:60px 24px;text-align:center;margin-top:48px}
-  .cta-section h2{font-size:clamp(1.3rem,3vw,1.8rem);font-weight:800;margin-bottom:16px}
-  .cta-section p{color:rgba(255,255,255,.6);font-size:15px;margin-bottom:32px;max-width:500px;margin-left:auto;margin-right:auto}
-  .cta-btn{display:inline-block;background:var(--brand);color:#fff;font-weight:700;font-size:15px;padding:16px 48px;text-decoration:none;border-radius:8px;transition:opacity .2s}
-  .cta-btn:hover{opacity:.85}
-  .footer{text-align:center;padding:32px 24px;color:var(--muted);font-size:12px}
-  .note{background:#fffbe6;border:1px solid #ffe066;padding:12px 16px;border-radius:8px;font-size:13px;color:#665500;margin:16px 0}
-  @media print{.header,.pdf-btn,.cta-section{display:none!important}body{background:#fff}.hero-img{height:250px}.chapter-img{max-height:300px}.chapter{page-break-inside:avoid}}
+  .header-logo .mark{background:var(--brand);color:#fff;font-weight:800;font-size:16px;padding:5px 12px;letter-spacing:-0.5px}
+  .header-logo .name{color:rgba(255,255,255,.7);font-weight:500;font-size:12px;letter-spacing:3px;font-family:var(--mono)}
+  .pdf-btn{background:transparent;color:rgba(255,255,255,.6);font-weight:500;font-size:12px;padding:8px 20px;border:1px solid rgba(255,255,255,.2);border-radius:4px;cursor:pointer;transition:all .3s;letter-spacing:1px;font-family:var(--mono)}
+  .pdf-btn:hover{background:var(--brand);color:#fff;border-color:var(--brand)}
+
+  /* ── Hero ── */
+  .hero{position:relative;color:#fff;overflow:hidden;background:var(--dark)}
+  .hero-img{width:100%;height:480px;object-fit:cover;display:block;opacity:.45;filter:contrast(1.1)}
+  .hero-overlay{position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center;padding:48px 24px;text-align:center}
+  .hero-overlay::before{content:'';position:absolute;inset:0;background:linear-gradient(160deg,rgba(10,10,15,.9) 0%,rgba(26,26,46,.6) 50%,rgba(194,54,22,.15) 100%)}
+  .hero-content{position:relative;z-index:1;max-width:700px}
+  .hero-badge{display:inline-block;font-family:var(--mono);font-size:11px;letter-spacing:3px;color:var(--brand-light);border:1px solid rgba(194,54,22,.4);padding:6px 16px;margin-bottom:24px;text-transform:uppercase}
+  .hero h1{font-family:var(--serif);font-size:clamp(1.8rem,5vw,3rem);font-weight:700;line-height:1.35;margin-bottom:20px;letter-spacing:-.02em}
+  .hero h1 em{font-style:normal;color:var(--brand-light);display:inline}
+  .hero .sub{color:rgba(255,255,255,.55);font-size:14px;max-width:520px;margin:0 auto;line-height:1.9;font-weight:300}
+  .hero-meta{display:flex;gap:32px;justify-content:center;margin-top:32px;font-size:12px;color:rgba(255,255,255,.4);font-family:var(--mono);letter-spacing:1px}
+
+  /* ── Container ── */
+  .container{max-width:780px;margin:0 auto;padding:0 28px}
+
+  /* ── Table of Contents ── */
+  .toc{padding:64px 0 48px}
+  .toc-header{display:flex;align-items:baseline;gap:16px;margin-bottom:36px}
+  .toc-header h2{font-family:var(--serif);font-size:22px;font-weight:700;letter-spacing:.05em}
+  .toc-header .line{flex:1;height:1px;background:var(--border)}
+  .toc-grid{display:grid;gap:2px}
+  .toc-item{display:flex;gap:20px;padding:18px 20px;background:var(--bg-chapter);border-left:3px solid transparent;transition:all .25s}
+  .toc-item:hover{border-left-color:var(--brand);background:var(--bg-warm)}
+  .toc-item a{text-decoration:none;color:inherit;display:flex;gap:20px;width:100%}
+  .toc-item .num{color:var(--brand);font-weight:700;font-size:13px;font-family:var(--mono);min-width:28px;padding-top:2px}
+  .toc-item .title{font-weight:600;font-size:14px;margin-bottom:3px;color:var(--text)}
+  .toc-item .desc{color:var(--muted);font-size:12.5px;line-height:1.7}
+
+  /* ── Chapter ── */
+  .chapter{padding:72px 0 56px;position:relative}
+  .chapter + .chapter{border-top:1px solid var(--border)}
+  .chapter-head{display:flex;align-items:flex-start;gap:20px;margin-bottom:36px}
+  .chapter-number{font-family:var(--display);font-size:72px;font-weight:700;color:var(--brand);opacity:.15;line-height:.85;min-width:80px;letter-spacing:-.04em}
+  .chapter-title-wrap{padding-top:12px}
+  .chapter-label{font-family:var(--mono);font-size:11px;letter-spacing:3px;color:var(--brand);margin-bottom:6px;text-transform:uppercase;font-weight:500}
+  .chapter h2{font-family:var(--serif);font-size:clamp(1.3rem,3vw,1.7rem);font-weight:700;line-height:1.4;color:var(--dark-warm);letter-spacing:.02em}
+  .chapter-img{width:100%;border-radius:8px;margin:28px 0;box-shadow:0 8px 40px rgba(0,0,0,.06);border:1px solid rgba(0,0,0,.04)}
+  .chapter p{margin-bottom:18px;font-size:15px;color:var(--text);font-weight:400}
+  .chapter strong{font-weight:600;color:var(--dark-warm)}
+  .chapter h3{font-family:var(--serif);font-size:18px;font-weight:600;color:var(--dark-warm);margin:36px 0 16px;padding-bottom:10px;border-bottom:1px solid var(--border)}
+  .chapter h4{font-size:15px;font-weight:600;color:var(--dark-warm);margin:28px 0 12px}
+  .chapter ul,.chapter ol{margin:14px 0 18px 24px;font-size:15px;color:var(--text)}
+  .chapter ul li,.chapter ol li{margin-bottom:10px;line-height:1.8}
+
+  /* ── Highlight Box ── */
+  .highlight{background:linear-gradient(135deg,#fff8f6,#fff5f0);border-left:4px solid var(--brand);padding:20px 24px;margin:24px 0;border-radius:0 8px 8px 0}
+  .highlight p{margin:0!important;font-size:14px;font-weight:500;color:var(--dark-warm);line-height:1.8}
+
+  /* ── Key Takeaway ── */
+  .takeaway{background:var(--dark-warm);color:#fff;padding:28px 32px;margin:36px 0;border-radius:10px;position:relative;overflow:hidden}
+  .takeaway::before{content:'KEY TAKEAWAY';position:absolute;top:0;right:0;background:var(--brand);color:#fff;font-family:var(--mono);font-size:10px;letter-spacing:2px;padding:6px 16px;border-radius:0 10px 0 8px;font-weight:500}
+  .takeaway p{margin:0;font-size:15px;line-height:1.9;color:rgba(255,255,255,.9);font-weight:400}
+  .takeaway strong{color:#fff;font-weight:600}
+
+  /* ── Note/Warning ── */
+  .note{background:#fefce8;border:1px solid #fde68a;padding:16px 20px;border-radius:8px;font-size:13.5px;color:#92400e;margin:20px 0;line-height:1.8}
+  .note::before{content:'📌 ';font-size:14px}
+  .warning{background:#fef2f2;border:1px solid #fecaca;padding:16px 20px;border-radius:8px;font-size:13.5px;color:#991b1b;margin:20px 0;line-height:1.8}
+  .warning::before{content:'⚠️ ';font-size:14px}
+
+  /* ── Tables ── */
+  .guide-table{width:100%;border-collapse:collapse;margin:24px 0;font-size:13.5px;border-radius:8px;overflow:hidden;box-shadow:0 2px 12px rgba(0,0,0,.04)}
+  .guide-table thead{background:var(--dark-warm);color:#fff}
+  .guide-table th{padding:14px 16px;text-align:left;font-weight:600;font-size:12.5px;letter-spacing:.5px}
+  .guide-table td{padding:12px 16px;border-bottom:1px solid var(--border);vertical-align:top;line-height:1.7}
+  .guide-table tbody tr:nth-child(even){background:var(--bg-warm)}
+  .guide-table tbody tr:hover{background:#f0eee8}
+  .guide-table .center{text-align:center}
+  .guide-table .right{text-align:right}
+  .guide-table .em{color:var(--brand);font-weight:600}
+  .guide-table .tag{display:inline-block;font-size:11px;padding:2px 8px;border-radius:3px;font-weight:600}
+  .tag-required{background:#fef2f2;color:#dc2626}
+  .tag-optional{background:#f0fdf4;color:#16a34a}
+  .tag-na{background:#f5f5f5;color:#888}
+
+  /* ── Flowchart ── */
+  .flowchart{margin:32px 0;padding:32px 24px;background:var(--bg-warm);border-radius:12px;border:1px solid var(--border)}
+  .flow-title{font-family:var(--serif);font-size:16px;font-weight:600;text-align:center;margin-bottom:28px;color:var(--dark-warm)}
+  .flow-node{background:#fff;border:2px solid var(--border);border-radius:10px;padding:16px 20px;text-align:center;font-size:14px;font-weight:500;position:relative;max-width:360px;margin:0 auto 0}
+  .flow-node.start{background:var(--dark-warm);color:#fff;border-color:var(--dark-warm)}
+  .flow-node.result-a{background:#fef2f2;border-color:var(--brand);color:var(--brand)}
+  .flow-node.result-b{background:#f0fdf4;border-color:#16a34a;color:#16a34a}
+  .flow-arrow{text-align:center;padding:8px 0;color:var(--muted);font-size:20px;line-height:1}
+  .flow-branch{display:flex;gap:20px;justify-content:center;margin-top:0}
+  .flow-branch-item{flex:1;max-width:240px;text-align:center}
+  .flow-branch-label{font-size:13px;font-weight:600;margin-bottom:8px;padding:4px 0}
+  .flow-branch-label.yes{color:var(--brand)}
+  .flow-branch-label.no{color:#16a34a}
+
+  /* ── Checklist ── */
+  .checklist{margin:20px 0;padding:0;list-style:none}
+  .checklist li{display:flex;align-items:flex-start;gap:12px;padding:12px 16px;border-bottom:1px solid var(--border);font-size:14px;line-height:1.7}
+  .checklist li:last-child{border-bottom:none}
+  .checklist .check{width:20px;height:20px;border:2px solid var(--border);border-radius:4px;flex-shrink:0;margin-top:2px;cursor:pointer;display:flex;align-items:center;justify-content:center;transition:all .2s}
+  .checklist .check.checked{background:var(--brand);border-color:var(--brand);color:#fff}
+  .checklist .check.checked::after{content:'✓';font-size:12px;font-weight:700}
+
+  /* ── Timeline ── */
+  .timeline{margin:28px 0;padding:0;list-style:none;position:relative}
+  .timeline::before{content:'';position:absolute;left:14px;top:8px;bottom:8px;width:2px;background:var(--border)}
+  .timeline li{display:flex;gap:20px;padding:16px 0;position:relative}
+  .timeline .dot{width:30px;height:30px;border-radius:50%;background:var(--bg-chapter);border:3px solid var(--brand);flex-shrink:0;z-index:1;display:flex;align-items:center;justify-content:center;font-family:var(--mono);font-size:11px;font-weight:700;color:var(--brand)}
+  .timeline .content{padding-top:4px}
+  .timeline .week{font-family:var(--mono);font-size:12px;color:var(--brand);font-weight:600;margin-bottom:4px;letter-spacing:1px}
+  .timeline .task{font-size:14px;font-weight:500;color:var(--dark-warm);margin-bottom:4px}
+  .timeline .detail{font-size:13px;color:var(--muted);line-height:1.7}
+
+  /* ── Comparison ── */
+  .compare-grid{display:grid;grid-template-columns:1fr 1fr;gap:20px;margin:24px 0}
+  .compare-card{padding:24px;border-radius:10px;border:1px solid var(--border)}
+  .compare-card.pro{background:#f0fdf4;border-color:#bbf7d0}
+  .compare-card.con{background:#fef2f2;border-color:#fecaca}
+  .compare-card h4{font-size:14px;font-weight:700;margin-bottom:12px}
+  .compare-card ul{margin:0;padding-left:18px;font-size:13.5px}
+  .compare-card li{margin-bottom:8px;line-height:1.7}
+  @media(max-width:600px){.compare-grid{grid-template-columns:1fr}}
+
+  /* ── Misconception ── */
+  .misconception{margin:20px 0;padding:20px 24px;background:var(--bg-chapter);border-radius:10px;border:1px solid var(--border)}
+  .misconception .wrong{color:#dc2626;font-weight:600;font-size:14px;margin-bottom:8px}
+  .misconception .wrong::before{content:'✕ '}
+  .misconception .right{color:#16a34a;font-weight:600;font-size:14px;margin-bottom:4px}
+  .misconception .right::before{content:'○ '}
+  .misconception .explain{font-size:13.5px;color:var(--text-light);margin-top:8px;line-height:1.8}
+
+  /* ── Glossary ── */
+  .glossary{margin:24px 0}
+  .glossary-item{display:flex;gap:16px;padding:16px 0;border-bottom:1px solid var(--border)}
+  .glossary-term{font-weight:700;font-size:14px;min-width:140px;color:var(--dark-warm);flex-shrink:0}
+  .glossary-def{font-size:13.5px;color:var(--text-light);line-height:1.8}
+
+  /* ── Author ── */
+  .author-section{padding:56px 0;border-top:1px solid var(--border)}
+  .author-card{display:flex;gap:32px;align-items:flex-start;padding:32px;background:var(--bg-chapter);border-radius:12px;border:1px solid var(--border)}
+  .author-photo{width:120px;height:120px;border-radius:50%;object-fit:cover;flex-shrink:0;border:3px solid var(--border)}
+  .author-info h3{font-family:var(--serif);font-size:18px;font-weight:700;margin-bottom:4px}
+  .author-info .role{font-size:13px;color:var(--muted);margin-bottom:12px;font-family:var(--mono);letter-spacing:1px}
+  .author-info p{font-size:14px;line-height:1.9;color:var(--text-light)}
+  @media(max-width:600px){.author-card{flex-direction:column;align-items:center;text-align:center}.author-photo{width:100px;height:100px}}
+
+  /* ── CTA ── */
+  .cta-section{background:var(--dark);color:#fff;padding:72px 28px;text-align:center;margin-top:48px;position:relative;overflow:hidden}
+  .cta-section::before{content:'';position:absolute;inset:0;background:radial-gradient(circle at 30% 50%,rgba(194,54,22,.12) 0%,transparent 60%)}
+  .cta-section h2{font-family:var(--serif);font-size:clamp(1.4rem,3.5vw,2rem);font-weight:700;margin-bottom:16px;position:relative}
+  .cta-section p{color:rgba(255,255,255,.5);font-size:14px;margin-bottom:36px;max-width:480px;margin-left:auto;margin-right:auto;line-height:1.9;position:relative}
+  .cta-btn{display:inline-block;background:var(--brand);color:#fff;font-weight:600;font-size:14px;padding:16px 48px;text-decoration:none;border-radius:6px;transition:all .3s;position:relative;letter-spacing:.5px}
+  .cta-btn:hover{background:var(--brand-light);transform:translateY(-2px);box-shadow:0 8px 24px rgba(194,54,22,.3)}
+
+  /* ── Footer ── */
+  .footer{text-align:center;padding:40px 28px;color:var(--muted);font-size:12px;line-height:1.8}
+
+  /* ── Term Tag ── */
+  .term{background:var(--cream);padding:2px 8px;border-radius:4px;font-size:13px;font-weight:600;font-family:var(--mono);letter-spacing:.5px}
+
+  /* ── Stat Grid ── */
+  .stat-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin:28px 0}
+  .stat-box{text-align:center;padding:24px 16px;background:var(--bg-chapter);border-radius:10px;border:1px solid var(--border)}
+  .stat-box .num{font-family:var(--display);font-size:36px;font-weight:700;color:var(--brand);line-height:1.1}
+  .stat-box .label{font-size:12px;color:var(--muted);margin-top:6px;letter-spacing:.5px}
+  @media(max-width:500px){.stat-grid{grid-template-columns:1fr}}
+
+  /* ── Print ── */
+  @media print{
+    .header,.pdf-btn,.cta-section,#email-gate{display:none!important}
+    body{background:#fff;font-size:12px;line-height:1.7}
+    .hero-img{height:200px}
+    .chapter{page-break-inside:avoid;padding:36px 0}
+    .chapter-img{max-height:250px}
+    .guide-table{font-size:11px}
+    .takeaway{background:#f5f5f5;color:#000}
+    .takeaway::before{background:#333}
+    .takeaway p,.takeaway strong{color:#000}
+  }
+
+  /* ── Responsive ── */
+  @media(max-width:600px){
+    .container{padding:0 20px}
+    .chapter{padding:48px 0 36px}
+    .chapter-head{flex-direction:column;gap:4px}
+    .chapter-number{font-size:48px;min-width:auto}
+    .hero-img{height:300px}
+    .hero-meta{flex-direction:column;gap:8px}
+    .stat-grid{grid-template-columns:1fr 1fr}
+  }
 </style>
 </head>
 <body>
@@ -74,225 +253,801 @@
     <span class="mark">AI</span>
     <span class="name">ARCHI-CIRCLE</span>
   </a>
-  <button class="pdf-btn" onclick="window.print()">PDF保存</button>
+  <button class="pdf-btn" onclick="window.print()">PDF SAVE</button>
 </div>
 
 <div class="hero">
   <img class="hero-img" src="images/hero.png" alt="">
   <div class="hero-overlay">
-    <h1>2025年4月施行 建築基準法改正<br><em>完全対応ガイド</em></h1>
-    <p class="sub">「何が変わったの？」「何をすればいいの？」<br>この2つの疑問に、できるだけ分かりやすくお答えします。</p>
+    <div class="hero-content">
+      <div class="hero-badge">FREE GUIDE — 2025.04</div>
+      <h1>2025年4月施行<br>建築基準法改正<br><em>完全対応ガイド</em></h1>
+      <p class="sub">4号特例縮小と省エネ適合義務化で、設計実務はどう変わるのか。<br>何が必要で、何から始めればいいのか。6章で徹底解説します。</p>
+      <div class="hero-meta">
+        <span>CHAPTERS: 06</span>
+        <span>AUTHOR: 櫻本 聖成</span>
+        <span>UPDATED: 2025.04</span>
+      </div>
+    </div>
   </div>
 </div>
 
 <div class="container">
 
+  <!-- ==================== TOC ==================== -->
   <div class="toc">
-    <h2>このガイドでわかること</h2>
-    <div class="toc-item"><span class="num">01</span><div><div class="title">そもそも何が変わった？（4号特例の縮小）</div><div class="desc">今まで不要だった書類が、なぜ必要になったのか</div></div></div>
-    <div class="toc-item"><span class="num">02</span><div><div class="title">新しく必要になる書類は？（省エネ適合義務化）</div><div class="desc">確認申請で何を出せばいいのか、一覧で整理</div></div></div>
-    <div class="toc-item"><span class="num">03</span><div><div class="title">外注するといくらかかる？</div><div class="desc">構造計算・省エネ計算の一般的な外注費用の目安</div></div></div>
-    <div class="toc-item"><span class="num">04</span><div><div class="title">AIツールで何ができる？</div><div class="desc">省エネ計算・構造計算をAIで効率化する方法</div></div></div>
-    <div class="toc-item"><span class="num">05</span><div><div class="title">外注 vs 内製化、どっちがいい？</div><div class="desc">事務所の規模別に考える、現実的な選択肢</div></div></div>
-    <div class="toc-item"><span class="num">06</span><div><div class="title">まず何から始めればいい？</div><div class="desc">今日からできる準備のチェックリスト</div></div></div>
+    <div class="toc-header">
+      <h2>目次</h2>
+      <div class="line"></div>
+    </div>
+    <div class="toc-grid">
+      <div class="toc-item"><a href="#ch1"><span class="num">01</span><div><div class="title">そもそも何が変わった？ — 4号特例の縮小</div><div class="desc">旧4号→新2号・新3号の分類変更、該当判定フローチャート、よくある誤解</div></div></a></div>
+      <div class="toc-item"><a href="#ch2"><span class="num">02</span><div><div class="title">新しく必要になる書類 — 省エネ適合義務化</div><div class="desc">構造関係図書・省エネ関係図書の完全チェックリスト、提出フロー</div></div></a></div>
+      <div class="toc-item"><a href="#ch3"><span class="num">03</span><div><div class="title">外注するといくらかかる？ — コスト試算</div><div class="desc">計算種別ごとの単価表、年間棟数別シミュレーション、隠れコスト</div></div></a></div>
+      <div class="toc-item"><a href="#ch4"><span class="num">04</span><div><div class="title">AIツールで何ができる？ — 効率化の実際</div><div class="desc">省エネ計算・構造計算ツール比較、従来フローとの時間比較</div></div></a></div>
+      <div class="toc-item"><a href="#ch5"><span class="num">05</span><div><div class="title">外注 vs 内製化 — 事務所規模別の最適解</div><div class="desc">判断マトリクス、損益分岐分析、3年コスト比較</div></div></a></div>
+      <div class="toc-item"><a href="#ch6"><span class="num">06</span><div><div class="title">まず何から始めればいい？ — 30日行動計画</div><div class="desc">週ごとのアクションプラン、即実行チェックリスト、よくある失敗</div></div></a></div>
+    </div>
   </div>
 
-  <!-- Chapter 1 -->
-  <div class="chapter">
-    <div class="chapter-num">CHAPTER 01</div>
-    <h2>そもそも何が変わった？</h2>
-    <img class="chapter-img" src="images/ch01.png" alt="建築基準法改正のイメージ">
+  <!-- ==================== CHAPTER 01 ==================== -->
+  <div class="chapter" id="ch1">
+    <div class="chapter-head">
+      <div class="chapter-number">01</div>
+      <div class="chapter-title-wrap">
+        <div class="chapter-label">Chapter 01</div>
+        <h2>そもそも何が変わった？<br>— 4号特例の縮小</h2>
+      </div>
+    </div>
+    <img class="chapter-img" src="images/ch01.png" alt="建築基準法改正">
 
-    <p>2025年4月、建築基準法が改正されました。一番大きな変更は<strong>「4号特例の縮小」</strong>です。</p>
+    <p>2025年4月1日、建築基準法が改正施行されました。住宅設計の実務に最も影響が大きいのは<strong>「4号特例の縮小」</strong>です。この章では、何がどう変わったのかを正確に整理します。</p>
 
-    <p>これまで、木造2階建て以下の住宅（旧4号建築物）は、確認申請の際に<strong>構造関係の図書を提出しなくてOK</strong>でした。いわゆる「4号特例」です。</p>
+    <h3>「4号特例」とは何だったのか</h3>
+    <p>建築基準法第6条の4に基づき、建築士が設計した一定規模以下の建築物（旧4号建築物）については、建築確認の際に<strong>構造関係規定の審査が省略</strong>されていました。具体的には、確認申請時に構造計算書や構造図の提出が不要でした。</p>
+    <p>この制度は1983年の法改正で導入され、約40年間にわたって運用されてきました。木造2階建て住宅の大多数がこの特例の対象であり、設計事務所にとっては「当たり前」の制度でした。</p>
 
-    <p>この特例の範囲が縮小され、以下のように変わりました：</p>
+    <h3>何が、どう変わったのか</h3>
+    <p>2025年4月の改正で、旧来の「4号建築物」という分類が廃止され、<strong>新2号・新3号</strong>に再編されました。</p>
 
+    <table class="guide-table">
+      <thead>
+        <tr><th style="width:25%">分類</th><th style="width:40%">対象</th><th style="width:35%">審査省略</th></tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><strong>旧4号</strong><br><span style="font-size:12px;color:var(--muted)">改正前</span></td>
+          <td>木造2階建て以下、延べ面積500m²以下、高さ13m以下、軒高9m以下</td>
+          <td>構造審査省略 ✓</td>
+        </tr>
+        <tr>
+          <td class="em"><strong>新2号</strong><br><span style="font-size:12px;color:var(--brand)">改正後</span></td>
+          <td><strong>構造を問わず</strong>、2階建て以上 または 延べ面積200m²超</td>
+          <td><span class="tag tag-required">審査省略なし</span><br>構造図書・省エネ図書の提出必須</td>
+        </tr>
+        <tr>
+          <td><strong>新3号</strong><br><span style="font-size:12px;color:#16a34a">改正後</span></td>
+          <td>平屋 かつ 延べ面積200m²以下</td>
+          <td><span class="tag tag-optional">従来通り省略可</span><br>ただし省エネ基準適合は義務</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <div class="highlight">
+      <p>最大のポイント：「木造2階建て住宅」のほぼ全てが新2号に該当し、<strong>構造関係図書と省エネ関係図書の提出が必須</strong>になりました。これは構造に関係なく（木造・鉄骨・RC問わず）適用されます。</p>
+    </div>
+
+    <h3>根拠条文</h3>
+    <p>主な関連法令は以下の通りです：</p>
     <ul>
-      <li><strong>新2号建築物</strong>（構造問わず、2階建て以上または延べ面積200m<sup>2</sup>超）<br>→ <span style="color:var(--brand);font-weight:700">構造図書・省エネ図書の提出が必須に</span></li>
-      <li><strong>新3号建築物</strong>（平屋かつ200m<sup>2</sup>以下）<br>→ 引き続き審査省略OK（ただし省エネ基準への適合自体は義務）</li>
+      <li><strong>法第6条第1項</strong> — 建築確認申請の対象建築物の分類を規定</li>
+      <li><strong>法第6条の4</strong> — 審査省略（特例）の適用範囲を規定</li>
+      <li><strong>令第10条</strong> — 確認の特例を受ける建築物の基準を規定</li>
+      <li><strong>法第28条の2（改正省エネ法）</strong> — 省エネ基準への適合義務を規定</li>
     </ul>
 
-    <div class="highlight"><p>簡単に言うと：木造2階建ての住宅を設計するなら、今までより書類が増えます。</p></div>
+    <h3>自分の建物はどれに該当する？</h3>
+    <div class="flowchart">
+      <div class="flow-title">建築物分類フローチャート（2025年4月〜）</div>
+      <div class="flow-node start">新築の住宅を設計する</div>
+      <div class="flow-arrow">↓</div>
+      <div class="flow-node">2階建て以上 or 延べ面積200m²超？</div>
+      <div class="flow-arrow" style="display:flex;justify-content:center;gap:100px">
+        <span>↙</span><span>↘</span>
+      </div>
+      <div class="flow-branch">
+        <div class="flow-branch-item">
+          <div class="flow-branch-label yes">YES</div>
+          <div class="flow-node result-a"><strong>新2号</strong><br><span style="font-size:12px">構造図書+省エネ図書<br>提出必須</span></div>
+        </div>
+        <div class="flow-branch-item">
+          <div class="flow-branch-label no">NO（平屋＋200m²以下）</div>
+          <div class="flow-node result-b"><strong>新3号</strong><br><span style="font-size:12px">審査省略OK<br>ただし省エネ適合は義務</span></div>
+        </div>
+      </div>
+    </div>
+
+    <h3>よくある誤解</h3>
+
+    <div class="misconception">
+      <div class="wrong">「木造だけが対象でしょ？」</div>
+      <div class="right">構造を問わず、階数と面積で判定されます</div>
+      <div class="explain">新2号・新3号の判定は「構造問わず」です。木造に限らず、鉄骨造やRC造でも2階建て以上・200m²超であれば新2号に該当します。</div>
+    </div>
+
+    <div class="misconception">
+      <div class="wrong">「全ての住宅で許容応力度計算が必要になった」</div>
+      <div class="right">300m²以下の住宅では仕様規定（壁量計算等）で対応可能</div>
+      <div class="explain">新2号に該当しても、延べ面積300m²以下の住宅であれば仕様規定（壁量計算・N値計算等）による対応が可能です。許容応力度計算は、300m²超や耐震等級3取得時などに必要になります。</div>
+    </div>
+
+    <div class="misconception">
+      <div class="wrong">「省エネ計算は届出だけでいいんでしょ？」</div>
+      <div class="right">2025年4月以降は「適合義務」です。届出ではありません</div>
+      <div class="explain">以前の「届出義務」から「適合義務」に強化されました。確認申請時に省エネ基準への適合を示す書類の提出が必要です。基準を満たさないと確認済証が下りません。</div>
+    </div>
+
+    <div class="takeaway">
+      <p><strong>この章のまとめ：</strong>木造2階建て住宅のほぼ全てが新2号に該当し、構造図書と省エネ図書の提出が必須になりました。「木造だけ」「許容応力度計算が必須」などの誤解が広まっていますが、正確に法令を理解することが対応の第一歩です。</p>
+    </div>
   </div>
 
-  <!-- Chapter 2 -->
-  <div class="chapter">
-    <div class="chapter-num">CHAPTER 02</div>
-    <h2>新しく必要になる書類は？</h2>
-    <img class="chapter-img" src="images/ch02.png" alt="必要書類のイメージ">
+  <!-- ==================== CHAPTER 02 ==================== -->
+  <div class="chapter" id="ch2">
+    <div class="chapter-head">
+      <div class="chapter-number">02</div>
+      <div class="chapter-title-wrap">
+        <div class="chapter-label">Chapter 02</div>
+        <h2>新しく必要になる書類<br>— 省エネ適合義務化</h2>
+      </div>
+    </div>
+    <img class="chapter-img" src="images/ch02.png" alt="必要書類">
 
-    <p>改正省エネ法により、原則として<strong>全ての新築建築物</strong>に省エネ基準への適合が義務付けられました。</p>
+    <p>新2号建築物の確認申請では、これまで不要だった書類が一気に増えます。「何を、いつ、どの順番で準備すればいいのか」を整理します。</p>
 
-    <p>新2号建築物の確認申請で提出が必要になる主な書類：</p>
+    <h3>提出が必要になる書類一覧</h3>
+    <p>以下は、新2号建築物（木造2階建て住宅の典型例）で必要になる書類の全体像です。</p>
 
-    <ul>
-      <li><strong>構造関係</strong>：壁量計算書、構造図、構造詳細図（300m<sup>2</sup>以下の住宅は仕様規定で対応可能）</li>
-      <li><strong>省エネ関係</strong>：
-        <ul>
-          <li>外皮性能計算書（<span class="term">UA値</span> = 壁や窓からの熱の逃げやすさ）</li>
-          <li>一次エネルギー消費量計算書（冷暖房・給湯・照明などの年間エネルギー量）</li>
-          <li>使用建材・設備の仕様書</li>
-        </ul>
+    <table class="guide-table">
+      <thead>
+        <tr><th>カテゴリ</th><th>書類名</th><th>新2号</th><th>新3号</th></tr>
+      </thead>
+      <tbody>
+        <tr><td rowspan="5"><strong>構造関係</strong></td><td>壁量計算書</td><td><span class="tag tag-required">必須</span></td><td><span class="tag tag-na">不要</span></td></tr>
+        <tr><td>柱の小径の確認</td><td><span class="tag tag-required">必須</span></td><td><span class="tag tag-na">不要</span></td></tr>
+        <tr><td>N値計算書（柱の引抜き力）</td><td><span class="tag tag-required">必須</span></td><td><span class="tag tag-na">不要</span></td></tr>
+        <tr><td>構造図（伏図・軸組図等）</td><td><span class="tag tag-required">必須</span></td><td><span class="tag tag-na">不要</span></td></tr>
+        <tr><td>構造詳細図（接合部等）</td><td><span class="tag tag-required">必須</span></td><td><span class="tag tag-na">不要</span></td></tr>
+        <tr><td rowspan="4"><strong>省エネ関係</strong></td><td>外皮性能計算書（UA値）</td><td><span class="tag tag-required">必須</span></td><td><span class="tag tag-optional">適合のみ</span></td></tr>
+        <tr><td>一次エネルギー消費量計算書</td><td><span class="tag tag-required">必須</span></td><td><span class="tag tag-optional">適合のみ</span></td></tr>
+        <tr><td>使用建材・設備仕様書</td><td><span class="tag tag-required">必須</span></td><td><span class="tag tag-optional">適合のみ</span></td></tr>
+        <tr><td>省エネ基準適合判定通知書</td><td><span class="tag tag-required">必須</span></td><td><span class="tag tag-na">不要</span></td></tr>
+        <tr><td rowspan="2"><strong>従来通り</strong></td><td>建築計画概要書</td><td><span class="tag tag-required">必須</span></td><td><span class="tag tag-required">必須</span></td></tr>
+        <tr><td>設計図書一式（意匠図等）</td><td><span class="tag tag-required">必須</span></td><td><span class="tag tag-required">必須</span></td></tr>
+      </tbody>
+    </table>
+
+    <div class="note">新3号の「適合のみ」は、省エネ基準への適合自体は義務ですが、確認申請時の図書提出は不要という意味です。ただし、建築士が省エネ基準適合の確認を行った記録は保管が必要です。</div>
+
+    <h3>構造関係図書の詳細</h3>
+    <p>300m²以下の住宅で仕様規定を選択した場合に必要な図書：</p>
+
+    <h4>壁量計算書</h4>
+    <p>各階・各方向ごとの必要壁量と存在壁量を算出します。地震力と風圧力それぞれについて検討が必要です。2025年4月の改正で、<strong>必要壁量の算定式が変更</strong>されています。新しい係数を使用してください。</p>
+
+    <h4>柱の小径の確認</h4>
+    <p>柱の断面寸法が構造計算基準を満たしているかを確認します。通常は105mm角以上ですが、階高や支持条件によって要求値が異なります。</p>
+
+    <h4>N値計算書</h4>
+    <p>柱の引抜き力を算出し、必要な接合部の仕様（金物の種類）を決定します。柱ごとにN値を算出し、対応する接合方法を明示する必要があります。</p>
+
+    <h3>省エネ関係図書の詳細</h3>
+
+    <h4>外皮性能計算書（UA値）</h4>
+    <p><span class="term">UA値</span>（外皮平均熱貫流率）は、建物の断熱性能を示す指標です。地域区分ごとに基準値が定められており、それ以下であることを示す計算書が必要です。</p>
+
+    <table class="guide-table">
+      <thead><tr><th>地域区分</th><th>基準UA値</th><th>代表的な地域</th></tr></thead>
+      <tbody>
+        <tr><td>1地域</td><td>0.46</td><td>旭川、北見</td></tr>
+        <tr><td>2地域</td><td>0.46</td><td>札幌、帯広</td></tr>
+        <tr><td>3地域</td><td>0.56</td><td>盛岡、秋田</td></tr>
+        <tr><td>4地域</td><td>0.75</td><td>仙台、長野</td></tr>
+        <tr><td>5地域</td><td>0.87</td><td>つくば、新潟</td></tr>
+        <tr><td>6地域</td><td>0.87</td><td>東京、大阪、福岡</td></tr>
+        <tr><td>7地域</td><td>0.87</td><td>宮崎、鹿児島</td></tr>
+        <tr><td>8地域</td><td>—</td><td>沖縄（UA値基準なし）</td></tr>
+      </tbody>
+    </table>
+
+    <h4>一次エネルギー消費量計算書</h4>
+    <p>暖房・冷房・換気・照明・給湯の各設備について、年間の一次エネルギー消費量を算出します。<strong>設計一次エネルギー消費量 ≦ 基準一次エネルギー消費量</strong> となることを示す必要があります。</p>
+
+    <h3>提出フロー</h3>
+    <ul class="timeline">
+      <li>
+        <div class="dot">1</div>
+        <div class="content">
+          <div class="week">基本設計段階</div>
+          <div class="task">断熱仕様・設備仕様の決定</div>
+          <div class="detail">UA値・一次エネルギー消費量の概算を行い、基準適合の見通しを立てる</div>
+        </div>
+      </li>
+      <li>
+        <div class="dot">2</div>
+        <div class="content">
+          <div class="week">実施設計段階</div>
+          <div class="task">省エネ計算書・構造計算書の作成</div>
+          <div class="detail">壁量計算、N値計算、外皮計算、一次エネルギー計算を実施。計算書と図面を整合させる</div>
+        </div>
+      </li>
+      <li>
+        <div class="dot">3</div>
+        <div class="content">
+          <div class="week">申請準備</div>
+          <div class="task">図書の整理・チェック</div>
+          <div class="detail">計算書と設計図の整合性を最終確認。漏れがないかチェックリストで確認する</div>
+        </div>
+      </li>
+      <li>
+        <div class="dot">4</div>
+        <div class="content">
+          <div class="week">確認申請</div>
+          <div class="task">構造図書＋省エネ図書を添えて提出</div>
+          <div class="detail">審査期間は従来より長くなる可能性あり。余裕を持ったスケジュールを推奨</div>
+        </div>
       </li>
     </ul>
 
-    <div class="highlight"><p>これまで不要だった書類が一気に増えるため、設計フローの見直しが必要です。</p></div>
+    <div class="warning">審査期間の長期化に注意：審査対象が増えるため、従来より確認済証の発行に時間がかかるケースが報告されています。工程に余裕を持たせてください。</div>
 
-    <div class="note">新3号建築物（平屋・200m<sup>2</sup>以下）は図書の提出は不要ですが、省エネ基準への適合自体は義務です。届出は不要でも、断熱等級4以上・一次エネルギー消費量等級4以上を満たす設計にする必要があります。</div>
+    <div class="takeaway">
+      <p><strong>この章のまとめ：</strong>新2号では構造関係5種＋省エネ関係4種の図書提出が必須です。設計フロー全体を見直し、基本設計段階から省エネ・構造を意識した計画が求められます。</p>
+    </div>
   </div>
 
-  <!-- Chapter 3 -->
-  <div class="chapter">
-    <div class="chapter-num">CHAPTER 03</div>
-    <h2>外注するといくらかかる？</h2>
-    <img class="chapter-img" src="images/ch03.png" alt="コストのイメージ">
+  <!-- ==================== CHAPTER 03 ==================== -->
+  <div class="chapter" id="ch3">
+    <div class="chapter-head">
+      <div class="chapter-number">03</div>
+      <div class="chapter-title-wrap">
+        <div class="chapter-label">Chapter 03</div>
+        <h2>外注するといくらかかる？<br>— コスト試算</h2>
+      </div>
+    </div>
+    <img class="chapter-img" src="images/ch03.png" alt="コスト試算">
 
-    <p>構造計算・省エネ計算を外注する場合の<strong>一般的な費用の目安</strong>です（規模や地域で異なります）：</p>
+    <p>法改正で新たに必要になる計算業務。外注した場合にどのくらいのコストがかかるのか、計算種別ごとに整理し、年間棟数に応じたシミュレーションを行います。</p>
 
-    <p><strong>典型的な木造2階建て住宅（300m<sup>2</sup>以下）の場合：</strong></p>
+    <h3>計算種別ごとの単価目安</h3>
+
+    <table class="guide-table">
+      <thead>
+        <tr><th>計算種別</th><th>概要</th><th>外注費目安（1棟）</th><th>対象</th></tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><strong>仕様規定チェック</strong><br><span style="font-size:11px;color:var(--muted)">壁量計算・N値計算等</span></td>
+          <td>壁量、柱小径、N値等を仕様規定で確認</td>
+          <td class="em">5〜15万円</td>
+          <td>300m²以下の住宅（大半）</td>
+        </tr>
+        <tr>
+          <td><strong>許容応力度計算</strong><br><span style="font-size:11px;color:var(--muted)">ルート1相当</span></td>
+          <td>部材ごとの応力と許容応力度を検討</td>
+          <td class="em">15〜50万円</td>
+          <td>300m²超、耐震等級3取得時等</td>
+        </tr>
+        <tr>
+          <td><strong>省エネ計算</strong><br><span style="font-size:11px;color:var(--muted)">外皮＋一次エネ</span></td>
+          <td>UA値計算＋一次エネルギー消費量計算</td>
+          <td class="em">5〜15万円</td>
+          <td>全新築（義務化）</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <div class="note">上記はあくまで一般的な目安です。実際の費用は建物の複雑さ、外注先の価格設定、地域によって大きく変動します。</div>
+
+    <h3>年間コストシミュレーション</h3>
+    <p>典型的な木造2階建て住宅（300m²以下）を設計する場合、仕様規定＋省エネ計算の合計で<strong>1棟あたり10〜30万円</strong>の外注費が発生します。年間棟数で計算すると：</p>
+
+    <table class="guide-table">
+      <thead>
+        <tr><th>年間棟数</th><th>仕様規定<br><span style="font-size:11px;font-weight:400">@10万円</span></th><th>省エネ計算<br><span style="font-size:11px;font-weight:400">@10万円</span></th><th>合計（年間）</th><th>3年累計</th></tr>
+      </thead>
+      <tbody>
+        <tr><td><strong>5棟</strong></td><td>50万円</td><td>50万円</td><td class="em">100万円</td><td>300万円</td></tr>
+        <tr><td><strong>10棟</strong></td><td>100万円</td><td>100万円</td><td class="em">200万円</td><td>600万円</td></tr>
+        <tr><td><strong>20棟</strong></td><td>200万円</td><td>200万円</td><td class="em">400万円</td><td>1,200万円</td></tr>
+        <tr><td><strong>30棟</strong></td><td>300万円</td><td>300万円</td><td class="em">600万円</td><td>1,800万円</td></tr>
+      </tbody>
+    </table>
+
+    <div class="stat-grid">
+      <div class="stat-box"><div class="num">10〜30</div><div class="label">万円 / 棟</div></div>
+      <div class="stat-box"><div class="num">200〜600</div><div class="label">万円 / 年（10棟の場合）</div></div>
+      <div class="stat-box"><div class="num">600〜1,800</div><div class="label">万円 / 3年累計</div></div>
+    </div>
+
+    <h3>見落としがちな「隠れコスト」</h3>
+    <p>単価表に出てこないコストも意識する必要があります：</p>
+
     <ul>
-      <li><strong>仕様規定チェック（壁量計算等）</strong>：1棟あたり 5〜15万円程度</li>
-      <li><strong>省エネ計算（外皮＋一次エネ）</strong>：1棟あたり 5〜15万円程度</li>
+      <li><strong>設計変更コスト</strong> — 仕様変更のたびに再計算が必要。外注の場合、変更1回につき追加費用（3〜10万円程度）が発生するケースが多い</li>
+      <li><strong>待ち時間コスト</strong> — 外注先の繁忙期には1〜3週間の納期。その間、工程が止まる可能性がある</li>
+      <li><strong>手戻りコスト</strong> — 計算結果によって意匠設計の変更が必要になった場合、設計のやり直しが発生</li>
+      <li><strong>コミュニケーションコスト</strong> — 外注先とのやり取り（仕様確認、修正依頼等）にかかる時間と人件費</li>
+      <li><strong>品質管理コスト</strong> — 外注先の計算書の内容を確認・検証する手間</li>
     </ul>
 
-    <p>合わせると、<strong>1棟あたり10〜30万円</strong>の追加コストが発生する可能性があります。</p>
+    <div class="highlight">
+      <p>隠れコストまで含めると、外注の実質コストは単価表の1.3〜1.5倍になることも。設計変更が多い物件ほど、この差は大きくなります。</p>
+    </div>
 
-    <div class="note">300m<sup>2</sup>超や耐震等級の取得には許容応力度計算（15〜50万円/棟）が必要です。典型的な2階建て住宅では仕様規定（壁量計算）での対応が可能です。</div>
-
-    <p>年間の設計棟数で考えると：</p>
+    <h3>コストを顧客に転嫁できるか？</h3>
+    <p>外注費を設計料に上乗せする方法もありますが、現実的には：</p>
     <ul>
-      <li>年間10棟 → 追加コスト 100〜300万円/年</li>
-      <li>年間30棟 → 追加コスト 300〜900万円/年</li>
+      <li>競合他社がツール導入でコスト吸収している場合、価格競争力を失う</li>
+      <li>施主にとっては「法律で義務化されたから値上げ」は受け入れにくい</li>
+      <li>設計料への転嫁は一部にとどめ、内製化でコストを抑える事務所が増加傾向</li>
     </ul>
 
-    <div class="highlight"><p>棟数が多い事務所ほど、内製化（自分たちで計算する）のメリットが大きくなります。</p></div>
-
-    <div class="note">上記はあくまで一般的な目安です。実際の費用は構造の複雑さ、外注先、地域によって大きく異なります。</div>
+    <div class="takeaway">
+      <p><strong>この章のまとめ：</strong>年間10棟設計する事務所で、外注費は年間200万円前後。隠れコストを含めると実質的な負担はさらに大きくなります。棟数が多いほど内製化のメリットが明確です。</p>
+    </div>
   </div>
 
-  <!-- Chapter 4 -->
-  <div class="chapter">
-    <div class="chapter-num">CHAPTER 04</div>
-    <h2>AIツールで何ができる？</h2>
-    <img class="chapter-img" src="images/ch04.png" alt="AIツールのイメージ">
+  <!-- ==================== CHAPTER 04 ==================== -->
+  <div class="chapter" id="ch4">
+    <div class="chapter-head">
+      <div class="chapter-number">04</div>
+      <div class="chapter-title-wrap">
+        <div class="chapter-label">Chapter 04</div>
+        <h2>AIツールで何ができる？<br>— 効率化の実際</h2>
+      </div>
+    </div>
+    <img class="chapter-img" src="images/ch04.png" alt="AIツール">
 
-    <p>法改正で増えた計算業務を効率化するために、AIや計算ツールを活用する方法があります。</p>
+    <p>法改正で増えた計算業務を効率化するために、AIや計算ツールを活用するアプローチが注目されています。この章では、ツールで具体的に何ができるのかを整理します。</p>
 
-    <p><strong>省エネ計算ツールでできること：</strong></p>
+    <h3>省エネ計算ツールでできること</h3>
+
+    <table class="guide-table">
+      <thead>
+        <tr><th>機能</th><th>従来の方法</th><th>ツール活用</th></tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><strong>UA値計算</strong></td>
+          <td>Excelシートに断熱仕様を手入力、部位別に計算</td>
+          <td>建物仕様を入力→自動計算、基準適合を即判定</td>
+        </tr>
+        <tr>
+          <td><strong>一次エネルギー計算</strong></td>
+          <td>WEBプログラム（国の計算サイト）に手入力</td>
+          <td>設備仕様入力→自動計算、結果をレポート出力</td>
+        </tr>
+        <tr>
+          <td><strong>仕様比較</strong></td>
+          <td>仕様を変えるたびに全て再計算</td>
+          <td>パラメータ変更→瞬時に結果を比較</td>
+        </tr>
+        <tr>
+          <td><strong>書類作成</strong></td>
+          <td>計算結果を別途書式にまとめ直す</td>
+          <td>確認申請用の書式で自動出力</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <h3>構造計算ツールでできること</h3>
+
+    <table class="guide-table">
+      <thead>
+        <tr><th>機能</th><th>従来の方法</th><th>ツール活用</th></tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><strong>壁量計算</strong></td>
+          <td>手計算またはExcelで必要壁量と存在壁量を比較</td>
+          <td>図面入力→各階・各方向の壁量を自動計算</td>
+        </tr>
+        <tr>
+          <td><strong>N値計算</strong></td>
+          <td>柱ごとにN値を手計算、金物を選定</td>
+          <td>軸組情報から全柱のN値を一括計算、金物を自動選定</td>
+        </tr>
+        <tr>
+          <td><strong>構造図作成</strong></td>
+          <td>CADで伏図・軸組図を手作業で作成</td>
+          <td>計算結果に基づき構造図の下書きを自動生成</td>
+        </tr>
+        <tr>
+          <td><strong>チェック</strong></td>
+          <td>目視と手計算で検算</td>
+          <td>整合性チェック機能でエラーを自動検出</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <h3>時間比較：従来フロー vs ツール活用</h3>
+    <p>典型的な木造2階建て住宅（延べ面積100〜150m²）の場合：</p>
+
+    <table class="guide-table">
+      <thead>
+        <tr><th>作業項目</th><th>従来（手計算/Excel）</th><th>ツール活用</th><th>削減率</th></tr>
+      </thead>
+      <tbody>
+        <tr><td>壁量計算</td><td>3〜5時間</td><td>30分〜1時間</td><td class="em">−70〜80%</td></tr>
+        <tr><td>N値計算</td><td>2〜4時間</td><td>15〜30分</td><td class="em">−80〜90%</td></tr>
+        <tr><td>省エネ計算（UA値）</td><td>4〜8時間</td><td>1〜2時間</td><td class="em">−60〜75%</td></tr>
+        <tr><td>一次エネルギー計算</td><td>2〜4時間</td><td>30分〜1時間</td><td class="em">−70〜80%</td></tr>
+        <tr><td>書類作成・整理</td><td>2〜3時間</td><td>自動出力</td><td class="em">−90%以上</td></tr>
+        <tr style="background:var(--cream);font-weight:600"><td>合計</td><td>13〜24時間</td><td>2.5〜5時間</td><td class="em">−70〜80%</td></tr>
+      </tbody>
+    </table>
+
+    <div class="highlight">
+      <p>ツールを使えば、<strong>1棟あたり10〜20時間の作業時間を削減</strong>できる可能性があります。年間10棟なら100〜200時間、人件費に換算すると相当なコスト削減になります。</p>
+    </div>
+
+    <h3>ツール活用の注意点</h3>
     <ul>
-      <li>建物の仕様を入力するだけで、UA値・一次エネルギー消費量を自動計算</li>
-      <li>確認申請に必要な書式での計算書出力</li>
-      <li>仕様を変えた場合の比較シミュレーション</li>
+      <li><strong>最終判断は設計者の責任</strong> — ツールの計算結果を鵜呑みにせず、建築士として妥当性を確認する</li>
+      <li><strong>入力の正確性</strong> — ツールの精度は入力データに依存する。仕様や寸法の入力ミスに注意</li>
+      <li><strong>法改正への追従</strong> — 2025年4月の改正で壁量の算定式が変わっています。ツールが最新の基準に対応しているか確認</li>
+      <li><strong>習熟期間</strong> — 最初の2〜3棟は慣れるまで時間がかかる。並行して外注も活用しながら徐々に移行するのが現実的</li>
     </ul>
 
-    <p><strong>構造計算ツールでできること：</strong></p>
-    <ul>
-      <li>壁量計算・N値計算の自動化</li>
-      <li>構造図の自動生成補助</li>
-      <li>計算結果のチェック・検証</li>
-    </ul>
-
-    <div class="highlight"><p>ツールを使えば、計算にかかる時間を大幅に短縮できます。ただし、最終的な判断や確認は設計者自身が行う必要があります。</p></div>
+    <div class="takeaway">
+      <p><strong>この章のまとめ：</strong>ツール活用で計算業務は70〜80%効率化できます。ただし「ツール任せ」ではなく、設計者としての判断と検証は不可欠。最初は外注と並行して使い慣れることが大切です。</p>
+    </div>
   </div>
 
-  <!-- Chapter 5 -->
-  <div class="chapter">
-    <div class="chapter-num">CHAPTER 05</div>
-    <h2>外注 vs 内製化、どっちがいい？</h2>
-    <img class="chapter-img" src="images/ch05.png" alt="外注と内製化の比較イメージ">
+  <!-- ==================== CHAPTER 05 ==================== -->
+  <div class="chapter" id="ch5">
+    <div class="chapter-head">
+      <div class="chapter-number">05</div>
+      <div class="chapter-title-wrap">
+        <div class="chapter-label">Chapter 05</div>
+        <h2>外注 vs 内製化<br>— 事務所規模別の最適解</h2>
+      </div>
+    </div>
+    <img class="chapter-img" src="images/ch05.png" alt="外注vs内製化">
 
-    <p>正解は事務所の状況によって異なります。それぞれのメリット・デメリットを整理します。</p>
+    <p>「外注し続けるべきか、自分たちでやるべきか」。これは法改正対応で最も多くの事務所が悩むポイントです。正解は事務所の状況によって異なります。判断の軸を整理します。</p>
 
-    <p><strong>外注のメリット：</strong></p>
-    <ul>
-      <li>すぐに対応できる（学習コストゼロ）</li>
-      <li>専門家に任せる安心感</li>
-    </ul>
+    <h3>外注と内製化の比較</h3>
 
-    <p><strong>外注のデメリット：</strong></p>
-    <ul>
-      <li>1棟ごとにコストがかかる</li>
-      <li>外注先の納期に左右される</li>
-      <li>設計変更のたびに追加費用・待ち時間が発生</li>
-    </ul>
+    <div class="compare-grid">
+      <div class="compare-card pro">
+        <h4>外注のメリット</h4>
+        <ul>
+          <li>すぐに対応開始できる（学習コストなし）</li>
+          <li>専門家に任せる安心感</li>
+          <li>社内リソースを設計に集中できる</li>
+          <li>計算ミスのリスクが低い（実績ある外注先の場合）</li>
+        </ul>
+      </div>
+      <div class="compare-card con">
+        <h4>外注のデメリット</h4>
+        <ul>
+          <li>1棟ごとに10〜30万円のコスト</li>
+          <li>外注先の納期に依存（1〜3週間待ち）</li>
+          <li>設計変更のたびに追加費用と待ち時間</li>
+          <li>社内にノウハウが蓄積されない</li>
+          <li>繁忙期に外注先が受けてくれない場合がある</li>
+        </ul>
+      </div>
+    </div>
 
-    <p><strong>内製化のメリット：</strong></p>
-    <ul>
-      <li>棟数が増えてもコストが大きく増えない</li>
-      <li>設計変更に即座に対応できる</li>
-      <li>社内にノウハウが蓄積される</li>
-    </ul>
+    <div class="compare-grid">
+      <div class="compare-card pro">
+        <h4>内製化のメリット</h4>
+        <ul>
+          <li>棟数が増えてもコストは一定（ツール費用のみ）</li>
+          <li>設計変更に即対応できる</li>
+          <li>社内にノウハウが蓄積される</li>
+          <li>クライアントへの提案力が向上</li>
+          <li>スケジュールのコントロールが容易</li>
+        </ul>
+      </div>
+      <div class="compare-card con">
+        <h4>内製化のデメリット</h4>
+        <ul>
+          <li>ツールの習得に2〜3ヶ月必要</li>
+          <li>最初は計算ミスのリスクがある</li>
+          <li>担当者が辞めた場合のリスク</li>
+          <li>ツール費用（月額または年額）が発生</li>
+        </ul>
+      </div>
+    </div>
 
-    <p><strong>内製化のデメリット：</strong></p>
-    <ul>
-      <li>ツールの習得に時間がかかる</li>
-      <li>最初は計算ミスのリスクがある</li>
-    </ul>
+    <h3>判断マトリクス</h3>
 
-    <div class="highlight"><p>年間5棟以下なら外注でも十分。10棟以上なら内製化を検討する価値があります。</p></div>
+    <table class="guide-table">
+      <thead>
+        <tr><th>年間棟数</th><th>推奨アプローチ</th><th>理由</th></tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><strong>1〜5棟</strong></td>
+          <td>外注メイン</td>
+          <td>内製化のコスト回収に時間がかかる。外注費は年間50〜150万円で収まる</td>
+        </tr>
+        <tr>
+          <td><strong>6〜15棟</strong></td>
+          <td class="em">ハイブリッド推奨</td>
+          <td>省エネ計算は内製化、構造計算は外注。段階的に移行</td>
+        </tr>
+        <tr>
+          <td><strong>16〜30棟</strong></td>
+          <td class="em">内製化推奨</td>
+          <td>外注費が年間300万円超。ツール導入で大幅なコスト削減が可能</td>
+        </tr>
+        <tr>
+          <td><strong>30棟以上</strong></td>
+          <td>内製化必須</td>
+          <td>外注費が事業を圧迫するレベル。内製化は経営戦略として不可欠</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <h3>ハイブリッドアプローチとは</h3>
+    <p>最も現実的なのは、<strong>段階的に内製化を進める「ハイブリッド」</strong>です：</p>
+    <ol>
+      <li><strong>まず省エネ計算を内製化</strong> — 比較的シンプルで習得しやすい。ツールも充実している</li>
+      <li><strong>構造計算は当面外注を継続</strong> — 壁量計算等の仕様規定チェックから徐々に自社対応</li>
+      <li><strong>1年かけて完全内製化へ移行</strong> — 並行稼働期間を設けて、外注結果と自社計算結果を突き合わせ</li>
+    </ol>
+
+    <h3>3年コスト比較</h3>
+    <p>年間15棟の事務所の場合（1棟あたりの外注費を仕様規定10万円＋省エネ10万円＝20万円と仮定）：</p>
+
+    <table class="guide-table">
+      <thead>
+        <tr><th></th><th>1年目</th><th>2年目</th><th>3年目</th><th>3年合計</th></tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><strong>全量外注</strong></td>
+          <td>300万円</td>
+          <td>300万円</td>
+          <td>300万円</td>
+          <td class="em">900万円</td>
+        </tr>
+        <tr>
+          <td><strong>ハイブリッド</strong><br><span style="font-size:11px;color:var(--muted)">1年目は半分外注</span></td>
+          <td>210万円</td>
+          <td>60万円</td>
+          <td>60万円</td>
+          <td class="em">330万円</td>
+        </tr>
+        <tr>
+          <td><strong>初年度から内製化</strong></td>
+          <td>120万円</td>
+          <td>60万円</td>
+          <td>60万円</td>
+          <td class="em">240万円</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <div class="note">「60万円」はツール利用費＋学習にかかる時間の人件費概算です。実際のツール費用は月額5,000円〜数万円程度が一般的です。</div>
+
+    <div class="takeaway">
+      <p><strong>この章のまとめ：</strong>年間6棟以上ならハイブリッドアプローチ、16棟以上なら積極的な内製化が合理的です。省エネ計算から始めて、段階的に移行するのが最も現実的です。3年間で数百万円の差が出ます。</p>
+    </div>
   </div>
 
-  <!-- Chapter 6 -->
-  <div class="chapter">
-    <div class="chapter-num">CHAPTER 06</div>
-    <h2>まず何から始めればいい？</h2>
-    <img class="chapter-img" src="images/ch06.png" alt="ステップのイメージ">
+  <!-- ==================== CHAPTER 06 ==================== -->
+  <div class="chapter" id="ch6">
+    <div class="chapter-head">
+      <div class="chapter-number">06</div>
+      <div class="chapter-title-wrap">
+        <div class="chapter-label">Chapter 06</div>
+        <h2>まず何から始めればいい？<br>— 30日行動計画</h2>
+      </div>
+    </div>
+    <img class="chapter-img" src="images/ch06.png" alt="アクションプラン">
 
-    <p>いきなり全てを変える必要はありません。以下のステップで段階的に進めましょう。</p>
+    <p>ここまで読んで「やらなきゃいけないのはわかった。でも何から？」と思った方へ。具体的な行動計画を示します。</p>
 
-    <p><strong>Step 1：現状を把握する</strong></p>
-    <ul>
-      <li>自社の年間設計棟数のうち、新2号に該当するものは何棟か？</li>
-      <li>構造計算・省エネ計算を現在どう対応しているか？（外注？自社？未対応？）</li>
+    <h3>30日アクションプラン</h3>
+
+    <ul class="timeline">
+      <li>
+        <div class="dot">W1</div>
+        <div class="content">
+          <div class="week">Week 1 — 現状把握</div>
+          <div class="task">自社の影響範囲を正確に把握する</div>
+          <div class="detail">
+            ・過去1年の設計実績を確認し、新2号に該当する物件の割合を算出<br>
+            ・構造計算・省エネ計算の現在の対応方法を整理（外注先、費用、納期）<br>
+            ・管轄の確認検査機関に、具体的な運用方針を問い合わせる
+          </div>
+        </div>
+      </li>
+      <li>
+        <div class="dot">W2</div>
+        <div class="content">
+          <div class="week">Week 2 — 情報収集・比較</div>
+          <div class="task">対応方法の選択肢を比較検討する</div>
+          <div class="detail">
+            ・計算ツールの無料トライアルを複数試す<br>
+            ・外注先の見積もりを取得（複数社比較）<br>
+            ・業界の勉強会・セミナーに参加して最新情報を収集<br>
+            ・同業の事務所が何をしているかヒアリング
+          </div>
+        </div>
+      </li>
+      <li>
+        <div class="dot">W3</div>
+        <div class="content">
+          <div class="week">Week 3 — 実践トライアル</div>
+          <div class="task">実際の物件で1棟やってみる</div>
+          <div class="detail">
+            ・過去物件（竣工済み）のデータを使って省エネ計算を実施<br>
+            ・計算ツールの操作に慣れる<br>
+            ・外注先がある場合は、外注結果と自社計算結果を突き合わせ検証
+          </div>
+        </div>
+      </li>
+      <li>
+        <div class="dot">W4</div>
+        <div class="content">
+          <div class="week">Week 4 — 方針決定</div>
+          <div class="task">自社の対応方針を決定し、体制を整える</div>
+          <div class="detail">
+            ・外注 / ハイブリッド / 内製化の方針を決定<br>
+            ・必要に応じてツール導入・外注先契約<br>
+            ・社内の担当者・フローを決定<br>
+            ・チェックリストとマニュアルを整備
+          </div>
+        </div>
+      </li>
     </ul>
 
-    <p><strong>Step 2：情報を集める</strong></p>
-    <ul>
-      <li>確認検査機関に、自分の地域での運用ルールを確認する</li>
-      <li>計算ツールの無料トライアルを試してみる</li>
+    <h3>今日すぐできること</h3>
+    <ul class="checklist" id="instant-actions">
+      <li><div class="check" onclick="this.classList.toggle('checked')"></div><div>管轄の確認検査機関のWebサイトで、法改正関連の案内を確認する</div></li>
+      <li><div class="check" onclick="this.classList.toggle('checked')"></div><div>直近の設計案件が新2号と新3号のどちらに該当するか判定する</div></li>
+      <li><div class="check" onclick="this.classList.toggle('checked')"></div><div>国土交通省の「省エネ計算支援プログラム」を試してみる</div></li>
+      <li><div class="check" onclick="this.classList.toggle('checked')"></div><div>現在の構造計算・省エネ計算の外注費を年間ベースで集計する</div></li>
+      <li><div class="check" onclick="this.classList.toggle('checked')"></div><div>社内で法改正対応の担当者を決める（兼任でOK）</div></li>
     </ul>
 
-    <p><strong>Step 3：小さく始める</strong></p>
-    <ul>
-      <li>まず1棟、自分で省エネ計算をやってみる</li>
-      <li>外注と並行して進め、結果を比較してみる</li>
+    <h3>準備チェックリスト</h3>
+    <ul class="checklist" id="prep-checklist">
+      <li><div class="check" onclick="this.classList.toggle('checked')"></div><div>新2号・新3号の分類基準を理解した</div></li>
+      <li><div class="check" onclick="this.classList.toggle('checked')"></div><div>必要な提出書類の一覧を確認した</div></li>
+      <li><div class="check" onclick="this.classList.toggle('checked')"></div><div>自社の年間設計棟数と新2号該当率を把握した</div></li>
+      <li><div class="check" onclick="this.classList.toggle('checked')"></div><div>外注費の年間見積もりを算出した</div></li>
+      <li><div class="check" onclick="this.classList.toggle('checked')"></div><div>計算ツールのトライアルを実施した</div></li>
+      <li><div class="check" onclick="this.classList.toggle('checked')"></div><div>外注 / ハイブリッド / 内製化の方針を決定した</div></li>
+      <li><div class="check" onclick="this.classList.toggle('checked')"></div><div>社内の対応フローを文書化した</div></li>
+      <li><div class="check" onclick="this.classList.toggle('checked')"></div><div>管轄の確認検査機関に運用方針を確認した</div></li>
     </ul>
 
-    <p><strong>Step 4：体制を整える</strong></p>
-    <ul>
-      <li>計算フローをマニュアル化する</li>
-      <li>スタッフに共有・研修する</li>
-    </ul>
+    <h3>よくある失敗パターン</h3>
 
-    <div class="highlight"><p>大事なのは「完璧にしてから始める」ではなく「小さく試して慣れる」こと。</p></div>
+    <div class="misconception">
+      <div class="wrong">「まだ着工中の案件で手一杯だから、後でいいや」</div>
+      <div class="right">法改正は既に施行済みです</div>
+      <div class="explain">2025年4月以降の確認申請は全て新基準が適用されます。「後で」ではなく、今進行中の案件で新基準の申請タイミングが来る前に準備が必要です。</div>
+    </div>
+
+    <div class="misconception">
+      <div class="wrong">「ツールを買えばそれだけで大丈夫でしょ」</div>
+      <div class="right">ツールは道具。使いこなすには練習期間が必要です</div>
+      <div class="explain">ツール導入後、最初の2〜3棟は練習として時間がかかります。余裕のあるスケジュールの物件で試すか、外注と並行して進めましょう。</div>
+    </div>
+
+    <div class="misconception">
+      <div class="wrong">「確認検査機関が教えてくれるから大丈夫」</div>
+      <div class="right">検査機関は審査機関であり、設計指導はしません</div>
+      <div class="explain">書類の不備があれば差し戻されますが、「何をどう計算すればいいか」の指導はありません。自分で理解するか、サポート体制のあるツール・コミュニティを活用しましょう。</div>
+    </div>
+
+    <div class="takeaway">
+      <p><strong>この章のまとめ：</strong>大事なのは「完璧にしてから始める」ではなく「小さく試して慣れる」こと。30日で基盤を作り、案件を通じて実力をつけていくのが最も確実なアプローチです。</p>
+    </div>
+  </div>
+
+  <!-- ==================== GLOSSARY ==================== -->
+  <div class="chapter" id="glossary">
+    <div class="chapter-head">
+      <div class="chapter-number">+</div>
+      <div class="chapter-title-wrap">
+        <div class="chapter-label">Appendix</div>
+        <h2>用語集</h2>
+      </div>
+    </div>
+
+    <div class="glossary">
+      <div class="glossary-item">
+        <div class="glossary-term">4号特例</div>
+        <div class="glossary-def">建築基準法第6条の4に基づき、建築士が設計した一定規模以下の建築物について構造関係規定の審査を省略する制度。2025年4月に縮小。</div>
+      </div>
+      <div class="glossary-item">
+        <div class="glossary-term">新2号建築物</div>
+        <div class="glossary-def">2025年4月以降の分類。構造を問わず、2階建て以上または延べ面積200m²超の建築物。構造図書・省エネ図書の提出が必須。</div>
+      </div>
+      <div class="glossary-item">
+        <div class="glossary-term">新3号建築物</div>
+        <div class="glossary-def">2025年4月以降の分類。平屋かつ延べ面積200m²以下の建築物。審査省略は継続されるが、省エネ基準適合自体は義務。</div>
+      </div>
+      <div class="glossary-item">
+        <div class="glossary-term">UA値</div>
+        <div class="glossary-def">外皮平均熱貫流率。建物の断熱性能を示す指標で、値が小さいほど断熱性能が高い。W/(m²·K)で表示。</div>
+      </div>
+      <div class="glossary-item">
+        <div class="glossary-term">一次エネルギー消費量</div>
+        <div class="glossary-def">暖房・冷房・換気・照明・給湯に使われる年間のエネルギー量をMJ/年で表したもの。設計値が基準値以下であることが求められる。</div>
+      </div>
+      <div class="glossary-item">
+        <div class="glossary-term">仕様規定</div>
+        <div class="glossary-def">壁量計算・柱小径の確認・N値計算等により、仕様で構造安全性を確認する方法。300m²以下の住宅で適用可能。許容応力度計算より簡易。</div>
+      </div>
+      <div class="glossary-item">
+        <div class="glossary-term">許容応力度計算</div>
+        <div class="glossary-def">部材ごとに発生する応力度が許容応力度以下であることを確認する構造計算方法。300m²超の建物や耐震等級3取得時などに必要。</div>
+      </div>
+      <div class="glossary-item">
+        <div class="glossary-term">N値計算</div>
+        <div class="glossary-def">柱の引抜き力を算出し、必要な柱脚・柱頭の接合仕様（金物等）を決定する計算方法。</div>
+      </div>
+      <div class="glossary-item">
+        <div class="glossary-term">壁量計算</div>
+        <div class="glossary-def">地震力・風圧力に対して、各階・各方向で必要な耐力壁の量（必要壁量）を算出し、実際の壁量（存在壁量）が上回っていることを確認する計算。</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ==================== AUTHOR ==================== -->
+  <div class="author-section">
+    <div class="chapter-head">
+      <div class="chapter-number"></div>
+      <div class="chapter-title-wrap">
+        <div class="chapter-label">Author</div>
+        <h2>著者について</h2>
+      </div>
+    </div>
+    <div class="author-card">
+      <img class="author-photo" src="/images/profile.jpg" alt="櫻本聖成">
+      <div class="author-info">
+        <h3>櫻本 聖成（Sena Sakuramoto）</h3>
+        <div class="role">ARCHITECT / AI ARCHI-CIRCLE FOUNDER</div>
+        <p>Archi-Prisma Design Works 代表。現役の建築士として設計実務に携わりながら、AIを活用した建築業務の効率化に取り組んでいます。2025年の建築基準法改正を機に、中小設計事務所が無理なく法改正に対応できるよう「AI建築サークル」を設立。省エネ計算ツール「KOKOME」、構造計算ツール「KOUZOU」の開発・運用を行い、月2回の勉強会で実務ノウハウを共有しています。</p>
+      </div>
+    </div>
   </div>
 
 </div>
 
 <div class="cta-section">
-  <h2>もっと詳しく知りたい方へ</h2>
-  <p>AI建築サークルでは、省エネ計算・構造計算のAIツールと月2回の勉強会で法改正対応をサポートしています。</p>
-  <a href="https://ai-archi-circle.archi-prisma.co.jp/#pricing" class="cta-btn">サークル詳細を見る</a>
+  <h2>ツールとコミュニティで、<br>法改正対応を加速する</h2>
+  <p>AI建築サークルでは、省エネ計算・構造計算のAIツール使い放題と月2回の勉強会で、設計事務所の法改正対応をサポートしています。</p>
+  <a href="https://ai-archi-circle.archi-prisma.co.jp/#pricing" class="cta-btn">サークル詳細を見る →</a>
 </div>
 
 <div class="footer">
   <p>AI建築サークル / Archi-Prisma Design Works / 代表: 櫻本聖成</p>
-  <p style="margin-top:8px;font-size:11px;color:#999;">本ガイドは2025年4月施行の建築基準法・省エネ法改正に基づく一般的な情報提供です。<br>具体的な申請手続きについては、管轄の確認検査機関にご確認ください。</p>
+  <p style="margin-top:10px;font-size:11px;color:#999;">本ガイドは2025年4月施行の建築基準法・建築物省エネ法改正に基づく一般的な情報提供です。<br>コスト等の数値はあくまで目安であり、実際の費用は条件により異なります。<br>具体的な申請手続きについては、管轄の確認検査機関にご確認ください。</p>
 </div>
 
 <!-- Email Gate -->
-<div id="email-gate" style="display:none;position:fixed;inset:0;z-index:9999;background:rgba(0,0,0,.7);backdrop-filter:blur(8px);align-items:center;justify-content:center;">
-  <div style="background:#fff;max-width:440px;width:90%;border-radius:16px;padding:40px 32px;text-align:center;box-shadow:0 20px 60px rgba(0,0,0,.3);">
-    <div style="font-size:32px;margin-bottom:12px;">📘</div>
-    <h3 style="font-size:20px;font-weight:800;margin-bottom:8px;color:#1a1a1a;">続きを読むには</h3>
-    <p style="font-size:14px;color:#666;margin-bottom:24px;line-height:1.7;">メールアドレスを登録すると、<br>全6章を無料でお読みいただけます。</p>
+<div id="email-gate" style="display:none;position:fixed;inset:0;z-index:9999;background:rgba(10,10,15,.75);backdrop-filter:blur(12px);align-items:center;justify-content:center;">
+  <div style="background:#fff;max-width:440px;width:90%;border-radius:16px;padding:44px 36px;text-align:center;box-shadow:0 24px 80px rgba(0,0,0,.4);">
+    <div style="width:48px;height:48px;background:var(--brand);border-radius:10px;display:flex;align-items:center;justify-content:center;margin:0 auto 16px;font-size:22px;color:#fff;">📘</div>
+    <h3 style="font-family:var(--serif);font-size:20px;font-weight:700;margin-bottom:8px;color:#1a1a2e;">続きを読むには</h3>
+    <p style="font-size:13.5px;color:#666;margin-bottom:24px;line-height:1.8;">メールアドレスを登録すると、<br>全6章＋用語集を無料でお読みいただけます。</p>
     <form id="gate-form" style="display:flex;flex-direction:column;gap:10px;">
-      <input type="email" id="gate-email" required placeholder="メールアドレス" style="width:100%;padding:12px 16px;border:1px solid #ddd;border-radius:8px;font-size:14px;outline:none;">
-      <button type="submit" style="width:100%;padding:14px;background:#ff3300;color:#fff;font-weight:700;font-size:14px;border:none;border-radius:8px;cursor:pointer;">無料で続きを読む</button>
+      <input type="email" id="gate-email" required placeholder="メールアドレス" style="width:100%;padding:13px 16px;border:1px solid #ddd;border-radius:8px;font-size:14px;outline:none;font-family:var(--sans);transition:border-color .2s" onfocus="this.style.borderColor='var(--brand)'" onblur="this.style.borderColor='#ddd'">
+      <button type="submit" style="width:100%;padding:14px;background:var(--brand);color:#fff;font-weight:600;font-size:14px;border:none;border-radius:8px;cursor:pointer;font-family:var(--sans);letter-spacing:.5px;transition:background .2s" onmouseover="this.style.background='var(--brand-light)'" onmouseout="this.style.background='var(--brand)'">無料で続きを読む</button>
     </form>
-    <p style="font-size:11px;color:#999;margin-top:12px;">※ 登録後、法改正対策の情報を数回お届けします。</p>
+    <p style="font-size:11px;color:#aaa;margin-top:14px;line-height:1.7;">※ 登録後、法改正対策の情報を数回お届けします。<br>いつでも配信停止できます。</p>
   </div>
 </div>
 <script>

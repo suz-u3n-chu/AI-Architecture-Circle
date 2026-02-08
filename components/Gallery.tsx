@@ -8,22 +8,22 @@ const Gallery: React.FC = () => {
   const works = [
     {
       url: "/images/exterior.jpg",
-      title: "AI生成による外観パース",
+      title: "Exterior Perspective",
       span: "md:col-span-2 md:row-span-2"
     },
     {
       url: "/images/interior.jpg",
-      title: "AI生成によるインテリアデザイン",
+      title: "Interior Perspective",
       span: "md:col-span-1 md:row-span-1"
     },
     {
-      url: "/images/meeting.jpg",
-      title: "サークルメンバーとのミーティング風景",
+      url: "/images/diagram.jpg",
+      title: "Concept Diagram",
       span: "md:col-span-1 md:row-span-2"
     },
     {
-      url: "/images/tools.jpg",
-      title: "実務支援ツールの操作画面",
+      url: "/images/proposal.jpg",
+      title: "Proposal Documents",
       span: "md:col-span-1 md:row-span-1"
     },
   ];
