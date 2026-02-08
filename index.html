@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="ja" class="scroll-smooth">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>AI ARCHITECTURE CIRCLE | 実務特化型コミュニティ</title>
+    <meta name="description" content="AI建築サークルは、2025年4月施行の建築基準法改正（4号特例縮小・省エネ適合義務化）に対応するためのAIツールとコミュニティです。省エネ計算・構造計算ツール使い放題、月2回の勉強会、月額¥5,000。">
+    <meta name="keywords" content="建築基準法改正,4号特例縮小,省エネ適合義務化,省エネ計算,構造計算,AI建築,設計事務所">
+    <link rel="canonical" href="https://ai-archi-circle.archi-prisma.co.jp/">
+
+    <!-- OGP -->
+    <meta property="og:title" content="AI建築サークル | AI×建築で法改正に備える">
+    <meta property="og:description" content="省エネ計算・構造計算のAIツール使い放題＋月2回の勉強会。28社以上の設計事務所が参加中。月額¥5,000。">
+    <meta property="og:image" content="https://ai-archi-circle.archi-prisma.co.jp/ogp-main.png">
+    <meta property="og:url" content="https://ai-archi-circle.archi-prisma.co.jp/">
+    <meta property="og:type" content="website">
+    <meta property="og:locale" content="ja_JP">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="AI建築サークル | AI×建築で法改正に備える">
+    <meta name="twitter:description" content="省エネ計算・構造計算のAIツール使い放題。28社以上が参加中。">
+    <meta name="twitter:image" content="https://ai-archi-circle.archi-prisma.co.jp/ogp-main.png">
+
+    <!-- Google Analytics 4 -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-XXXXXXXXXX');
+    </script>
+
+    <!-- Structured Data (JSON-LD) -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Organization",
+      "name": "AI建築サークル",
+      "alternateName": "AI Architecture Circle",
+      "url": "https://ai-archi-circle.archi-prisma.co.jp/",
+      "logo": "https://ai-archi-circle.archi-prisma.co.jp/ogp-main.png",
+      "description": "2025年4月施行の建築基準法改正（4号特例縮小・省エネ適合義務化）に対応するAIツール・コミュニティ",
+      "founder": {
+        "@type": "Person",
+        "name": "櫻本聖成",
+        "jobTitle": "代表"
+      },
+      "memberOf": {
+        "@type": "ProfessionalService",
+        "name": "Archi-Prisma Design Works"
+      },
+      "offers": {
+        "@type": "Offer",
+        "name": "AI建築サークル月額会員",
+        "price": "5000",
+        "priceCurrency": "JPY",
+        "description": "省エネ計算・構造計算AIツール使い放題、月2回のライブ勉強会"
+      }
+    }
+    </script>
+
+    <!-- Favicon -->
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🏛️</text></svg>">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;300;400;500;700;900&family=Zen+Old+Mincho:wght@400;500;600;700;900&display=swap" rel="stylesheet">
+
+    <!-- Tailwind CSS (CDN) -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Tailwind Configuration -->
+    <script>
+      tailwind.config = {
+        darkMode: 'class',
+        theme: {
+          extend: {
+            colors: {
+              bg: {
+                DEFAULT: '#ffffff',
+                paper: '#f8fafc',
+                card: '#ffffff',
+                dark: '#050505',
+              },
+              brand: {
+                DEFAULT: '#ff3300',
+                hover: '#cc2900',
+                light: '#ff5c33',
+                dim: 'rgba(255, 51, 0, 0.05)',
+              },
+            },
+            fontFamily: {
+              sans: ['"Inter"', '"Helvetica Neue"', 'Arial', 'sans-serif'],
+              serif: ['"Zen Old Mincho"', 'serif'],
+              mono: ['"Menlo"', '"Monaco"', '"Consolas"', '"Courier New"', 'monospace'],
+              system: ['"Helvetica Neue"', 'Arial', '"Hiragino Kaku Gothic ProN"', '"Hiragino Sans"', 'Meiryo', 'sans-serif'],
+            },
+            animation: {
+              'fade-in-up': 'fadeInUp 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards',
+              'scroll': 'scroll 40s linear infinite',
+              'pulse-fast': 'pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite',
+              'pulse-slow': 'pulse 6s cubic-bezier(0.4, 0, 0.6, 1) infinite',
+            },
+            keyframes: {
+              fadeInUp: {
+                '0%': { opacity: '0', transform: 'translateY(40px)' },
+                '100%': { opacity: '1', transform: 'translateY(0)' },
+              },
+              scroll: {
+                '0%': { transform: 'translateX(0)' },
+                '100%': { transform: 'translateX(-50%)' },
+              },
+              draw: {
+                'to': { strokeDashoffset: '0' }
+              },
+              movePen: {
+                '0%': { offsetDistance: '0%' },
+                '100%': { offsetDistance: '100%' }
+              }
+            },
+            backgroundImage: {
+              'grid-cad': "linear-gradient(to right, #e5e7eb 1px, transparent 1px), linear-gradient(to bottom, #e5e7eb 1px, transparent 1px)",
+              'noise': "url(\"data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)' opacity='0.4'/%3E%3C/svg%3E\")",
+            }
+          },
+        },
+      };
+    </script>
+    <style>
+      body { 
+        background-color: #ffffff; 
+        color: #18181b; 
+        font-feature-settings: "palt" 1;
+        margin: 0;
+      }
+      
+      .clip-path-slant {
+        clip-path: polygon(10% 0, 100% 0, 100% 100%, 0% 100%);
+      }
+      
+      .clip-path-ticket {
+        clip-path: polygon(
+          0% 0%, 100% 0%, 100% 100%, 0% 100%, 
+          0% 80%, 5% 75%, 0% 70%,
+          0% 30%, 5% 25%, 0% 20%
+        );
+      }
+      /* Loader styles */
+      #initial-loader {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: #ffffff;
+        z-index: 9999;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        transition: opacity 0.5s ease-out, visibility 0.5s;
+      }
+      .spinner {
+        width: 40px;
+        height: 40px;
+        border: 3px solid #f3f4f6;
+        border-top: 3px solid #ff3300;
+        border-radius: 50%;
+        animation: spin 1s linear infinite;
+        margin-bottom: 20px;
+      }
+      .loading-text {
+        font-family: monospace;
+        color: #ff3300;
+        font-size: 12px;
+        letter-spacing: 0.1em;
+        animation: pulse 2s infinite;
+      }
+      @keyframes spin { 0% { transform: rotate(0deg); } 100% { transform: rotate(360deg); } }
+      @keyframes pulse { 0%, 100% { opacity: 1; } 50% { opacity: 0.5; } }
+    </style>
+  <script type="module" crossorigin src="/assets/index-DbWz3in0.js"></script>
+</head>
+<body class="min-h-screen bg-white text-slate-900 selection:bg-brand selection:text-white font-sans overflow-x-hidden">
+    <!-- Initial Loader (managed by App.tsx) -->
+    <div id="initial-loader">
+      <div class="spinner"></div>
+      <div class="loading-text">LOADING SYSTEM...</div>
+    </div>
+
+    <!-- React Root -->
+    <div id="root"></div>
+
+    <!-- SEO fallback content for crawlers that don't execute JS -->
+    <noscript>
+      <div style="max-width:800px;margin:0 auto;padding:40px 20px;font-family:sans-serif;">
+        <h1>AI建築サークル | 実務特化型AIコミュニティ</h1>
+        <p>2025年4月施行の建築基準法改正（4号特例縮小・省エネ適合義務化）に対応するためのAIツールとコミュニティです。</p>
+        <h2>サービス内容</h2>
+        <ul>
+          <li>省エネ計算AIツール「KOKOME」使い放題</li>
+          <li>構造計算AIツール「KOUZOU」使い放題</li>
+          <li>月2回のライブ勉強会（AI×建築実務）</li>
+          <li>会員限定Discordコミュニティ</li>
+          <li>法改正対応テンプレート・マニュアル</li>
+        </ul>
+        <h2>料金</h2>
+        <p>月額¥5,000（税込）/ 学割：月額¥2,000 / 年額¥50,000</p>
+        <h2>4号特例縮小とは</h2>
+        <p>2025年4月から建築確認申請の審査省略制度が大幅縮小。新2号建築物（2階建て以上または延べ面積200㎡超、構造問わず）は構造関係図書・省エネ関係図書の提出が必須に。新3号（平屋かつ200㎡以下）のみ従来通りの審査省略が継続。</p>
+        <h2>省エネ適合義務化</h2>
+        <p>全ての新築住宅・非住宅に省エネ基準への適合が義務化。外皮性能（UA値）と一次エネルギー消費量の計算・適合証明が必要。</p>
+        <h2>無料ガイド</h2>
+        <p><a href="/guide/">2025年4月施行 建築基準法改正 完全対応ガイド（無料）</a></p>
+        <p>代表: 櫻本聖成 / Archi-Prisma Design Works</p>
+      </div>
+    </noscript>
+
+    <!-- Entry Point -->
+</body>
+</html>
