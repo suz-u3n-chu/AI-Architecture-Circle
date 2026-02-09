@@ -83,7 +83,7 @@ const Pricing: React.FC = () => {
                     </ul>
                   </div>
 
-                  <a href="https://stripe-discord-pro-417218426761.asia-northeast1.run.app/" className="w-full group bg-brand text-white py-5 text-lg font-bold flex items-center justify-center gap-4 hover:bg-black transition-colors duration-300 shadow-lg rounded-lg">
+                  <a href="https://stripe-discord-pro-417218426761.asia-northeast1.run.app/?plan=yearly" className="w-full group bg-brand text-white py-5 text-lg font-bold flex items-center justify-center gap-4 hover:bg-black transition-colors duration-300 shadow-lg rounded-lg">
                     <span>年間プランで登録する</span>
                     <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
                   </a>
@@ -113,7 +113,7 @@ const Pricing: React.FC = () => {
                     </ul>
                   </div>
 
-                  <a href="https://stripe-discord-pro-417218426761.asia-northeast1.run.app/" className="w-full group bg-black text-white py-5 text-lg font-bold flex items-center justify-center gap-4 hover:bg-brand transition-colors duration-300 shadow-lg rounded-lg">
+                  <a href="https://stripe-discord-pro-417218426761.asia-northeast1.run.app/?plan=monthly" className="w-full group bg-black text-white py-5 text-lg font-bold flex items-center justify-center gap-4 hover:bg-brand transition-colors duration-300 shadow-lg rounded-lg">
                     <span>メンバー登録する</span>
                     <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
                   </a>
@@ -147,7 +147,7 @@ const Pricing: React.FC = () => {
                     </ul>
                   </div>
 
-                  <a href="https://stripe-discord-pro-417218426761.asia-northeast1.run.app/" className="w-full group bg-slate-700 text-white py-5 text-lg font-bold flex items-center justify-center gap-4 hover:bg-brand transition-colors duration-300 shadow-lg rounded-lg">
+                  <a href="https://stripe-discord-pro-417218426761.asia-northeast1.run.app/?plan=student" className="w-full group bg-slate-700 text-white py-5 text-lg font-bold flex items-center justify-center gap-4 hover:bg-brand transition-colors duration-300 shadow-lg rounded-lg">
                     <span>学生プランで登録する</span>
                     <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
                   </a>
