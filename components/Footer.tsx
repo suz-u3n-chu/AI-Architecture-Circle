@@ -49,10 +49,10 @@ const Footer: React.FC = () => {
           <div className="md:col-span-2">
             <h4 className="text-white font-bold mb-6">法的表記</h4>
             <ul className="space-y-4 text-sm text-slate-400">
-              <li><a href="#" className="hover:text-brand transition-colors">運営会社</a></li>
-              <li><a href="#" className="hover:text-brand transition-colors">利用規約</a></li>
-              <li><a href="#" className="hover:text-brand transition-colors">プライバシーポリシー</a></li>
-              <li><a href="#" className="hover:text-brand transition-colors">特定商取引法に基づく表記</a></li>
+              <li><a href="https://archi-prisma.co.jp" target="_blank" rel="noopener noreferrer" className="hover:text-brand transition-colors">運営会社</a></li>
+              <li><a href="/privacy.html" className="hover:text-brand transition-colors">プライバシーポリシー</a></li>
+              <li><a href="/tokushoho.html" className="hover:text-brand transition-colors">特定商取引法に基づく表記</a></li>
+              <li><a href="https://archi-prisma.co.jp/security-policy" target="_blank" rel="noopener noreferrer" className="hover:text-brand transition-colors">情報セキュリティ方針</a></li>
             </ul>
           </div>
 
