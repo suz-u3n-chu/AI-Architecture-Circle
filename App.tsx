@@ -20,6 +20,7 @@ import Footer from './components/Footer';
 import ToolsMarquee from './components/ToolsMarquee';
 import Roadmap from './components/Roadmap';
 import FreeGuide from './components/FreeGuide';
+import ExitIntent from './components/ExitIntent';
 
 function App() {
   // Ensure the loader is removed when the app mounts
@@ -58,6 +59,7 @@ function App() {
         <FAQ />
       </main>
       <Footer />
+      <ExitIntent />
     </div>
   );
 }

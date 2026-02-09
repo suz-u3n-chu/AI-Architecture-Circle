@@ -1,7 +1,16 @@
-import React from 'react';
-import { Check, Zap, ArrowRight, Video, Download, Laptop, Star, GraduationCap } from 'lucide-react';
+import React, { useEffect, useState } from 'react';
+import { Check, Zap, ArrowRight, Video, Download, Laptop, Star, GraduationCap, Users } from 'lucide-react';
 
 const Pricing: React.FC = () => {
+  const [memberCount, setMemberCount] = useState<number>(28);
+
+  useEffect(() => {
+    fetch('https://stripe-discord-pro-417218426761.asia-northeast1.run.app/api/stats')
+      .then(r => r.json())
+      .then(data => { if (data.members) setMemberCount(data.members); })
+      .catch(() => {});
+  }, []);
+
   return (
     <section id="pricing" className="py-32 bg-white relative overflow-hidden">
       {/* Background Accent */}
@@ -12,6 +21,11 @@ const Pricing: React.FC = () => {
 
           {/* Left: Value Prop */}
           <div className="lg:w-1/2">
+            <div className="inline-flex items-center gap-2 px-4 py-2 bg-slate-100 border border-slate-200 rounded-full mb-6">
+              <Users className="w-4 h-4 text-brand" />
+              <span className="text-sm font-bold text-slate-700">{memberCount}社以上が参加中</span>
+              <span className="w-2 h-2 rounded-full bg-green-500 animate-pulse"></span>
+            </div>
             <h2 className="text-5xl md:text-7xl font-black text-slate-900 mb-8 leading-[1.1]">
               セミナー1回分で<br/>
               <span className="text-brand">すべて手に入る。</span>
