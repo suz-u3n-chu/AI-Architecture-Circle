@@ -10,9 +10,14 @@ const SenaTools: React.FC = () => {
       <div className="container mx-auto px-6 relative z-10">
         <div className="flex flex-col md:flex-row gap-16 items-center mb-20">
           <div className="md:w-1/2">
-            <span className="inline-block py-1 px-3 rounded-full bg-brand/10 border border-brand/20 text-brand text-xs font-bold tracking-widest uppercase mb-6">
-              Exclusive Tools
-            </span>
+            <div className="flex flex-wrap gap-3 mb-6">
+              <span className="inline-block py-1 px-3 rounded-full bg-brand/10 border border-brand/20 text-brand text-xs font-bold tracking-widest uppercase">
+                Exclusive Tools
+              </span>
+              <span className="inline-block py-1 px-3 rounded-full bg-emerald-500/10 border border-emerald-500/20 text-emerald-600 text-xs font-bold tracking-wider">
+                IT導入補助金対象（申請準備中）
+              </span>
+            </div>
             <h2 className="text-4xl md:text-5xl font-bold text-slate-900 mb-6 leading-tight">
               会員限定の<br />
               <span className="text-brand">「武器」</span>を配ります。
