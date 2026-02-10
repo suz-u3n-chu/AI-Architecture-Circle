@@ -284,7 +284,7 @@
       <div class="toc-item"><a href="#ch1"><span class="num">01</span><div><div class="title">そもそも何が変わった？ — 4号特例の縮小</div><div class="desc">旧4号→新2号・新3号の分類変更、該当判定フローチャート、よくある誤解</div></div></a></div>
       <div class="toc-item"><a href="#ch2"><span class="num">02</span><div><div class="title">新しく必要になる書類 — 省エネ適合義務化</div><div class="desc">構造関係図書・省エネ関係図書の完全チェックリスト、提出フロー</div></div></a></div>
       <div class="toc-item"><a href="#ch3"><span class="num">03</span><div><div class="title">外注するといくらかかる？ — コスト試算</div><div class="desc">計算種別ごとの単価表、年間棟数別シミュレーション、隠れコスト</div></div></a></div>
-      <div class="toc-item"><a href="#ch4"><span class="num">04</span><div><div class="title">AIツールで何ができる？ — 効率化の実際</div><div class="desc">省エネ計算・構造計算ツール比較、従来フローとの時間比較</div></div></a></div>
+      <div class="toc-item"><a href="#ch4"><span class="num">04</span><div><div class="title">AIツールで対応コストを劇的に下げる方法</div><div class="desc">KAKOME・KOZOの具体的機能、外注vsAI内製化のコスト比較、ワークフロー改善</div></div></a></div>
       <div class="toc-item"><a href="#ch5"><span class="num">05</span><div><div class="title">外注 vs 内製化 — 事務所規模別の最適解</div><div class="desc">判断マトリクス、損益分岐分析、3年コスト比較</div></div></a></div>
       <div class="toc-item"><a href="#ch6"><span class="num">06</span><div><div class="title">まず何から始めればいい？ — 30日行動計画</div><div class="desc">週ごとのアクションプラン、即実行チェックリスト、よくある失敗</div></div></a></div>
     </div>
@@ -604,59 +604,71 @@
       <div class="chapter-number">04</div>
       <div class="chapter-title-wrap">
         <div class="chapter-label">Chapter 04</div>
-        <h2>AIツールで何ができる？<br>— 効率化の実際</h2>
+        <h2>AIツールで対応コストを<br>劇的に下げる方法</h2>
       </div>
     </div>
     <img class="chapter-img" src="images/ch04.png" alt="AIツール">
 
-    <p>法改正で増えた計算業務を効率化するために、AIや計算ツールを活用するアプローチが注目されています。この章では、ツールで具体的に何ができるのかを整理します。</p>
+    <p>前章で見たとおり、法改正対応を外注すれば年間数百万円のコストがかかります。しかし近年、<strong>AIを活用した建築特化ツール</strong>が登場し、状況は大きく変わりつつあります。この章では、AIツールで具体的に何ができて、どれだけコストを削減できるのかを解説します。</p>
 
-    <h3>省エネ計算ツールでできること</h3>
+    <h3>なぜ「AI」が建築計算を変えるのか</h3>
+    <p>従来の計算ソフトは、基本的に「入力された数値を計算式に当てはめて出力する」ものでした。AIツールはそこからさらに踏み込みます：</p>
+    <ul>
+      <li><strong>図面データからの自動読み取り</strong> — 手入力を大幅に削減。PDFやCADデータから建物情報をAIが抽出</li>
+      <li><strong>整合性の自動チェック</strong> — 入力ミスや図面との矛盾をAIが検出し、修正を提案</li>
+      <li><strong>最適仕様の提案</strong> — 基準ギリギリの仕様ではなく、コストと性能のバランスを考慮した仕様をAIが提案</li>
+      <li><strong>申請書類の自動生成</strong> — 計算結果から確認申請用の書式を自動で整形・出力</li>
+    </ul>
+    <p>これにより、専門知識がなくても法改正対応の計算業務を<strong>自社で完結</strong>できるようになります。</p>
+
+    <h3>省エネ計算：KAKOME（Archi-Prisma開発）</h3>
+    <p>Archi-Prismaが開発した省エネ計算AIツール「KAKOME」は、建築実務者の声をもとに設計されています。</p>
 
     <table class="guide-table">
       <thead>
-        <tr><th>機能</th><th>従来の方法</th><th>ツール活用</th></tr>
+        <tr><th>機能</th><th>従来の方法</th><th>KAKOME（AI活用）</th></tr>
       </thead>
       <tbody>
         <tr>
           <td><strong>UA値計算</strong></td>
           <td>Excelシートに断熱仕様を手入力、部位別に計算</td>
-          <td>建物仕様を入力→自動計算、基準適合を即判定</td>
+          <td>建物仕様を入力→AIが自動計算、基準適合を即判定</td>
         </tr>
         <tr>
           <td><strong>一次エネルギー計算</strong></td>
-          <td>WEBプログラム（国の計算サイト）に手入力</td>
+          <td>国のWEBプログラムに手入力（操作が煩雑）</td>
           <td>設備仕様入力→自動計算、結果をレポート出力</td>
         </tr>
         <tr>
           <td><strong>仕様比較</strong></td>
-          <td>仕様を変えるたびに全て再計算</td>
-          <td>パラメータ変更→瞬時に結果を比較</td>
+          <td>仕様を変えるたびに全て再計算（30分〜1時間）</td>
+          <td>パラメータ変更→瞬時に結果を比較、最適仕様を提案</td>
         </tr>
         <tr>
-          <td><strong>書類作成</strong></td>
-          <td>計算結果を別途書式にまとめ直す</td>
-          <td>確認申請用の書式で自動出力</td>
+          <td><strong>申請書類作成</strong></td>
+          <td>計算結果を別途書式にまとめ直す（1〜2時間）</td>
+          <td>確認申請用PDFをワンクリックで自動出力</td>
         </tr>
       </tbody>
     </table>
 
-    <h3>構造計算ツールでできること</h3>
+    <h3>構造計算：KOZO（Archi-Prisma開発）</h3>
+    <p>構造計算AIツール「KOZO」は、壁量計算・N値計算などの仕様規定チェックを自動化します。</p>
 
     <table class="guide-table">
       <thead>
-        <tr><th>機能</th><th>従来の方法</th><th>ツール活用</th></tr>
+        <tr><th>機能</th><th>従来の方法</th><th>KOZO（AI活用）</th></tr>
       </thead>
       <tbody>
         <tr>
           <td><strong>壁量計算</strong></td>
           <td>手計算またはExcelで必要壁量と存在壁量を比較</td>
-          <td>図面入力→各階・各方向の壁量を自動計算</td>
+          <td>図面データから各階・各方向の壁量をAIが自動計算</td>
         </tr>
         <tr>
           <td><strong>N値計算</strong></td>
           <td>柱ごとにN値を手計算、金物を選定</td>
-          <td>軸組情報から全柱のN値を一括計算、金物を自動選定</td>
+          <td>全柱のN値を一括計算、金物をAIが自動選定</td>
         </tr>
         <tr>
           <td><strong>構造図作成</strong></td>
@@ -664,19 +676,19 @@
           <td>計算結果に基づき構造図の下書きを自動生成</td>
         </tr>
         <tr>
-          <td><strong>チェック</strong></td>
-          <td>目視と手計算で検算</td>
-          <td>整合性チェック機能でエラーを自動検出</td>
+          <td><strong>整合性チェック</strong></td>
+          <td>目視と手計算で検算（見落としリスクあり）</td>
+          <td>AIがエラーを自動検出し、修正箇所を提案</td>
         </tr>
       </tbody>
     </table>
 
-    <h3>時間比較：従来フロー vs ツール活用</h3>
+    <h3>時間比較：従来フロー vs AIツール活用</h3>
     <p>典型的な木造2階建て住宅（延べ面積100〜150m²）の場合：</p>
 
     <table class="guide-table">
       <thead>
-        <tr><th>作業項目</th><th>従来（手計算/Excel）</th><th>ツール活用</th><th>削減率</th></tr>
+        <tr><th>作業項目</th><th>従来（手計算/Excel）</th><th>AIツール活用</th><th>削減率</th></tr>
       </thead>
       <tbody>
         <tr><td>壁量計算</td><td>3〜5時間</td><td>30分〜1時間</td><td class="em">−70〜80%</td></tr>
@@ -688,20 +700,65 @@
       </tbody>
     </table>
 
-    <div class="highlight">
-      <p>ツールを使えば、<strong>1棟あたり10〜20時間の作業時間を削減</strong>できる可能性があります。年間10棟なら100〜200時間、人件費に換算すると相当なコスト削減になります。</p>
+    <h3>コスト比較：外注 vs AIツール内製化</h3>
+    <p>時間だけでなく、金銭的なコストで比較するとAIツールの効果はさらに明確です。年間10棟設計する事務所の場合：</p>
+
+    <table class="guide-table">
+      <thead>
+        <tr><th></th><th>全量外注</th><th>AIツールで内製化</th></tr>
+      </thead>
+      <tbody>
+        <tr><td><strong>構造計算（1棟）</strong></td><td>10〜15万円</td><td class="em">ツール費用に含む</td></tr>
+        <tr><td><strong>省エネ計算（1棟）</strong></td><td>10〜15万円</td><td class="em">ツール費用に含む</td></tr>
+        <tr><td><strong>設計変更時の再計算</strong></td><td>3〜10万円 / 回</td><td class="em">¥0（自分で即修正）</td></tr>
+        <tr><td><strong>待ち時間</strong></td><td>1〜3週間 / 棟</td><td class="em">即日対応可</td></tr>
+        <tr style="background:var(--cream);font-weight:600"><td>年間コスト（10棟）</td><td>200〜300万円</td><td class="em">数万円（ツール利用費のみ）</td></tr>
+      </tbody>
+    </table>
+
+    <div class="stat-grid">
+      <div class="stat-box"><div class="num">90%+</div><div class="label">コスト削減</div></div>
+      <div class="stat-box"><div class="num">70〜80%</div><div class="label">時間削減</div></div>
+      <div class="stat-box"><div class="num">0日</div><div class="label">外注待ち時間</div></div>
     </div>
 
-    <h3>ツール活用の注意点</h3>
+    <div class="highlight">
+      <p>AIツールで内製化すれば、<strong>1棟あたり10〜20時間の作業時間削減</strong>に加え、<strong>外注費を年間200万円以上カット</strong>できる可能性があります。さらに設計変更への即対応が可能になり、工程全体のスピードも上がります。</p>
+    </div>
+
+    <h3>AIツール活用のワークフロー</h3>
+    <p>実際の設計フローにどう組み込むのか、具体的に見てみましょう。</p>
+
+    <h4>従来のワークフロー</h4>
+    <ol>
+      <li>意匠設計を完了させる</li>
+      <li>構造計算・省エネ計算を外注先に依頼（資料まとめに半日）</li>
+      <li>外注先の納期を待つ（1〜3週間）</li>
+      <li>結果を受け取り、NGなら意匠を修正して再依頼（追加費用＋1〜2週間）</li>
+      <li>OKが出たら確認申請へ</li>
+    </ol>
+
+    <h4>AIツール活用のワークフロー</h4>
+    <ol>
+      <li>意匠設計と並行して、KAKOMEで省エネ概算→断熱仕様を早期に確定</li>
+      <li>基本設計の段階でKOZOにデータ投入→構造的な問題を事前に把握</li>
+      <li>実施設計完了後、最終計算をAIツールで実行（数時間で完了）</li>
+      <li>仕様変更があっても自分ですぐに再計算（追加費用¥0）</li>
+      <li>申請書類を自動出力して確認申請へ</li>
+    </ol>
+
+    <div class="note">ポイントは「設計の上流からAIツールを使う」こと。完成してから計算するのではなく、設計しながら同時に検証することで、手戻りを大幅に減らせます。</div>
+
+    <h3>AIツール活用の注意点</h3>
     <ul>
-      <li><strong>最終判断は設計者の責任</strong> — ツールの計算結果を鵜呑みにせず、建築士として妥当性を確認する</li>
-      <li><strong>入力の正確性</strong> — ツールの精度は入力データに依存する。仕様や寸法の入力ミスに注意</li>
+      <li><strong>最終判断は設計者の責任</strong> — AIの計算結果を鵜呑みにせず、建築士として妥当性を確認する</li>
+      <li><strong>入力の正確性</strong> — AIの精度は入力データに依存する。仕様や寸法の入力ミスに注意</li>
       <li><strong>法改正への追従</strong> — 2025年4月の改正で壁量の算定式が変わっています。ツールが最新の基準に対応しているか確認</li>
       <li><strong>習熟期間</strong> — 最初の2〜3棟は慣れるまで時間がかかる。並行して外注も活用しながら徐々に移行するのが現実的</li>
     </ul>
 
     <div class="takeaway">
-      <p><strong>この章のまとめ：</strong>ツール活用で計算業務は70〜80%効率化できます。ただし「ツール任せ」ではなく、設計者としての判断と検証は不可欠。最初は外注と並行して使い慣れることが大切です。</p>
+      <p><strong>この章のまとめ：</strong>KAKOME（省エネ）・KOZO（構造）などのAIツールを活用すれば、計算業務は70〜80%の時間削減、外注費は90%以上のコスト削減が可能です。設計の上流から並行して使うことで手戻りも激減します。ただし「AI任せ」ではなく、設計者としての判断と検証は不可欠です。</p>
     </div>
   </div>
 
@@ -795,11 +852,11 @@
     </table>
 
     <h3>ハイブリッドアプローチとは</h3>
-    <p>最も現実的なのは、<strong>段階的に内製化を進める「ハイブリッド」</strong>です：</p>
+    <p>最も現実的なのは、<strong>段階的に内製化を進める「ハイブリッド」</strong>です。第4章で紹介したKAKOME・KOZOなどのAIツールを活用すれば、専門知識がなくても段階的に移行できます：</p>
     <ol>
-      <li><strong>まず省エネ計算を内製化</strong> — 比較的シンプルで習得しやすい。ツールも充実している</li>
-      <li><strong>構造計算は当面外注を継続</strong> — 壁量計算等の仕様規定チェックから徐々に自社対応</li>
-      <li><strong>1年かけて完全内製化へ移行</strong> — 並行稼働期間を設けて、外注結果と自社計算結果を突き合わせ</li>
+      <li><strong>まず省エネ計算を内製化</strong> — KAKOMEなら比較的シンプルに始められる。基準適合の判定もAIが補助</li>
+      <li><strong>構造計算は当面外注を継続</strong> — KOZOで壁量計算等の仕様規定チェックから徐々に自社対応</li>
+      <li><strong>1年かけて完全内製化へ移行</strong> — 並行稼働期間を設けて、外注結果とAIツールの計算結果を突き合わせ</li>
     </ol>
 
     <h3>3年コスト比較</h3>
@@ -875,9 +932,9 @@
           <div class="week">Week 2 — 情報収集・比較</div>
           <div class="task">対応方法の選択肢を比較検討する</div>
           <div class="detail">
-            ・計算ツールの無料トライアルを複数試す<br>
+            ・KAKOME・KOZOなどAIツールの無料トライアルを試す<br>
             ・外注先の見積もりを取得（複数社比較）<br>
-            ・業界の勉強会・セミナーに参加して最新情報を収集<br>
+            ・AI建築サークルなどの勉強会・セミナーに参加して最新情報を収集<br>
             ・同業の事務所が何をしているかヒアリング
           </div>
         </div>
@@ -888,9 +945,9 @@
           <div class="week">Week 3 — 実践トライアル</div>
           <div class="task">実際の物件で1棟やってみる</div>
           <div class="detail">
-            ・過去物件（竣工済み）のデータを使って省エネ計算を実施<br>
-            ・計算ツールの操作に慣れる<br>
-            ・外注先がある場合は、外注結果と自社計算結果を突き合わせ検証
+            ・過去物件（竣工済み）のデータを使ってKAKOMEで省エネ計算を実施<br>
+            ・KOZOで壁量計算・N値計算を試す<br>
+            ・外注先がある場合は、外注結果とAIツールの計算結果を突き合わせ検証
           </div>
         </div>
       </li>
@@ -1015,11 +1072,11 @@
       </div>
     </div>
     <div class="author-card">
-      <img class="author-photo" src="/images/profile.jpg" alt="櫻本聖成">
+      <img class="author-photo" src="../images/profile.jpg" alt="櫻本聖成">
       <div class="author-info">
         <h3>櫻本 聖成（Sena Sakuramoto）</h3>
         <div class="role">ARCHITECT / AI ARCHI-CIRCLE FOUNDER</div>
-        <p>Archi-Prisma Design Works 代表。現役の建築士として設計実務に携わりながら、AIを活用した建築業務の効率化に取り組んでいます。2025年の建築基準法改正を機に、中小設計事務所が無理なく法改正に対応できるよう「AI建築サークル」を設立。省エネ計算ツール「KAKOME」、構造計算ツール「KOZO」の開発・運用を行い、月2回の勉強会で実務ノウハウを共有しています。</p>
+        <p>Archi-Prisma Design Works 代表。現役の建築士として設計実務に携わりながら、AIを活用した建築業務の効率化に取り組んでいます。2025年の建築基準法改正を機に、中小設計事務所が無理なく法改正に対応できるよう「AI建築サークル」を設立。Senaを中心とするメンバーで省エネ計算AIツール「KAKOME」、構造計算AIツール「KOZO」などを開発・運用し、月2回の勉強会で実務ノウハウを共有しています。</p>
       </div>
     </div>
   </div>
@@ -1027,8 +1084,8 @@
 </div>
 
 <div class="cta-section">
-  <h2>ツールとコミュニティで、<br>法改正対応を加速する</h2>
-  <p>AI建築サークルでは、省エネ計算・構造計算のAIツール使い放題と月2回の勉強会で、設計事務所の法改正対応をサポートしています。</p>
+  <h2>KAKOME・KOZOとコミュニティで、<br>法改正対応を加速する</h2>
+  <p>AI建築サークルでは、KAKOME（省エネ）・KOZO（構造）などのAIツール使い放題と月2回の勉強会で、設計事務所の法改正対応をサポートしています。</p>
   <a href="https://ai-archi-circle.archi-prisma.co.jp/#pricing" class="cta-btn">サークル詳細を見る →</a>
 </div>
 
