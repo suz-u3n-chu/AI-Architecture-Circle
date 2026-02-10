@@ -73,10 +73,10 @@ const Offerings: React.FC = () => {
                 <Laptop className="w-5 h-5 text-brand" />
               </div>
             </div>
-            <h3 className="text-2xl font-bold text-slate-900 mb-2 group-hover:text-brand transition-colors">Sena開発ツールが使い放題</h3>
+            <h3 className="text-2xl font-bold text-slate-900 mb-2 group-hover:text-brand transition-colors">Archi-Prisma開発ツールが使い放題</h3>
             <p className="text-slate-600 text-sm leading-relaxed">
               {/* Corrected 'class' to 'className' in the span below */}
-              Senaが実務のために開発した独自のAIソフト（図面差分チェック、積算補助、タスク管理連携など）を、メンバーは<span className="text-brand font-bold">追加料金なし</span>で利用できます。ツール代だけで会費以上の価値があります。
+              Senaを中心とするメンバーが実務のために開発した独自のAIソフト（図面差分チェック、積算補助、タスク管理連携など）を、<span className="text-brand font-bold">追加料金なし</span>で利用できます。ツール代だけで会費以上の価値があります。
             </p>
           </div>
 

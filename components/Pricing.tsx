@@ -30,11 +30,88 @@ const Pricing: React.FC = () => {
               セミナー1回分で<br/>
               <span className="text-brand">すべて手に入る。</span>
             </h2>
-            <p className="text-xl text-slate-600 mb-12 leading-relaxed border-l-4 border-brand pl-6 font-medium">
+            <p className="text-xl text-slate-600 mb-8 leading-relaxed border-l-4 border-brand pl-6 font-medium">
               通常、実務レベルのAI講座やセミナーに参加すると3,000円〜100,000円かかります。<br/>
-              このサークルなら、わずか5,000円で<span className="text-black font-bold">セミナーも、ツールも,コミュニティも</span>すべて使い放題。<br/>
+              このサークルなら、わずか5,000円で<span className="text-black font-bold">セミナーも、ツールも、コミュニティも</span>すべて使い放題。<br/>
               圧倒的なコストパフォーマンスです。
             </p>
+
+            {/* Value comparison */}
+            <div className="bg-slate-50 border border-slate-200 rounded-xl overflow-hidden mb-12">
+              {/* Header */}
+              <div className="bg-slate-100 px-6 py-3 border-b border-slate-200">
+                <p className="text-xs font-bold text-slate-500 uppercase tracking-wider">個別で揃えた場合の月額</p>
+              </div>
+
+              {/* Priced items */}
+              <div className="px-6 py-4">
+                <table className="w-full text-sm">
+                  <tbody>
+                    <tr className="border-b border-slate-100">
+                      <td className="py-2.5 text-slate-600">KOZO（構造計算AI・月1棟）</td>
+                      <td className="py-2.5 text-right">
+                        <span className="text-slate-900 font-black text-lg line-through decoration-brand decoration-2">¥40,000</span>
+                        <span className="text-slate-400 text-[10px] ml-1 block">※外注相当額</span>
+                      </td>
+                    </tr>
+                    <tr className="border-b border-slate-100">
+                      <td className="py-2.5 text-slate-600">AI活用セミナー（月1回）</td>
+                      <td className="py-2.5 text-right"><span className="text-slate-800 font-bold line-through decoration-brand/60 decoration-2">¥5,000</span></td>
+                    </tr>
+                    <tr className="border-b border-slate-100">
+                      <td className="py-2.5 text-slate-600">Compass（工程管理・3席）</td>
+                      <td className="py-2.5 text-right"><span className="text-slate-800 font-bold line-through decoration-brand/60 decoration-2">¥3,000</span></td>
+                    </tr>
+                    <tr className="border-b border-slate-100">
+                      <td className="py-2.5 text-slate-600">アーカイブ動画（見放題）</td>
+                      <td className="py-2.5 text-right"><span className="text-slate-800 font-bold line-through decoration-brand/60 decoration-2">¥3,000</span></td>
+                    </tr>
+                    <tr className="border-b border-slate-100">
+                      <td className="py-2.5 text-slate-600">最新の建築・AI情報</td>
+                      <td className="py-2.5 text-right"><span className="text-slate-800 font-bold line-through decoration-brand/60 decoration-2">¥6,000</span></td>
+                    </tr>
+                    <tr className="border-b border-slate-100">
+                      <td className="py-2.5 text-slate-600">SpotPDF（図面差分チェック）</td>
+                      <td className="py-2.5 text-right"><span className="text-slate-800 font-bold line-through decoration-brand/60 decoration-2">¥500</span></td>
+                    </tr>
+                    <tr>
+                      <td className="py-2.5 text-slate-600">主宰 Sena と1on1面談（月3回・各20分）</td>
+                      <td className="py-2.5 text-right"><span className="text-slate-800 font-bold line-through decoration-brand/60 decoration-2">¥15,000</span></td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+
+              {/* Bonus items */}
+              <div className="bg-slate-100/60 px-6 py-3 border-t border-slate-200">
+                <p className="text-[10px] font-bold text-slate-400 uppercase tracking-wider mb-2">さらに含まれるもの</p>
+                <div className="flex flex-wrap gap-2 text-xs">
+                  <span className="bg-white px-2.5 py-1 rounded-full text-slate-600 border border-slate-200">KAKOME（現場写真指示書）</span>
+                  <span className="bg-white px-2.5 py-1 rounded-full text-slate-600 border border-slate-200">会員限定Discord</span>
+                  <span className="bg-white px-2.5 py-1 rounded-full text-slate-500 border border-dashed border-slate-300">AICommander <span className="text-[10px]">開発中</span></span>
+                  <span className="bg-white px-2.5 py-1 rounded-full text-slate-500 border border-dashed border-slate-300">楽々省エネ計算 <span className="text-[10px]">開発中</span></span>
+                  <span className="bg-white px-2.5 py-1 rounded-full text-slate-500 border border-dashed border-slate-300">今後の新ツールすべて</span>
+                </div>
+              </div>
+
+              {/* Total */}
+              <div className="px-6 py-4 border-t-2 border-slate-300 flex justify-between items-center">
+                <span className="text-slate-500 font-bold text-sm">通常合計</span>
+                <span className="text-slate-900 font-black text-4xl line-through decoration-brand decoration-[3px]">¥72,500<span className="text-base font-bold">/月〜</span></span>
+              </div>
+
+              {/* Circle price */}
+              <div className="bg-black px-6 py-5 flex items-center justify-between">
+                <div className="flex items-center gap-2">
+                  <Zap className="w-5 h-5 text-brand" />
+                  <span className="text-white font-bold text-sm">サークルなら</span>
+                </div>
+                <div className="text-right">
+                  <span className="text-brand font-black text-3xl">¥5,000</span>
+                  <span className="text-white/60 text-sm font-bold">/月</span>
+                </div>
+              </div>
+            </div>
 
             <div className="space-y-6">
               <div className="flex items-start gap-4 p-4 bg-slate-50 rounded-xl border border-slate-200">
@@ -92,12 +169,12 @@ const Pricing: React.FC = () => {
                     <ul className="text-sm font-bold text-black space-y-1">
                       <li className="flex items-center gap-2"><Check className="w-3 h-3 text-brand"/> 全セミナーへの無料参加</li>
                       <li className="flex items-center gap-2"><Check className="w-3 h-3 text-brand"/> アーカイブ動画 見放題</li>
-                      <li className="flex items-center gap-2"><Check className="w-3 h-3 text-brand"/> Sena開発ツール 利用権</li>
+                      <li className="flex items-center gap-2"><Check className="w-3 h-3 text-brand"/> Archi-Prisma開発ツール 利用権</li>
                       <li className="flex items-center gap-2"><Check className="w-3 h-3 text-brand"/> Discordコミュニティ参加</li>
                     </ul>
                   </div>
 
-                  <a href="https://stripe-discord-pro-417218426761.asia-northeast1.run.app/?plan=yearly" className="w-full group bg-brand text-white py-5 text-lg font-bold flex items-center justify-center gap-4 hover:bg-black transition-colors duration-300 shadow-lg rounded-lg">
+                  <a href="https://stripe-discord-pro-417218426761.asia-northeast1.run.app/?plan=yearly" onClick={() => window.gtag?.('event', 'checkout_click', { plan: 'yearly' })} className="w-full group bg-brand text-white py-5 text-lg font-bold flex items-center justify-center gap-4 hover:bg-black transition-colors duration-300 shadow-lg rounded-lg">
                     <span>年間プランで登録する</span>
                     <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
                   </a>
@@ -122,12 +199,12 @@ const Pricing: React.FC = () => {
                     <ul className="text-sm font-bold text-black space-y-1">
                       <li className="flex items-center gap-2"><Check className="w-3 h-3 text-brand"/> 全セミナーへの無料参加</li>
                       <li className="flex items-center gap-2"><Check className="w-3 h-3 text-brand"/> アーカイブ動画 見放題</li>
-                      <li className="flex items-center gap-2"><Check className="w-3 h-3 text-brand"/> Sena開発ツール 利用権</li>
+                      <li className="flex items-center gap-2"><Check className="w-3 h-3 text-brand"/> Archi-Prisma開発ツール 利用権</li>
                       <li className="flex items-center gap-2"><Check className="w-3 h-3 text-brand"/> Discordコミュニティ参加</li>
                     </ul>
                   </div>
 
-                  <a href="https://stripe-discord-pro-417218426761.asia-northeast1.run.app/?plan=monthly" className="w-full group bg-black text-white py-5 text-lg font-bold flex items-center justify-center gap-4 hover:bg-brand transition-colors duration-300 shadow-lg rounded-lg">
+                  <a href="https://stripe-discord-pro-417218426761.asia-northeast1.run.app/?plan=monthly" onClick={() => window.gtag?.('event', 'checkout_click', { plan: 'monthly' })} className="w-full group bg-black text-white py-5 text-lg font-bold flex items-center justify-center gap-4 hover:bg-brand transition-colors duration-300 shadow-lg rounded-lg">
                     <span>メンバー登録する</span>
                     <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
                   </a>
@@ -156,12 +233,12 @@ const Pricing: React.FC = () => {
                     <ul className="text-sm font-bold text-black space-y-1">
                       <li className="flex items-center gap-2"><Check className="w-3 h-3 text-brand"/> 全セミナーへの無料参加</li>
                       <li className="flex items-center gap-2"><Check className="w-3 h-3 text-brand"/> アーカイブ動画 見放題</li>
-                      <li className="flex items-center gap-2"><Check className="w-3 h-3 text-brand"/> Sena開発ツール 利用権</li>
+                      <li className="flex items-center gap-2"><Check className="w-3 h-3 text-brand"/> Archi-Prisma開発ツール 利用権</li>
                       <li className="flex items-center gap-2"><Check className="w-3 h-3 text-brand"/> Discordコミュニティ参加</li>
                     </ul>
                   </div>
 
-                  <a href="https://stripe-discord-pro-417218426761.asia-northeast1.run.app/?plan=student" className="w-full group bg-slate-700 text-white py-5 text-lg font-bold flex items-center justify-center gap-4 hover:bg-brand transition-colors duration-300 shadow-lg rounded-lg">
+                  <a href="https://stripe-discord-pro-417218426761.asia-northeast1.run.app/?plan=student" onClick={() => window.gtag?.('event', 'checkout_click', { plan: 'student' })} className="w-full group bg-slate-700 text-white py-5 text-lg font-bold flex items-center justify-center gap-4 hover:bg-brand transition-colors duration-300 shadow-lg rounded-lg">
                     <span>学生プランで登録する</span>
                     <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
                   </a>

@@ -28,11 +28,25 @@ function App() {
     const loader = document.getElementById('initial-loader');
     if (loader) {
       loader.style.opacity = '0';
-      // Allow transition to finish before removing from DOM
-      setTimeout(() => {
-        loader.remove();
-      }, 500);
+      setTimeout(() => { loader.remove(); }, 500);
     }
+  }, []);
+
+  // GA4 scroll depth tracking
+  useEffect(() => {
+    const thresholds = [25, 50, 75, 90];
+    const fired = new Set<number>();
+    const handleScroll = () => {
+      const pct = Math.round((window.scrollY / (document.documentElement.scrollHeight - window.innerHeight)) * 100);
+      for (const t of thresholds) {
+        if (pct >= t && !fired.has(t)) {
+          fired.add(t);
+          window.gtag?.('event', 'scroll_depth', { percent: t });
+        }
+      }
+    };
+    window.addEventListener('scroll', handleScroll, { passive: true });
+    return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
   return (

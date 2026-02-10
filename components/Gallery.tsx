@@ -40,8 +40,8 @@ const Gallery: React.FC = () => {
             </h2>
           </div>
           <p className="text-slate-600 max-w-md text-sm md:text-right">
-            サークルメンバーが生成したスタディ、パース、図面の一例。<br/>
-            実験的な造形から実務レベルの納まり検討まで。
+            AI画像生成セミナーを受講すると、<br/>
+            こうしたパースや空間イメージを自分で作れるようになります。
           </p>
         </div>
 

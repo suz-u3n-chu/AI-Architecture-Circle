@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { FileText, Mail, Building2, User, ArrowRight, CheckCircle, Shield, BookOpen } from 'lucide-react';
+import { FileText, Mail, ArrowRight, CheckCircle, Shield, BookOpen } from 'lucide-react';
 
 const CAPTURE_URL = 'https://stripe-discord-pro-417218426761.asia-northeast1.run.app/api/capture';
 
@@ -14,8 +14,6 @@ const chapters = [
 
 const FreeGuide: React.FC = () => {
   const [email, setEmail] = useState('');
-  const [name, setName] = useState('');
-  const [company, setCompany] = useState('');
   const [status, setStatus] = useState<'idle' | 'sending' | 'done' | 'error'>('idle');
 
   const handleSubmit = async (e: React.FormEvent) => {
@@ -26,9 +24,10 @@ const FreeGuide: React.FC = () => {
       await fetch(CAPTURE_URL, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ email, name, company, source: 'circle_lp' }),
+        body: JSON.stringify({ email, source: 'circle_lp' }),
       }).catch(() => {});
       setStatus('done');
+      window.gtag?.('event', 'guide_download', { source: 'free_guide_section' });
     } catch {
       setStatus('done'); // show success anyway for UX
     }
@@ -132,28 +131,6 @@ const FreeGuide: React.FC = () => {
                     value={email}
                     onChange={e => setEmail(e.target.value)}
                     placeholder="メールアドレス *"
-                    className="w-full bg-white/[0.06] border border-white/10 rounded-xl pl-11 pr-4 py-3.5 text-sm text-white placeholder:text-white/30 focus:outline-none focus:border-brand/50 focus:ring-1 focus:ring-brand/30 transition-colors"
-                  />
-                </div>
-
-                <div className="relative">
-                  <User className="absolute left-4 top-1/2 -translate-y-1/2 w-4 h-4 text-white/30" />
-                  <input
-                    type="text"
-                    value={name}
-                    onChange={e => setName(e.target.value)}
-                    placeholder="お名前"
-                    className="w-full bg-white/[0.06] border border-white/10 rounded-xl pl-11 pr-4 py-3.5 text-sm text-white placeholder:text-white/30 focus:outline-none focus:border-brand/50 focus:ring-1 focus:ring-brand/30 transition-colors"
-                  />
-                </div>
-
-                <div className="relative">
-                  <Building2 className="absolute left-4 top-1/2 -translate-y-1/2 w-4 h-4 text-white/30" />
-                  <input
-                    type="text"
-                    value={company}
-                    onChange={e => setCompany(e.target.value)}
-                    placeholder="会社名"
                     className="w-full bg-white/[0.06] border border-white/10 rounded-xl pl-11 pr-4 py-3.5 text-sm text-white placeholder:text-white/30 focus:outline-none focus:border-brand/50 focus:ring-1 focus:ring-brand/30 transition-colors"
                   />
                 </div>

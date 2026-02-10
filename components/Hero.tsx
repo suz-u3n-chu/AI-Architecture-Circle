@@ -69,16 +69,16 @@ const Hero: React.FC = () => {
            <div className="max-w-3xl text-center mix-blend-difference px-2">
               <p className="text-sm md:text-lg font-serif leading-loose text-white/90 font-medium">
                  <span className="inline-block bg-brand/20 px-3 py-1 mb-3 font-bold text-white backdrop-blur-sm border border-brand/30">中小・個人設計者が「生き残る」ための武器を。</span><br/>
-                 現役建築家Senaが開発した業務ツールと<br/>
+                 Senaを中心とするチームが開発した業務ツールと<br/>
                  実務ノウハウを共有する実践型コミュニティ
               </p>
            </div>
 
            {/* CTA & Scroll */}
            <div className="flex flex-col items-center gap-6">
-              <a href="#pricing" className="group relative px-10 py-4 overflow-hidden border border-white/20 hover:border-brand/50 transition-colors duration-500 bg-black/40 backdrop-blur-md">
+              <a href="#pricing" onClick={() => window.gtag?.('event', 'cta_click', { location: 'hero' })} className="group relative px-10 py-4 overflow-hidden border border-white/20 hover:border-brand/50 transition-colors duration-500 bg-black/40 backdrop-blur-md">
                  <div className="absolute inset-0 w-full h-full bg-white origin-bottom-left transform scale-x-0 group-hover:scale-x-100 transition-transform duration-500 ease-out"></div>
-                 <span className="relative text-xs font-bold tracking-[0.2em] text-white group-hover:text-black transition-colors duration-500">JOIN THE CIRCLE</span>
+                 <span className="relative text-xs font-bold tracking-[0.2em] text-white group-hover:text-black transition-colors duration-500">サークルに参加する</span>
               </a>
               
               <div className="flex flex-col items-center gap-2 opacity-50 cursor-pointer" onClick={() => window.scrollTo({top: window.innerHeight, behavior: 'smooth'})}>

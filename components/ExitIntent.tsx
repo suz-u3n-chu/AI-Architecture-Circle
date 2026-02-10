@@ -41,29 +41,72 @@ const ExitIntent: React.FC = () => {
     }
   };
 
-  // ---- exit-intent handler ----
+  // ---- fire the popup ----
+  const fire = useCallback(() => {
+    if (hasFired.current) return;
+    if (alreadyShown()) return;
+    if (hasScrolledPastGuide()) return;
+
+    hasFired.current = true;
+    markShown();
+    setVisible(true);
+    window.gtag?.('event', 'exit_intent_shown', { trigger: isMobile() ? 'mobile_scroll' : 'desktop_mouseout' });
+  }, []);
+
+  // ---- desktop: mouseout handler ----
   const handleMouseOut = useCallback(
     (e: MouseEvent) => {
-      if (hasFired.current) return;
-      if (isMobile()) return;
-      if (alreadyShown()) return;
       if (e.clientY >= 10) return;
-      if (hasScrolledPastGuide()) return;
-
-      hasFired.current = true;
-      markShown();
-      setVisible(true);
+      fire();
     },
-    [],
+    [fire],
   );
 
   useEffect(() => {
-    // Skip setup entirely on mobile or if already shown this session
-    if (isMobile() || alreadyShown()) return;
+    if (alreadyShown()) return;
 
-    document.addEventListener('mouseout', handleMouseOut);
-    return () => document.removeEventListener('mouseout', handleMouseOut);
-  }, [handleMouseOut]);
+    const mobile = isMobile();
+
+    if (!mobile) {
+      // Desktop: mouse leaving viewport
+      document.addEventListener('mouseout', handleMouseOut);
+      return () => document.removeEventListener('mouseout', handleMouseOut);
+    }
+
+    // Mobile: scroll 50% + 20-second dwell time
+    let dwellTimer: ReturnType<typeof setTimeout> | null = null;
+    let scrolledPast50 = false;
+
+    const handleScroll = () => {
+      const scrollPercent = window.scrollY / (document.documentElement.scrollHeight - window.innerHeight);
+      if (scrollPercent >= 0.5) {
+        scrolledPast50 = true;
+      }
+    };
+
+    dwellTimer = setTimeout(() => {
+      if (scrolledPast50) {
+        fire();
+      } else {
+        // Wait for scroll after dwell time passed
+        const checkScroll = () => {
+          const scrollPercent = window.scrollY / (document.documentElement.scrollHeight - window.innerHeight);
+          if (scrollPercent >= 0.5) {
+            fire();
+            window.removeEventListener('scroll', checkScroll);
+          }
+        };
+        window.addEventListener('scroll', checkScroll, { passive: true });
+      }
+    }, 20000);
+
+    window.addEventListener('scroll', handleScroll, { passive: true });
+
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+      if (dwellTimer) clearTimeout(dwellTimer);
+    };
+  }, [handleMouseOut, fire]);
 
   // ---- close ----
   const close = () => setVisible(false);
@@ -80,6 +123,7 @@ const ExitIntent: React.FC = () => {
         body: JSON.stringify({ email, source: 'exit_intent' }),
       }).catch(() => {});
       setStatus('done');
+      window.gtag?.('event', 'guide_download', { source: 'exit_intent' });
     } catch {
       setStatus('done'); // show success anyway for UX
     }

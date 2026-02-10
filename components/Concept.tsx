@@ -36,7 +36,7 @@ const Concept: React.FC = () => {
                 </div>
                 <h3 className="text-xl font-bold text-slate-900 mb-4">実務ツールの提供</h3>
                 <p className="text-slate-600 text-sm leading-relaxed">
-                    汎用的なAIだけでなく、Senaが開発した「建築実務専用ツール（図面チェック・管理等）」をメンバーに提供。学ぶだけでなく、明日からの業務が物理的に楽になります。
+                    汎用的なAIだけでなく、Senaを中心とするメンバーが開発した「建築実務専用ツール（図面チェック・管理等）」を提供。学ぶだけでなく、明日からの業務が物理的に楽になります。
                 </p>
              </div>
 

@@ -23,12 +23,13 @@ const SenaTools: React.FC = () => {
               <span className="text-brand">「武器」</span>を配ります。
             </h2>
             <p className="text-lg text-slate-600 leading-relaxed font-medium">
-              サークル会員は、Senaが開発した実務特化型アプリケーションを<span className="text-brand font-bold">追加料金なし</span>で利用可能です。
+              サークル会員は、Senaを中心とするメンバーが開発した実務特化型アプリケーションを<span className="text-brand font-bold">追加料金なし</span>で利用可能です。
               <br/>
               市販のSaaSなら月額数万円するレベルの機能を、あなたのデスクトップへ。
             </p>
           </div>
-          <div className="md:w-1/2 flex justify-end">
+          <div className="md:w-1/2 flex flex-col items-end gap-6">
+             <img src="/images/archiprisma_dev logo.png" alt="ARCHI-PRISMA" className="h-10 md:h-14 object-contain" />
              <div className="text-right">
                 <p className="text-9xl font-black text-slate-200 leading-none select-none -mb-10">FREE</p>
                 <p className="text-sm font-bold text-slate-400 uppercase tracking-widest mr-2">Included in Membership</p>
@@ -43,45 +44,9 @@ const SenaTools: React.FC = () => {
             <div className="absolute -inset-4 bg-white border border-slate-200 rounded-3xl shadow-xl transform rotate-1 group-hover:rotate-0 transition-all duration-500"></div>
             <div className="relative bg-white rounded-2xl border border-slate-200 overflow-hidden flex flex-col md:flex-row">
               
-              <div className="md:w-3/5 bg-slate-100 p-8 border-r border-slate-200 relative overflow-hidden">
+              <div className="md:w-3/5 bg-slate-100 p-4 md:p-8 border-r border-slate-200 relative overflow-hidden flex items-center justify-center">
                 <div className="absolute top-0 left-0 w-full h-1 bg-brand"></div>
-                <div className="bg-white rounded-xl shadow-sm border border-slate-200 p-4 space-y-4">
-                  <div className="flex justify-between items-center border-b border-slate-100 pb-2">
-                    <div className="flex gap-2">
-                      <div className="w-3 h-3 rounded-full bg-red-400"></div>
-                      <div className="w-3 h-3 rounded-full bg-yellow-400"></div>
-                      <div className="w-3 h-3 rounded-full bg-green-400"></div>
-                    </div>
-                    <div className="text-xs font-mono text-slate-400">SpotPDF v2.0 - Diff Check</div>
-                  </div>
-                  <div className="flex gap-4 h-48">
-                    <div className="flex-1 bg-slate-50 border border-slate-200 rounded p-2 relative">
-                      <div className="absolute top-2 left-2 text-[10px] text-slate-400">OLD VER</div>
-                      <div className="mt-4 space-y-2">
-                        <div className="h-2 bg-slate-200 w-3/4"></div>
-                        <div className="h-2 bg-slate-200 w-1/2"></div>
-                        <div className="h-20 border-2 border-dashed border-slate-300 rounded"></div>
-                      </div>
-                    </div>
-                    <div className="flex-1 bg-slate-50 border border-slate-200 rounded p-2 relative">
-                       <div className="absolute top-2 left-2 text-[10px] text-brand font-bold">NEW VER</div>
-                       <div className="mt-4 space-y-2">
-                        <div className="h-2 bg-slate-200 w-3/4"></div>
-                        <div className="h-2 bg-brand/20 w-1/2"></div>
-                        <div className="h-20 border-2 border-brand/50 bg-brand/5 rounded relative">
-                            <div className="absolute -top-2 -right-2 bg-brand text-white text-[8px] px-1 rounded">CHANGED</div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                
-                <div className="mt-6 flex justify-center">
-                   <div className="bg-black text-white text-xs font-mono px-4 py-2 rounded shadow-lg flex items-center gap-2">
-                      <ScanEye className="w-4 h-4 text-brand" />
-                      <span>差分検出完了: 3箇所</span>
-                   </div>
-                </div>
+                <img src="/images/spotpdf-gamen.png" alt="SpotPDF 操作画面" className="w-full max-w-md rounded-xl shadow-lg border border-slate-200" />
               </div>
 
               <div className="md:w-2/5 p-10 flex flex-col justify-center">
@@ -175,28 +140,12 @@ const SenaTools: React.FC = () => {
           <div className="relative group">
             <div className="relative bg-white rounded-2xl border border-slate-200 overflow-hidden flex flex-col md:flex-row-reverse shadow-lg hover:shadow-xl transition-all duration-300">
               
-              <div className="md:w-3/5 bg-slate-900 p-8 border-l border-slate-200 relative flex items-center justify-center overflow-hidden">
-                <div className="absolute inset-0 bg-[linear-gradient(to_right,#ffffff05_1px,transparent_1px),linear-gradient(to_bottom,#ffffff05_1px,transparent_1px)] bg-[size:20px_20px]"></div>
-                
-                <div className="w-full max-w-sm bg-slate-800 rounded-xl border border-slate-700 shadow-2xl p-4 relative z-10 transform group-hover:scale-105 transition-transform duration-500">
-                    <div className="flex gap-4 mb-4">
-                      <div className="w-1/4 h-20 bg-slate-700/50 rounded-lg animate-pulse"></div>
-                      <div className="w-3/4 space-y-2">
-                          <div className="h-4 bg-brand/20 rounded w-1/3"></div>
-                          <div className="h-2 bg-slate-600 rounded w-full"></div>
-                          <div className="h-2 bg-slate-600 rounded w-5/6"></div>
-                      </div>
-                    </div>
-                    <div className="grid grid-cols-3 gap-2">
-                      <div className="h-24 bg-slate-700/30 rounded-lg border-t-2 border-blue-500 p-2"><div className="h-1 w-8 bg-slate-600 rounded"></div></div>
-                      <div className="h-24 bg-slate-700/30 rounded-lg border-t-2 border-yellow-500 p-2"><div className="h-1 w-8 bg-slate-600 rounded"></div></div>
-                      <div className="h-24 bg-slate-700/30 rounded-lg border-t-2 border-green-500 p-2"><div className="h-1 w-8 bg-slate-600 rounded"></div></div>
-                    </div>
-                </div>
+              <div className="md:w-3/5 bg-slate-50 p-4 md:p-8 border-l border-slate-200 relative flex items-center justify-center overflow-hidden">
+                <img src="/images/compass-gantt.png" alt="Compass ガントチャート画面" className="w-full rounded-xl shadow-lg border border-slate-200" />
               </div>
 
               <div className="md:w-2/5 p-10 flex flex-col justify-center">
-                <img src="/images/Compass logo.png" alt="COMPASS" className="h-48 mb-6 object-contain" />
+                <img src="/images/Compass logo.png" alt="COMPASS" className="h-[134px] mb-6 object-contain" />
                 <p className="text-sm font-bold text-slate-400 mb-6 uppercase tracking-wider">AI建築プロジェクト管理システム</p>
                 <p className="text-slate-600 leading-relaxed mb-6">
                   建築プロジェクトの「情報・図面・進捗」を1ページに集約。汎用ツールでは管理しきれない建築業務に特化した様々な管理を搭載。迷わないUIで、実務の混乱をゼロにします。
