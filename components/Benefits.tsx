@@ -5,8 +5,8 @@ const Benefits: React.FC = () => {
   const benefits = [
     {
       icon: <Laptop className="w-8 h-8 text-brand" />,
-      title: "ツール・セミナーが追加費用ゼロ",
-      desc: "Archi-Prismaが開発した実務AIソフト（図面チェック等）が使い放題。さらに通常3,000円〜のセミナー参加も、アーカイブ視聴もメンバーは全て無料。これだけで会費以上の価値があります。"
+      title: "Compassも勉強会も追加費用ゼロ",
+      desc: "Compass 3名分が会費に含まれ、Smallプラン相当の機能を利用できます。さらにAI学習コンテンツや勉強会もすべて利用可能。月額5,000円でも十分に元が取れる内容です。"
     },
     {
       icon: <Clock className="w-8 h-8 text-brand" />,

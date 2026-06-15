@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import { Check, Zap, ArrowRight, Video, Download, Laptop, Star, GraduationCap, Users } from 'lucide-react';
+import { Check, Zap, ArrowRight, Video, Laptop, Star, GraduationCap, Users } from 'lucide-react';
 
 const Pricing: React.FC = () => {
   const [memberCount, setMemberCount] = useState<number>(28);
@@ -31,9 +31,9 @@ const Pricing: React.FC = () => {
               <span className="text-brand">すべて手に入る。</span>
             </h2>
             <p className="text-xl text-slate-600 mb-8 leading-relaxed border-l-4 border-brand pl-6 font-medium">
-              通常、実務レベルのAI講座やセミナーに参加すると3,000円〜100,000円かかります。<br/>
-              このサークルなら、わずか5,000円で<span className="text-black font-bold">セミナーも、ツールも、コミュニティも</span>すべて使い放題。<br/>
-              圧倒的なコストパフォーマンスです。
+              Compass Smallプラン相当の3名分と、AI学習コンテンツ・勉強会を個別に揃えると、月額5,000円では収まりません。<br/>
+              このサークルなら、わずか5,000円で<span className="text-black font-bold">Compassも、学習コンテンツも、勉強会も、コミュニティも</span>まとめて利用可能。<br/>
+              必要なものを最小コストで導入できます。
             </p>
 
             {/* Value comparison */}
@@ -48,19 +48,12 @@ const Pricing: React.FC = () => {
                 <table className="w-full text-sm">
                   <tbody>
                     <tr className="border-b border-slate-100">
-                      <td className="py-2.5 text-slate-600">KOZO（構造計算AI・月1棟）</td>
-                      <td className="py-2.5 text-right">
-                        <span className="text-slate-900 font-black text-lg line-through decoration-brand decoration-2">¥40,000</span>
-                        <span className="text-slate-400 text-[10px] ml-1 block">※外注相当額</span>
-                      </td>
-                    </tr>
-                    <tr className="border-b border-slate-100">
-                      <td className="py-2.5 text-slate-600">AI活用セミナー（月1回）</td>
+                      <td className="py-2.5 text-slate-600">AI学習コンテンツ・勉強会</td>
                       <td className="py-2.5 text-right"><span className="text-slate-800 font-bold line-through decoration-brand/60 decoration-2">¥5,000</span></td>
                     </tr>
                     <tr className="border-b border-slate-100">
-                      <td className="py-2.5 text-slate-600">Compass（工程管理・3席）</td>
-                      <td className="py-2.5 text-right"><span className="text-slate-800 font-bold line-through decoration-brand/60 decoration-2">¥3,000</span></td>
+                      <td className="py-2.5 text-slate-600">Compass Small相当（3名分）</td>
+                      <td className="py-2.5 text-right"><span className="text-slate-800 font-bold line-through decoration-brand/60 decoration-2">¥5,000</span></td>
                     </tr>
                     <tr className="border-b border-slate-100">
                       <td className="py-2.5 text-slate-600">アーカイブ動画（見放題）</td>
@@ -97,7 +90,7 @@ const Pricing: React.FC = () => {
               {/* Total */}
               <div className="px-6 py-4 border-t-2 border-slate-300 flex justify-between items-center">
                 <span className="text-slate-500 font-bold text-sm">通常合計</span>
-                <span className="text-slate-900 font-black text-4xl line-through decoration-brand decoration-[3px]">¥72,500<span className="text-base font-bold">/月〜</span></span>
+                <span className="text-slate-900 font-black text-4xl line-through decoration-brand decoration-[3px]">¥34,500<span className="text-base font-bold">/月〜</span></span>
               </div>
 
               {/* Circle price */}
@@ -119,9 +112,9 @@ const Pricing: React.FC = () => {
                   <Video className="w-5 h-5 text-brand" />
                 </div>
                 <div>
-                  <h4 className="font-bold text-slate-900">Sena主催セミナーに無料招待</h4>
+                  <h4 className="font-bold text-slate-900">AI学習コンテンツ・勉強会がすべて利用可</h4>
                   <p className="text-sm text-slate-600">
-                    月額メンバーは追加費用ゼロで参加可能。当日参加できなくても、<span className="font-bold text-black border-b border-brand/30">アーカイブ動画（オンデマンド）が見放題</span>です。
+                    月額メンバーは追加費用ゼロで参加可能。当日参加できなくても、<span className="font-bold text-black border-b border-brand/30">アーカイブ動画を含む学習コンテンツ</span>をいつでも見返せます。
                   </p>
                 </div>
               </div>
@@ -131,9 +124,9 @@ const Pricing: React.FC = () => {
                   <Laptop className="w-5 h-5 text-brand" />
                 </div>
                 <div>
-                  <h4 className="font-bold text-slate-900">開発ツールが使い放題</h4>
+                  <h4 className="font-bold text-slate-900">Compass 3名分がプランに含まれる</h4>
                   <p className="text-sm text-slate-600">
-                    図面差分チェック「SpotPDF」など、実務支援ツールも無料で提供。ツール代だけで元が取れます。
+                    工程管理ツール「Compass」を3名分まで会費内で利用可能。<span className="font-bold text-black border-b border-brand/30">Smallプラン相当の機能</span>をそのまま使えます。
                   </p>
                 </div>
               </div>
@@ -167,8 +160,8 @@ const Pricing: React.FC = () => {
                   <div className="p-4 bg-slate-50 border border-slate-200 rounded-lg">
                     <p className="text-xs font-bold text-slate-500 mb-1 uppercase">含まれるもの</p>
                     <ul className="text-sm font-bold text-black space-y-1">
-                      <li className="flex items-center gap-2"><Check className="w-3 h-3 text-brand"/> 全セミナーへの無料参加</li>
-                      <li className="flex items-center gap-2"><Check className="w-3 h-3 text-brand"/> アーカイブ動画 見放題</li>
+                      <li className="flex items-center gap-2"><Check className="w-3 h-3 text-brand"/> Compass 3名分が付属</li>
+                      <li className="flex items-center gap-2"><Check className="w-3 h-3 text-brand"/> AI学習コンテンツ・勉強会 すべて利用可</li>
                       <li className="flex items-center gap-2"><Check className="w-3 h-3 text-brand"/> Archi-Prisma開発ツール 利用権</li>
                       <li className="flex items-center gap-2"><Check className="w-3 h-3 text-brand"/> Discordコミュニティ参加</li>
                     </ul>
@@ -197,8 +190,8 @@ const Pricing: React.FC = () => {
                   <div className="p-4 bg-slate-50 border border-slate-200 rounded-lg">
                     <p className="text-xs font-bold text-slate-500 mb-1 uppercase">含まれるもの</p>
                     <ul className="text-sm font-bold text-black space-y-1">
-                      <li className="flex items-center gap-2"><Check className="w-3 h-3 text-brand"/> 全セミナーへの無料参加</li>
-                      <li className="flex items-center gap-2"><Check className="w-3 h-3 text-brand"/> アーカイブ動画 見放題</li>
+                      <li className="flex items-center gap-2"><Check className="w-3 h-3 text-brand"/> Compass 3名分が付属</li>
+                      <li className="flex items-center gap-2"><Check className="w-3 h-3 text-brand"/> AI学習コンテンツ・勉強会 すべて利用可</li>
                       <li className="flex items-center gap-2"><Check className="w-3 h-3 text-brand"/> Archi-Prisma開発ツール 利用権</li>
                       <li className="flex items-center gap-2"><Check className="w-3 h-3 text-brand"/> Discordコミュニティ参加</li>
                     </ul>
@@ -231,8 +224,8 @@ const Pricing: React.FC = () => {
                   <div className="p-4 bg-slate-50 border border-slate-200 rounded-lg">
                     <p className="text-xs font-bold text-slate-500 mb-1 uppercase">含まれるもの</p>
                     <ul className="text-sm font-bold text-black space-y-1">
-                      <li className="flex items-center gap-2"><Check className="w-3 h-3 text-brand"/> 全セミナーへの無料参加</li>
-                      <li className="flex items-center gap-2"><Check className="w-3 h-3 text-brand"/> アーカイブ動画 見放題</li>
+                      <li className="flex items-center gap-2"><Check className="w-3 h-3 text-brand"/> Compass 3名分が付属</li>
+                      <li className="flex items-center gap-2"><Check className="w-3 h-3 text-brand"/> AI学習コンテンツ・勉強会 すべて利用可</li>
                       <li className="flex items-center gap-2"><Check className="w-3 h-3 text-brand"/> Archi-Prisma開発ツール 利用権</li>
                       <li className="flex items-center gap-2"><Check className="w-3 h-3 text-brand"/> Discordコミュニティ参加</li>
                     </ul>
