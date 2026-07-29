@@ -19,6 +19,7 @@
 
 html {
   scroll-behavior: smooth;
+  scroll-padding-top: 96px;
 }
 
 body {
@@ -73,6 +74,7 @@ img {
   width: min(100% - 32px, var(--content-width));
   margin-inline: auto;
   padding-block: 88px;
+  scroll-margin-top: 96px;
   border-bottom: 1px solid var(--rule);
 }
 
@@ -292,7 +294,7 @@ img {
   max-width: 9em;
   margin: 0;
   font-family: var(--serif);
-  font-size: clamp(3rem, 14.5vw, 7.7rem);
+  font-size: clamp(3rem, 12.5vw, 6.65rem);
   font-weight: 600;
   letter-spacing: -0.08em;
   line-height: 1.02;
@@ -317,8 +319,8 @@ img {
   max-width: 560px;
   align-items: center;
   gap: 16px;
-  margin: 30px 0 0;
-  padding: 18px 0;
+  margin: 22px 0 0;
+  padding: 13px 0;
   border-top: 1px solid var(--ink);
   border-bottom: 1px solid var(--ink);
 }
@@ -340,11 +342,12 @@ img {
 .hero-actions {
   display: grid;
   gap: 10px;
-  margin-top: 28px;
+  margin-top: 16px;
 }
 
 .hero-artifacts {
   position: relative;
+  width: 100%;
   min-height: 590px;
   max-width: 660px;
   margin-inline: auto;
@@ -1060,7 +1063,7 @@ img {
 }
 
 .price strong {
-  font-size: clamp(2.9rem, 13vw, 4.5rem);
+  font-size: clamp(2.8rem, 5vw, 3.1rem);
   line-height: 1;
 }
 
