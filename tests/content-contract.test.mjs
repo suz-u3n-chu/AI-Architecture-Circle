@@ -45,3 +45,16 @@ test('checkout contract retains the three existing Stripe destinations', () => {
   }
   assert.match(content.plans[2].note, /学校.*メール.*確認/);
 });
+
+test('all people and product proof use reviewed local assets', () => {
+  const assets = [
+    content.hero.portrait,
+    content.hero.artifact,
+    ...content.gathering.images,
+    ...content.services.available.map(service => service.image),
+  ];
+  for (const asset of new Set(assets)) {
+    const file = path.join(projectRoot, 'public', asset.replace(/^\//u, ''));
+    assert.ok(fs.statSync(file).size > 0, `${asset} must exist and be non-empty`);
+  }
+});
