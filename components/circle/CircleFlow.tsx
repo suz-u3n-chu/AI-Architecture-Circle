@@ -1,0 +1,34 @@
+import content from '../../content/circle-content.json';
+
+export default function CircleFlow() {
+  return (
+    <section id="flow" className="flow-section section-frame" aria-labelledby="flow-title">
+      <div className="section-heading">
+        <p className="section-index">CIRCLE METHOD / 01—03</p>
+        <h2 id="flow-title">話して、試して、会社に持ち帰る。</h2>
+        <p>新しい知識を増やすことより、自分と会社が変わるところまで。</p>
+      </div>
+      <svg
+        className="flow-line"
+        viewBox="0 0 1000 180"
+        preserveAspectRatio="none"
+        aria-hidden="true"
+      >
+        <path d="M30 30 C180 10, 250 150, 430 96 S720 26, 970 142" />
+      </svg>
+      <div className="flow-grid">
+        {content.flow.map(item => (
+          <article className="flow-card" key={item.id}>
+            <div className="flow-card-label">
+              <span>{item.label}</span>
+              <strong>{item.number}</strong>
+            </div>
+            <h3>{item.title}</h3>
+            <p>{item.copy}</p>
+            <p className="hand-note">{item.annotation}</p>
+          </article>
+        ))}
+      </div>
+    </section>
+  );
+}
