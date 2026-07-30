@@ -41,11 +41,12 @@ function replaceGenerated(source, marker, generated) {
   ].join('');
 }
 
-const description = [
+const descriptionParts = [
   content.hero.primaryValue,
   content.hero.supportingLine,
   `会員ページと${content.services.available.length}つの建築AIサービスを含む実務サークル。`,
-].join('。');
+].map(part => part.replace(/。+$/u, ''));
+const description = `${descriptionParts.join('。')}。`;
 const title = `${content.hero.headline} | ${content.site.name}`;
 
 const meta = `
