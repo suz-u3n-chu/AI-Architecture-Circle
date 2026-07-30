@@ -76,3 +76,21 @@ test('all people and product proof use reviewed local assets', () => {
     assert.ok(fs.statSync(file).size > 0, `${asset} must exist and be non-empty`);
   }
 });
+
+test('gathering photos publish only privacy-covered assets', () => {
+  assert.deepEqual(content.gathering.images, [
+    '/images/circle/gathering-table-private.webp',
+    '/images/circle/gathering-group-private.webp',
+  ]);
+
+  for (const unredactedAsset of [
+    'public/images/circle/gathering-table.webp',
+    'public/images/circle/gathering-group.webp',
+  ]) {
+    assert.equal(
+      fs.existsSync(path.join(projectRoot, unredactedAsset)),
+      false,
+      `${unredactedAsset} must not be included in the public build`,
+    );
+  }
+});
