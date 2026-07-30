@@ -77,20 +77,22 @@ test('all people and product proof use reviewed local assets', () => {
   }
 });
 
-test('gathering photos publish only privacy-covered assets', () => {
+test('gathering photos publish only consent-reviewed assets', () => {
   assert.deepEqual(content.gathering.images, [
-    '/images/circle/gathering-table-private.webp',
-    '/images/circle/gathering-group-private.webp',
+    '/images/circle/gathering-table-consent.webp',
+    '/images/circle/gathering-group-consent.webp',
   ]);
 
-  for (const unredactedAsset of [
+  for (const excludedAsset of [
     'public/images/circle/gathering-table.webp',
     'public/images/circle/gathering-group.webp',
+    'public/images/circle/gathering-table-private.webp',
+    'public/images/circle/gathering-group-private.webp',
   ]) {
     assert.equal(
-      fs.existsSync(path.join(projectRoot, unredactedAsset)),
+      fs.existsSync(path.join(projectRoot, excludedAsset)),
       false,
-      `${unredactedAsset} must not be included in the public build`,
+      `${excludedAsset} must not be included in the public build`,
     );
   }
 });
