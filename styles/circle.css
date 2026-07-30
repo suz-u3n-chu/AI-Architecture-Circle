@@ -350,6 +350,12 @@ img {
   font-weight: 600;
 }
 
+.hero-supporting-line {
+  display: block;
+  white-space: nowrap;
+  word-break: keep-all;
+}
+
 .hero-description {
   max-width: 610px;
   margin: 20px 0 0;

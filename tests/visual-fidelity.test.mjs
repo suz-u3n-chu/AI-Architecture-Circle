@@ -51,6 +51,10 @@ test('hero keeps the approved two-line headline and exact semantic handwriting',
 
   assert.match(hero, /<span className="hero-title-line">建築AIを、<\/span>/);
   assert.match(hero, /<span className="hero-title-line">ひとりで学ばない。<\/span>/);
+  assert.match(
+    hero,
+    /className="hero-supporting-line"[\s\S]*\{line\}/u,
+  );
   assert.match(hero, /現場から学ぶ。現場で使う。/);
   assert.match(hero, /一緒に、その場で試す。/);
   assert.match(hero, /hand-note-field\.webp/);
@@ -72,6 +76,10 @@ test('hero keeps the approved two-line headline and exact semantic handwriting',
   assert.match(
     css,
     /@media \(min-width: 680px\)[\s\S]*\.hero-value[\s\S]*flex-direction: row;/u,
+  );
+  assert.match(
+    css,
+    /\.hero-supporting-line[\s\S]*display: block;[\s\S]*white-space: nowrap;/u,
   );
 });
 

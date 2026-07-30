@@ -11,6 +11,7 @@ export default function CircleHero() {
   const valuePromise = hero.primaryValue.startsWith(valuePrefix)
     ? hero.primaryValue.slice(valuePrefix.length)
     : hero.primaryValue;
+  const supportingLines = hero.supportingLine.split(/(?=会社に)/u);
 
   return (
     <section className="circle-hero section-frame" aria-labelledby="hero-title">
@@ -29,7 +30,11 @@ export default function CircleHero() {
           <span className="hero-title-line">建築AIを、</span>
           <span className="hero-title-line">ひとりで学ばない。</span>
         </h1>
-        <p className="hero-supporting">{hero.supportingLine}</p>
+        <p className="hero-supporting">
+          {supportingLines.map(line => (
+            <span className="hero-supporting-line" key={line}>{line}</span>
+          ))}
+        </p>
         <p className="hero-description">{hero.description}</p>
         <div className="hero-value">
           <span className="value-count">{valuePrefix}</span>
