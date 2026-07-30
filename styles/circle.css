@@ -360,8 +360,9 @@ img {
 .hero-value {
   display: flex;
   max-width: 560px;
-  align-items: center;
-  gap: 16px;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 8px;
   margin: 22px 0 0;
   padding: 13px 0;
   border-top: 1px solid var(--ink);
@@ -380,6 +381,13 @@ img {
 .hero-value strong {
   font-family: var(--serif);
   font-size: clamp(1.25rem, 4vw, 2.1rem);
+}
+
+.hero-value .value-count,
+.hero-value strong {
+  white-space: nowrap;
+  word-break: keep-all;
+  overflow-wrap: normal;
 }
 
 .hero-actions {
@@ -1282,6 +1290,12 @@ img {
   .section-frame {
     width: min(100% - 64px, var(--content-width));
     padding-block: 112px;
+  }
+
+  .hero-value {
+    flex-direction: row;
+    align-items: center;
+    gap: 16px;
   }
 
   .hero-actions {

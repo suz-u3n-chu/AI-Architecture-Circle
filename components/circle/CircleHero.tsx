@@ -7,6 +7,10 @@ function track(location: string) {
 
 export default function CircleHero() {
   const hero = content.hero;
+  const valuePrefix = `月${hero.interviewsPerMonth}回、`;
+  const valuePromise = hero.primaryValue.startsWith(valuePrefix)
+    ? hero.primaryValue.slice(valuePrefix.length)
+    : hero.primaryValue;
 
   return (
     <section className="circle-hero section-frame" aria-labelledby="hero-title">
@@ -28,8 +32,8 @@ export default function CircleHero() {
         <p className="hero-supporting">{hero.supportingLine}</p>
         <p className="hero-description">{hero.description}</p>
         <div className="hero-value">
-          <span className="value-count">月{hero.interviewsPerMonth}回</span>
-          <strong>{hero.primaryValue.replace(`月${hero.interviewsPerMonth}回、`, '')}</strong>
+          <span className="value-count">{valuePrefix}</span>
+          <strong>{valuePromise}</strong>
         </div>
         <div className="hero-actions">
           <a
