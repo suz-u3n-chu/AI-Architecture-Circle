@@ -74,8 +74,8 @@ test('OPEN STUDIO CSS provides paper tokens and mobile-first breakpoints', () =>
   for (const token of [
     '--paper',
     '--ink',
-    '--cobalt',
-    '--coral',
+    '--blue-pencil',
+    '--vermilion',
     '--rule',
     '--content-width',
   ]) {
