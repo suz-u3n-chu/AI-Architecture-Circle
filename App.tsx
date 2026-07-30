@@ -1,27 +1,17 @@
 
-import React, { useEffect } from 'react';
-import Header from './components/Header';
-import Hero from './components/Hero';
-import Message from './components/Message';
-import Concept from './components/Concept';
-import SenaTools from './components/SenaTools';
-import Problems from './components/Problems';
-import Benefits from './components/Benefits';
-import Offerings from './components/Offerings';
-import Schedule from './components/Schedule';
-import Gallery from './components/Gallery';
-import Target from './components/Target';
-import Voices from './components/Voices';
-import Profile from './components/Profile';
-import Flow from './components/Flow';
-import Pricing from './components/Pricing';
-import FAQ from './components/FAQ';
-import Footer from './components/Footer';
-import ToolsMarquee from './components/ToolsMarquee';
-import Roadmap from './components/Roadmap';
+import { useEffect } from 'react';
+import CircleFaq from './components/circle/CircleFaq';
+import CircleFlow from './components/circle/CircleFlow';
+import CircleFooter from './components/circle/CircleFooter';
+import CircleHeader from './components/circle/CircleHeader';
+import CircleHero from './components/circle/CircleHero';
+import CirclePricing from './components/circle/CirclePricing';
+import GatheringSection from './components/circle/GatheringSection';
+import MemberPreview from './components/circle/MemberPreview';
+import ProofSection from './components/circle/ProofSection';
+import ServiceShelf from './components/circle/ServiceShelf';
 
 function App() {
-  // Ensure the loader is removed when the app mounts
   useEffect(() => {
     const loader = document.getElementById('initial-loader');
     if (loader) {
@@ -30,7 +20,6 @@ function App() {
     }
   }, []);
 
-  // GA4 scroll depth tracking
   useEffect(() => {
     const thresholds = [25, 50, 75, 90];
     const fired = new Set<number>();
@@ -48,28 +37,19 @@ function App() {
   }, []);
 
   return (
-    <div className="min-h-screen bg-white text-slate-900 selection:bg-brand selection:text-white font-sans overflow-x-hidden">
-      <Header />
+    <div id="top" className="circle-shell">
+      <CircleHeader />
       <main>
-        <Hero />
-        <ToolsMarquee />
-        <Message />
-        <Concept />
-        <Problems />
-        <SenaTools />
-        <Benefits />
-        <Offerings />
-        <Roadmap />
-        <Schedule />
-        <Gallery />
-        <Target />
-        <Voices />
-        <Profile />
-        <Flow />
-        <Pricing />
-        <FAQ />
+        <CircleHero />
+        <CircleFlow />
+        <MemberPreview />
+        <ServiceShelf />
+        <GatheringSection />
+        <ProofSection />
+        <CirclePricing />
+        <CircleFaq />
       </main>
-      <Footer />
+      <CircleFooter />
     </div>
   );
 }

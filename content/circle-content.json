@@ -1,0 +1,244 @@
+{
+  "site": {
+    "name": "AI ARCHITECTURE CIRCLE",
+    "issue": "OPEN STUDIO / ISSUE 001",
+    "description": "建築実務でAIを使う人のための、対話・実践・持ち帰りを一つにつないだ月額サークルです。"
+  },
+  "hero": {
+    "eyebrow": "現場から学ぶ。現場で使う。",
+    "headline": "建築AIを、ひとりで学ばない。",
+    "supportingLine": "自分で試す。実務で使う。会社に持ち帰る。",
+    "interviewsPerMonth": 3,
+    "primaryValue": "月3回、主宰のSenaと話す。",
+    "description": "記事を読むだけでも、ツールを渡されるだけでもない。今の仕事を持ち込み、話しながら試し、次の実務で使える形にして持ち帰る場所です。",
+    "portrait": "/images/circle/sena-profile.jpg",
+    "artifact": "/images/circle/compass.png",
+    "primaryCta": "サークルに参加する",
+    "secondaryCta": "サークルをチラ見する"
+  },
+  "flow": [
+    {
+      "id": "talk",
+      "number": "01",
+      "label": "TALK",
+      "title": "話す",
+      "copy": "月3回のオンライン面談で、いま抱えている業務やAI活用の迷いを主宰のSenaと整理します。",
+      "annotation": "まず、仕事をそのまま持ってくる。"
+    },
+    {
+      "id": "try",
+      "number": "02",
+      "label": "TRY",
+      "title": "試す",
+      "copy": "図面、工程、写真、議事録。自分の題材でAIや会員向けツールを試し、小さく検証します。",
+      "annotation": "その場で、一緒に触ってみる。"
+    },
+    {
+      "id": "take-back",
+      "number": "03",
+      "label": "TAKE BACK",
+      "title": "持ち帰る",
+      "copy": "学びを資料・手順・判断軸に変え、翌日から社内で再現できる状態にします。",
+      "annotation": "会社の成果に変える。"
+    }
+  ],
+  "memberPreview": {
+    "title": "学びも、記録も、使えるものも。会員ページに全部ある。",
+    "description": "次の面談、最新Tips、アーカイブ、使えるサービスを、ブラウザからいつでも確認できます。",
+    "publicRows": [
+      {
+        "date": "2026.07",
+        "type": "NEXT",
+        "title": "今月のオンライン面談と、今回話したいこと"
+      },
+      {
+        "date": "2026.07",
+        "type": "TIPS",
+        "title": "図面チェックの精度を上げるAI活用メモ"
+      }
+    ],
+    "lockedRows": [
+      "過去の面談アーカイブ",
+      "実務テンプレートとプロンプト",
+      "会員向けサービス一覧"
+    ],
+    "previewUrl": "https://aiarchi-portal.vercel.app/circle/preview",
+    "cta": "会員ページをチラ見する"
+  },
+  "services": {
+    "title": "同じサブスクで、使える道具が増えていく。",
+    "description": "学ぶ場所だけで終わらず、実務で使うサービスも会費に含まれます。新しいサービスも、準備が整い次第ここに加わります。",
+    "available": [
+      {
+        "id": "compass",
+        "name": "COMPASS",
+        "category": "工程・プロジェクト管理",
+        "copy": "建築プロジェクトの工程と進捗を、チームで見える形に整理します。",
+        "image": "/images/circle/compass.png"
+      },
+      {
+        "id": "kakome",
+        "name": "KAKOME",
+        "category": "現場写真・指示書",
+        "copy": "現場写真に指示を書き込み、共有用の資料まで素早くまとめます。",
+        "image": "/images/circle/kakome.jpg"
+      },
+      {
+        "id": "spotpdf",
+        "name": "SpotPDF",
+        "category": "図面差分チェック",
+        "copy": "新旧PDFの差分を見つけ、見落としや確認の負担を減らします。",
+        "image": "/images/circle/spotpdf.png"
+      },
+      {
+        "id": "mojioko",
+        "name": "MOJIOKO",
+        "category": "議事録・文字起こし",
+        "copy": "録音から議事録を作り、次に決めることまで読みやすく残します。",
+        "image": "/images/circle/mojioko.png"
+      },
+      {
+        "id": "archi-prisma-ar",
+        "name": "Archi-Prisma AR",
+        "category": "ARプレゼンテーション",
+        "copy": "設計案を現地スケールで重ね、空間の伝わり方を変えます。",
+        "image": "/images/circle/archi-prisma-ar.png"
+      }
+    ],
+    "inPreparation": [
+      {
+        "id": "ai-commander",
+        "name": "AI Commander",
+        "category": "設計AIワークフロー",
+        "status": "準備中",
+        "image": "/images/circle/services/ai-commander.png"
+      },
+      {
+        "id": "energy-calc",
+        "name": "楽々省エネ計算",
+        "category": "省エネ計算支援",
+        "status": "準備中",
+        "image": "/images/circle/services/energy-calc.webp"
+      },
+      {
+        "id": "kozo",
+        "name": "KOZO",
+        "category": "構造検討支援",
+        "status": "準備中",
+        "image": "/images/circle/services/kozo.webp"
+      },
+      {
+        "id": "sin",
+        "name": "SIN",
+        "category": "新しい建築AIサービス",
+        "status": "準備中",
+        "image": "/images/circle/services/sin.webp"
+      }
+    ]
+  },
+  "gathering": {
+    "eyebrow": "AFTER HOURS / OPTIONAL",
+    "title": "AIを本気でやる。だから、リアルを大切にする。",
+    "description": "画面の中で学ぶだけでは生まれない会話もあります。希望者で食事を囲み、試したことや悩んでいることを率直に話す時間をつくっています。",
+    "qualifiers": [
+      "参加は自由",
+      "不定期開催",
+      "飲酒なしの参加も歓迎"
+    ],
+    "images": [
+      "/images/circle/gathering-table.webp",
+      "/images/circle/gathering-group.webp"
+    ]
+  },
+  "proof": {
+    "title": "情報を集めるだけで終わらせない。",
+    "items": [
+      {
+        "number": "01",
+        "title": "自分の仕事から始める",
+        "copy": "一般論ではなく、いま担当している図面や工程、提案を題材にします。"
+      },
+      {
+        "number": "02",
+        "title": "小さく試して確かめる",
+        "copy": "AIの答えを鵜呑みにせず、実務の判断と照らしながら使える形を見つけます。"
+      },
+      {
+        "number": "03",
+        "title": "社内で再現できる形にする",
+        "copy": "個人の気づきを手順やテンプレートに変え、チームの資産として持ち帰ります。"
+      }
+    ]
+  },
+  "plans": [
+    {
+      "id": "yearly",
+      "name": "年間プラン",
+      "price": 50000,
+      "period": "年",
+      "badge": "2か月分お得",
+      "description": "腰を据えて、実務の変化まで積み重ねたい方へ。",
+      "cta": "年間プランで参加する",
+      "note": "月あたり約4,167円"
+    },
+    {
+      "id": "monthly",
+      "name": "月額プラン",
+      "price": 5000,
+      "period": "月",
+      "badge": "STANDARD",
+      "description": "まず一つの仕事から、話して試してみたい方へ。",
+      "cta": "月額プランで参加する",
+      "note": "いつでも解約可能"
+    },
+    {
+      "id": "student",
+      "name": "学生プラン",
+      "price": 2000,
+      "period": "月",
+      "badge": "STUDENT",
+      "description": "学校で学びながら、実務で使われるAIにも触れたい方へ。",
+      "cta": "学生プランで参加する",
+      "note": "学校発行メールの受信確認が必要です"
+    }
+  ],
+  "planFeatures": [
+    "月3回、主宰のSenaとオンライン面談",
+    "会員ページのTips・アーカイブ・テンプレート",
+    "利用可能な5つの建築AIサービス",
+    "今後追加される対象サービス",
+    "会員コミュニティ",
+    "希望者向けの対面交流会"
+  ],
+  "faqs": [
+    {
+      "question": "AIに詳しくなくても参加できますか？",
+      "answer": "はい。詳しさよりも、いまの仕事で何を良くしたいかを一緒に整理するところから始めます。"
+    },
+    {
+      "question": "オンライン面談はどのように行いますか？",
+      "answer": "月3回、少人数のオンライン面談を行います。自分の業務を持ち込み、主宰のSenaと直接話しながら次に試すことを決めます。"
+    },
+    {
+      "question": "参加できない回はどうなりますか？",
+      "answer": "会員ページのアーカイブやTipsから振り返れます。すべての回に参加できなくても、自分のペースで続けられます。"
+    },
+    {
+      "question": "AI Commanderは今使えますか？",
+      "answer": "現在は準備中です。利用できる状態になったサービスから、会員ページで順次案内します。"
+    },
+    {
+      "question": "交流会への参加は必須ですか？",
+      "answer": "必須ではありません。希望者のみ、不定期で開催します。"
+    },
+    {
+      "question": "学生プランの条件は？",
+      "answer": "学校から発行された対象ドメインのメールアドレスで、確認コードを受け取れることが条件です。"
+    }
+  ],
+  "checkout": {
+    "yearly": "https://stripe-discord-pro-417218426761.asia-northeast1.run.app/?plan=yearly",
+    "monthly": "https://stripe-discord-pro-417218426761.asia-northeast1.run.app/?plan=monthly",
+    "student": "https://stripe-discord-pro-417218426761.asia-northeast1.run.app/?plan=student"
+  }
+}
