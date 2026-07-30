@@ -35,6 +35,9 @@ test('OPEN STUDIO uses the measured reference palette and physical assets', () =
     'hand-note-history.webp',
     'hand-note-tools.webp',
     'hand-note-gathering.webp',
+    'hand-note-talk.webp',
+    'hand-note-trial.webp',
+    'hand-note-takeback.webp',
   ]) {
     assert.ok(
       fs.existsSync(path.join(root, 'public/images/circle/studio', file)),
@@ -65,6 +68,15 @@ test('member preview, service shelf, and gathering use exact note assets', () =>
   assert.match(services, /hand-note-tools\.webp/);
   assert.match(gathering, /希望者で、たまにご飯とお酒。/);
   assert.match(gathering, /hand-note-gathering\.webp/);
+});
+
+test('method annotations are baked as handwriting images', () => {
+  const flow = read('components/circle/CircleFlow.tsx');
+
+  assert.match(flow, /hand-note-talk\.webp/);
+  assert.match(flow, /hand-note-trial\.webp/);
+  assert.match(flow, /hand-note-takeback\.webp/);
+  assert.match(flow, /item\.annotation/);
 });
 
 test('physical decoration is non-interactive and mobile remains a normal website', () => {

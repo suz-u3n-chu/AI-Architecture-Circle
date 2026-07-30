@@ -10,7 +10,15 @@ export default function MemberPreview() {
         <p className="section-index">MEMBERS' STUDIO / PREVIEW</p>
         <h2 id="preview-title">{preview.title}</h2>
         <p>{preview.description}</p>
-        <p className="hand-note">過去の記録も、検索していつでも見返せる。</p>
+        <div className="handwritten-image preview-handwritten">
+          <span className="sr-only">過去の記録も、検索していつでも見返せる。</span>
+          <img
+            className="studio-texture"
+            src="/images/circle/studio/hand-note-history.webp"
+            alt=""
+            aria-hidden="true"
+          />
+        </div>
       </div>
       <div className="binder" aria-label="会員ページの内容プレビュー">
         <div className="binder-rings" aria-hidden="true">

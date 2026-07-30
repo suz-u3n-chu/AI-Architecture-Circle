@@ -46,7 +46,15 @@ export default function ServiceShelf() {
           </article>
         ))}
       </div>
-      <p className="hand-note services-note">同じサブスクで、使える道具が増えていく。→</p>
+      <div className="handwritten-image services-note">
+        <span className="sr-only">同じサブスクで、使える道具が増えていく。</span>
+        <img
+          className="studio-texture"
+          src="/images/circle/studio/hand-note-tools.webp"
+          alt=""
+          aria-hidden="true"
+        />
+      </div>
     </section>
   );
 }

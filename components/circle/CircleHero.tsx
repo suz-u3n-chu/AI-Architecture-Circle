@@ -12,8 +12,19 @@ export default function CircleHero() {
     <section className="circle-hero section-frame" aria-labelledby="hero-title">
       <div className="hero-copy">
         <p className="issue-label">{content.site.issue}</p>
-        <p className="hand-note hero-note">{hero.eyebrow}</p>
-        <h1 id="hero-title">{hero.headline}</h1>
+        <div className="handwritten-image hero-note">
+          <span className="sr-only">現場から学ぶ。現場で使う。</span>
+          <img
+            className="studio-texture"
+            src="/images/circle/studio/hand-note-field.webp"
+            alt=""
+            aria-hidden="true"
+          />
+        </div>
+        <h1 id="hero-title">
+          <span className="hero-title-line">建築AIを、</span>
+          <span className="hero-title-line">ひとりで学ばない。</span>
+        </h1>
         <p className="hero-supporting">{hero.supportingLine}</p>
         <p className="hero-description">{hero.description}</p>
         <div className="hero-value">
@@ -42,7 +53,12 @@ export default function CircleHero() {
 
       <div className="hero-artifacts" aria-label="オンライン面談と実務ツールのイメージ">
         <figure className="artifact artifact-portrait">
-          <span className="tape tape-top" aria-hidden="true" />
+          <img
+            className="studio-texture tape tape-top"
+            src="/images/circle/studio/studio-tape-short.webp"
+            alt=""
+            aria-hidden="true"
+          />
           <img
             src={hero.portrait}
             alt="AI Architecture Circle主宰の櫻本聖成"
@@ -55,7 +71,12 @@ export default function CircleHero() {
           </figcaption>
         </figure>
         <figure className="artifact artifact-screen">
-          <span className="tape tape-corner" aria-hidden="true" />
+          <img
+            className="studio-texture tape tape-corner"
+            src="/images/circle/studio/studio-tape-wide.webp"
+            alt=""
+            aria-hidden="true"
+          />
           <img
             src={hero.artifact}
             alt="工程管理サービスCOMPASSの実画面"
@@ -67,9 +88,35 @@ export default function CircleHero() {
         <div className="artifact memo-card">
           <p>NEXT MEETING NOTE</p>
           <strong>AIで検討の幅を広げて、<br />判断の精度を上げる。</strong>
-          <span className="hand-note">一緒に、その場で試す。✓</span>
+          <div className="handwritten-image memo-handwritten">
+            <span className="sr-only">一緒に、その場で試す。</span>
+            <img
+              className="studio-texture"
+              src="/images/circle/studio/hand-note-try.webp"
+              alt=""
+              aria-hidden="true"
+            />
+          </div>
         </div>
+        <img
+          className="studio-texture hero-red-mark"
+          src="/images/circle/studio/studio-red-marks.webp"
+          alt=""
+          aria-hidden="true"
+        />
+        <img
+          className="studio-texture hero-blue-mark"
+          src="/images/circle/studio/studio-blue-marks.webp"
+          alt=""
+          aria-hidden="true"
+        />
       </div>
+      <img
+        className="studio-texture hero-paper-edge"
+        src="/images/circle/studio/studio-paper-edge.webp"
+        alt=""
+        aria-hidden="true"
+      />
     </section>
   );
 }

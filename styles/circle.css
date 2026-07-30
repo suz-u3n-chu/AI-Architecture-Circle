@@ -1,12 +1,16 @@
 :root {
-  --paper: #f6f3eb;
-  --paper-deep: #ebe6dc;
-  --ink: #161819;
-  --muted: #62615c;
-  --cobalt: #1647d8;
-  --cobalt-dark: #0d2e94;
-  --coral: #ed5238;
-  --rule: rgba(22, 24, 25, 0.2);
+  --paper: #faf9f2;
+  --paper-lifted: #fffef9;
+  --paper-deep: #eee9dd;
+  --ink: #181818;
+  --muted: #696861;
+  --vermilion: #d84018;
+  --blue-pencil: #5572ad;
+  --tape: #d8c9a0;
+  --cobalt: var(--blue-pencil);
+  --cobalt-dark: #3f5786;
+  --coral: var(--vermilion);
+  --rule: rgba(24, 24, 24, 0.24);
   --content-width: 1200px;
   --serif: "Zen Old Mincho", "Yu Mincho", serif;
   --sans: Inter, "Noto Sans JP", system-ui, sans-serif;
@@ -55,6 +59,33 @@ img {
   max-width: 100%;
 }
 
+.sr-only {
+  position: absolute;
+  overflow: hidden;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  border: 0;
+  clip: rect(0 0 0 0);
+  white-space: nowrap;
+}
+
+.studio-texture {
+  pointer-events: none;
+  user-select: none;
+}
+
+.handwritten-image {
+  position: relative;
+  width: min(100%, 360px);
+}
+
+.handwritten-image > img {
+  width: 100%;
+  height: auto;
+}
+
 ::selection {
   background: var(--cobalt);
   color: white;
@@ -64,8 +95,9 @@ img {
   min-width: 0;
   overflow: clip;
   background:
-    radial-gradient(circle at 20% 30%, rgba(255, 255, 255, 0.72), transparent 27rem),
-    repeating-linear-gradient(0deg, rgba(22, 24, 25, 0.018) 0 1px, transparent 1px 5px),
+    radial-gradient(circle at 18% 22%, rgba(255, 255, 255, 0.88), transparent 28rem),
+    radial-gradient(circle at 82% 55%, rgba(216, 201, 160, 0.08), transparent 32rem),
+    repeating-linear-gradient(0deg, rgba(24, 24, 24, 0.012) 0 1px, transparent 1px 6px),
     var(--paper);
 }
 
@@ -120,7 +152,7 @@ img {
   max-width: 15em;
   margin: 0;
   font-family: var(--serif);
-  font-size: clamp(2.3rem, 7.5vw, 5rem);
+  font-size: clamp(2.25rem, 5.5vw, 3.8rem);
   font-weight: 600;
   letter-spacing: -0.05em;
   line-height: 1.22;
@@ -200,7 +232,7 @@ img {
   justify-content: space-between;
   padding: 10px 16px;
   border-bottom: 1px solid var(--ink);
-  background: rgba(246, 243, 235, 0.94);
+  background: rgba(250, 249, 242, 0.94);
   backdrop-filter: blur(12px);
 }
 
@@ -227,6 +259,7 @@ img {
 
 .menu-button {
   display: inline-flex;
+  min-height: 44px;
   align-items: center;
   gap: 8px;
   padding: 8px 10px;
@@ -277,6 +310,7 @@ img {
 }
 
 .circle-hero {
+  position: relative;
   display: grid;
   gap: 52px;
   min-height: calc(100svh - 68px);
@@ -285,19 +319,28 @@ img {
 }
 
 .hero-note {
-  display: inline-block;
-  margin: 0 0 22px 38px;
-  border-bottom: 2px solid var(--coral);
+  width: min(100%, 340px);
+  margin: 0 0 20px 24px;
+  transform: rotate(-1.4deg);
+}
+
+.hero-copy,
+.hero-artifacts {
+  z-index: 1;
 }
 
 .hero-copy h1 {
-  max-width: 9em;
   margin: 0;
   font-family: var(--serif);
-  font-size: clamp(3rem, 12.5vw, 6.65rem);
+  font-size: clamp(2.65rem, 10.6vw, 4.15rem);
   font-weight: 600;
   letter-spacing: -0.08em;
-  line-height: 1.02;
+  line-height: 1.08;
+}
+
+.hero-title-line {
+  display: block;
+  white-space: nowrap;
 }
 
 .hero-supporting {
@@ -349,7 +392,7 @@ img {
   position: relative;
   width: 100%;
   min-height: 590px;
-  max-width: 660px;
+  max-width: 720px;
   margin-inline: auto;
 }
 
@@ -357,8 +400,8 @@ img {
   position: absolute;
   margin: 0;
   border: 1px solid rgba(22, 24, 25, 0.25);
-  background: #fff;
-  box-shadow: 0 18px 44px rgba(22, 24, 25, 0.15);
+  background: var(--paper-lifted);
+  box-shadow: 0 18px 44px rgba(24, 24, 24, 0.14);
 }
 
 .artifact img {
@@ -369,9 +412,9 @@ img {
 
 .artifact-portrait {
   z-index: 2;
-  top: 0;
-  right: 6%;
-  width: 56%;
+  top: 10px;
+  right: 4%;
+  width: 52%;
   padding: 10px 10px 44px;
   transform: rotate(3deg);
 }
@@ -397,9 +440,9 @@ img {
 
 .artifact-screen {
   z-index: 3;
-  top: 270px;
-  left: 1%;
-  width: 78%;
+  top: 254px;
+  left: 0;
+  width: 76%;
   padding: 8px 8px 34px;
   transform: rotate(-4deg);
 }
@@ -411,10 +454,10 @@ img {
 
 .memo-card {
   z-index: 4;
-  right: 0;
-  bottom: 20px;
-  width: 66%;
-  padding: 28px 22px;
+  right: 1%;
+  bottom: 14px;
+  width: 62%;
+  padding: 26px 22px 20px;
   transform: rotate(2deg);
 }
 
@@ -432,33 +475,77 @@ img {
   font-weight: 600;
 }
 
-.memo-card .hand-note {
-  display: block;
-  margin-top: 22px;
-  border-bottom: 2px solid var(--coral);
-  font-size: 0.83rem;
+.memo-handwritten {
+  width: min(100%, 270px);
+  margin: 18px 0 -2px;
+  transform: rotate(-1deg);
 }
 
 .tape {
   position: absolute;
   z-index: 10;
   display: block;
-  width: 82px;
-  height: 24px;
-  background: rgba(219, 203, 157, 0.62);
-  box-shadow: inset 0 0 7px rgba(99, 83, 43, 0.1);
+  width: 112px;
+  max-width: none;
+  height: auto;
+  filter: drop-shadow(0 2px 2px rgba(68, 56, 31, 0.14));
+}
+
+.artifact > .tape,
+.photo-print > .tape {
+  width: 112px;
+  height: auto;
+  max-width: none;
+  object-fit: contain;
 }
 
 .tape-top {
-  top: -14px;
+  top: -25px;
   left: 50%;
   transform: translateX(-50%) rotate(-3deg);
 }
 
 .tape-corner {
-  top: -8px;
-  left: -18px;
+  top: -24px;
+  left: -38px;
+  width: 148px;
   transform: rotate(-38deg);
+}
+
+.artifact > .tape-corner {
+  width: 148px;
+}
+
+.photo-print > .tape-top {
+  width: 140px;
+}
+
+.hero-red-mark {
+  position: absolute;
+  z-index: 6;
+  right: 2%;
+  bottom: 102px;
+  width: 220px;
+  transform: rotate(-5deg);
+}
+
+.hero-blue-mark {
+  position: absolute;
+  z-index: 6;
+  right: 3%;
+  bottom: -18px;
+  width: 92px;
+  transform: rotate(8deg);
+}
+
+.hero-paper-edge {
+  position: absolute;
+  z-index: 0;
+  right: 2%;
+  bottom: -40px;
+  width: 58%;
+  min-width: 520px;
+  opacity: 0.84;
 }
 
 .flow-section {
@@ -519,15 +606,16 @@ img {
   font-weight: 600;
 }
 
-.flow-card > p:not(.hand-note) {
+.flow-card > p {
   margin: 0;
   color: var(--muted);
   font-size: 0.9rem;
 }
 
-.flow-card .hand-note {
+.flow-handwritten {
+  width: min(100%, 280px);
   margin: 24px 0 0;
-  font-size: 0.85rem;
+  transform: rotate(-1.2deg);
 }
 
 .preview-section {
@@ -535,9 +623,10 @@ img {
   gap: 34px;
 }
 
-.preview-heading .hand-note {
-  display: inline-block;
+.preview-handwritten {
+  width: min(100%, 330px);
   margin-top: 24px;
+  transform: rotate(-1.6deg);
 }
 
 .binder {
@@ -804,10 +893,10 @@ img {
   overflow: hidden;
   aspect-ratio: 4 / 3;
   place-items: center;
-  border: 1px dashed rgba(22, 71, 216, 0.4);
+  border: 1px dashed rgba(85, 114, 173, 0.4);
   background:
-    linear-gradient(rgba(22, 71, 216, 0.06) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(22, 71, 216, 0.06) 1px, transparent 1px);
+    linear-gradient(rgba(85, 114, 173, 0.06) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(85, 114, 173, 0.06) 1px, transparent 1px);
   background-size: 18px 18px;
 }
 
@@ -820,7 +909,7 @@ img {
 .blueprint-placeholder i {
   position: absolute;
   display: block;
-  border: 1px solid rgba(22, 71, 216, 0.28);
+  border: 1px solid rgba(85, 114, 173, 0.28);
 }
 
 .blueprint-placeholder i:nth-child(2) {
@@ -846,9 +935,10 @@ img {
 }
 
 .services-note {
+  width: min(100%, 390px);
   justify-self: end;
-  max-width: 320px;
-  margin: 0;
+  margin: 6px 0 0;
+  transform: rotate(1deg);
 }
 
 .gathering-section {
@@ -873,10 +963,10 @@ img {
   font-weight: 800;
 }
 
-.gathering-copy .hand-note {
-  display: inline-block;
+.gathering-handwritten {
+  width: min(100%, 360px);
   margin-top: 28px;
-  border-bottom: 2px solid var(--coral);
+  transform: rotate(-1.2deg);
 }
 
 .gathering-photos {
@@ -888,8 +978,8 @@ img {
   position: absolute;
   margin: 0;
   padding: 9px 9px 36px;
-  background: white;
-  box-shadow: 0 18px 40px rgba(22, 24, 25, 0.17);
+  background: var(--paper-lifted);
+  box-shadow: 0 18px 40px rgba(24, 24, 24, 0.16);
 }
 
 .photo-print img {
@@ -1014,7 +1104,7 @@ img {
 
 .price-yearly {
   border: 2px solid var(--coral);
-  box-shadow: 8px 8px 0 rgba(237, 82, 56, 0.18);
+  box-shadow: 8px 8px 0 rgba(216, 64, 24, 0.18);
 }
 
 .price-card-top {
@@ -1265,17 +1355,21 @@ img {
     padding: 8px 14px;
   }
 
-  .circle-hero {
-    grid-template-columns: minmax(0, 7fr) minmax(420px, 5fr);
-    gap: 34px;
-    min-height: calc(100svh - 76px);
-    padding-block: 74px 94px;
-  }
+    .circle-hero {
+      grid-template-columns: minmax(0, 0.9fr) minmax(480px, 1.1fr);
+      gap: 24px;
+      min-height: calc(100svh - 76px);
+      padding-block: 74px 94px;
+    }
 
-  .hero-artifacts {
-    width: 100%;
-    min-height: 670px;
-  }
+    .hero-copy h1 {
+      font-size: clamp(2.3rem, 4.35vw, 4.15rem);
+    }
+
+    .hero-artifacts {
+      width: 100%;
+      min-height: 650px;
+    }
 
   .artifact-portrait {
     width: 54%;
@@ -1302,9 +1396,9 @@ img {
     margin-top: 66px;
   }
 
-  .flow-card {
-    border-right: 0;
-    background: rgba(246, 243, 235, 0.8);
+    .flow-card {
+      border-right: 0;
+      background: rgba(250, 249, 242, 0.82);
   }
 
   .flow-card:last-child {

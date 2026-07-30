@@ -12,11 +12,24 @@ export default function GatheringSection() {
         <ul aria-label="参加は自由・不定期開催">
           {gathering.qualifiers.map(item => <li key={item}>{item}</li>)}
         </ul>
-        <p className="hand-note">希望者で、たまにご飯とお酒。☺</p>
+        <div className="handwritten-image gathering-handwritten">
+          <span className="sr-only">希望者で、たまにご飯とお酒。</span>
+          <img
+            className="studio-texture"
+            src="/images/circle/studio/hand-note-gathering.webp"
+            alt=""
+            aria-hidden="true"
+          />
+        </div>
       </div>
       <div className="gathering-photos">
         <figure className="photo-print photo-primary">
-          <span className="tape tape-top" aria-hidden="true" />
+          <img
+            className="studio-texture tape tape-top"
+            src="/images/circle/studio/studio-tape-wide.webp"
+            alt=""
+            aria-hidden="true"
+          />
           <img src={gathering.images[0]} alt="希望者で食事と会話を楽しむ交流会の様子" loading="lazy" />
           <figcaption>DINNER SESSION / OPTIONAL</figcaption>
         </figure>
