@@ -2,6 +2,17 @@
 
 Verified: 2026-07-30
 
+## Editorial polish verification
+
+The final editorial pass was verified after reusing the current Archi-Prisma HP assets for all four preparation services.
+
+| Viewport | Result | Evidence |
+| --- | --- | --- |
+| 1440 × 1000 | All six editorial headings use the approved desktop line groups with no heading overflow. The five available services sit in one row, all four preparation images load with a visible `準備中` overlay, and the preparation cards contain no links. The gathering copy and both real photographs are visible together. All three pricing cards render at 337 px high. `scrollWidth = clientWidth = 1440`. | `docs/verification/screenshots/editorial-desktop-full.png`, `docs/verification/screenshots/editorial-desktop-services.png`, `docs/verification/screenshots/editorial-desktop-gathering.png`, `docs/verification/screenshots/editorial-desktop-pricing.png` |
+| 390 × 844 | Mobile-specific heading lines are displayed and the desktop line groups are hidden. No editorial heading overflows its 358 px content width. All preparation images load after normal scrolling, preparation cards remain non-interactive, and each pricing card stays within the 358 px content width. `scrollWidth = clientWidth = 390`. | `docs/verification/screenshots/editorial-mobile-full.png`, `docs/verification/screenshots/editorial-mobile-services.png`, `docs/verification/screenshots/editorial-mobile-gathering.png`, `docs/verification/screenshots/editorial-mobile-pricing.png` |
+
+The mobile menu was opened through the visible menu button (`aria-expanded=true`) and a normal tap on the services navigation link closed it again (`aria-expanded=false`).
+
 ## User-facing claims checked
 
 - Primary promise is `建築AIを、ひとりで学ばない。`

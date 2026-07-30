@@ -1,4 +1,5 @@
 import content from '../../content/circle-content.json';
+import EditorialHeading from './EditorialHeading';
 
 export default function GatheringSection() {
   const gathering = content.gathering;
@@ -7,7 +8,11 @@ export default function GatheringSection() {
     <section id="gathering" className="gathering-section section-frame" aria-labelledby="gathering-title">
       <div className="gathering-copy">
         <p className="section-index">{gathering.eyebrow}</p>
-        <h2 id="gathering-title">{gathering.title}</h2>
+        <EditorialHeading
+          id="gathering-title"
+          label={gathering.title}
+          desktopLines={['AIを本気でやる。', 'だから、リアルを', '大切にする。']}
+        />
         <p>{gathering.description}</p>
         <ul aria-label="参加は自由・不定期開催">
           {gathering.qualifiers.map(item => <li key={item}>{item}</li>)}

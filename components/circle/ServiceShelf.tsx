@@ -1,4 +1,5 @@
 import content from '../../content/circle-content.json';
+import EditorialHeading from './EditorialHeading';
 
 export default function ServiceShelf() {
   const services = content.services;
@@ -7,7 +8,12 @@ export default function ServiceShelf() {
     <section id="services" className="services-section section-frame" aria-labelledby="services-title">
       <div className="section-heading services-heading">
         <p className="section-index">TOOLS REEL / INCLUDED</p>
-        <h2 id="services-title">{services.title}</h2>
+        <EditorialHeading
+          id="services-title"
+          label={services.title}
+          desktopLines={['同じサブスクで、', '使える道具が増えていく。']}
+          mobileLines={['同じサブスクで、', '使える道具が', '増えていく。']}
+        />
         <p>{services.description}</p>
       </div>
       <div className="service-count" aria-label="利用可能5サービス、準備中4サービス">
@@ -36,12 +42,17 @@ export default function ServiceShelf() {
       <div className="service-grid service-grid-preparation">
         {services.inPreparation.map((service, index) => (
           <article className="service-card preparation-card" key={service.id}>
-            <div className="blueprint-placeholder" aria-hidden="true">
-              <span>{String(index + 6).padStart(2, '0')}</span>
-              <i /><i /><i />
+            <div className="service-image preparation-image">
+              <img src={service.image} alt={`${service.name}のイメージ`} loading="lazy" />
+              <span>{service.status}</span>
             </div>
-            <p>{service.category}</p>
-            <h3>{service.name}</h3>
+            <div className="service-meta">
+              <span>{String(index + 6).padStart(2, '0')}</span>
+              <div>
+                <p>{service.category}</p>
+                <h3>{service.name}</h3>
+              </div>
+            </div>
             <small>{service.status}</small>
           </article>
         ))}

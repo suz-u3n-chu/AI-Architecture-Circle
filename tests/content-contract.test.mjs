@@ -67,8 +67,11 @@ test('all people and product proof use reviewed local assets', () => {
     content.hero.artifact,
     ...content.gathering.images,
     ...content.services.available.map(service => service.image),
+    ...content.services.inPreparation.map(service => service.image),
   ];
   for (const asset of new Set(assets)) {
+    assert.equal(typeof asset, 'string', 'every reviewed asset must have a local path');
+    assert.match(asset, /^\//u, `${asset} must use a public-root path`);
     const file = path.join(projectRoot, 'public', asset.replace(/^\//u, ''));
     assert.ok(fs.statSync(file).size > 0, `${asset} must exist and be non-empty`);
   }

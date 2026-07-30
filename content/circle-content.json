@@ -110,32 +110,36 @@
         "id": "ai-commander",
         "name": "AI Commander",
         "category": "設計AIワークフロー",
-        "status": "準備中"
+        "status": "準備中",
+        "image": "/images/circle/services/ai-commander.png"
       },
       {
         "id": "energy-calc",
         "name": "楽々省エネ計算",
         "category": "省エネ計算支援",
-        "status": "準備中"
+        "status": "準備中",
+        "image": "/images/circle/services/energy-calc.webp"
       },
       {
         "id": "kozo",
         "name": "KOZO",
         "category": "構造検討支援",
-        "status": "準備中"
+        "status": "準備中",
+        "image": "/images/circle/services/kozo.webp"
       },
       {
         "id": "sin",
         "name": "SIN",
         "category": "新しい建築AIサービス",
-        "status": "準備中"
+        "status": "準備中",
+        "image": "/images/circle/services/sin.webp"
       }
     ]
   },
   "gathering": {
     "eyebrow": "AFTER HOURS / OPTIONAL",
-    "title": "たまには、画面の外で話す。",
-    "description": "希望者だけで、食事とお酒を囲む交流会も不定期で開いています。成果発表会ではなく、試したことや悩んでいることを気軽に話す時間です。",
+    "title": "AIを本気でやる。だから、リアルを大切にする。",
+    "description": "画面の中で学ぶだけでは生まれない会話もあります。希望者で食事を囲み、試したことや悩んでいることを率直に話す時間をつくっています。",
     "qualifiers": [
       "参加は自由",
       "不定期開催",

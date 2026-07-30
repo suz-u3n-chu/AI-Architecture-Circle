@@ -1,5 +1,6 @@
 import { ArrowRight, Check } from 'lucide-react';
 import content from '../../content/circle-content.json';
+import EditorialHeading from './EditorialHeading';
 
 const yen = new Intl.NumberFormat('ja-JP');
 
@@ -8,7 +9,11 @@ export default function CirclePricing() {
     <section id="pricing" className="pricing-section section-frame" aria-labelledby="pricing-title">
       <div className="section-heading pricing-heading">
         <p className="section-index">JOIN THE CIRCLE</p>
-        <h2 id="pricing-title">ひとりで迷う時間を、<br />実務が進む時間へ。</h2>
+        <EditorialHeading
+          id="pricing-title"
+          label="ひとりで迷う時間を、実務が進む時間へ。"
+          desktopLines={['ひとりで迷う時間を、', '実務が進む時間へ。']}
+        />
         <p>どのプランでも、面談・会員ページ・対象サービスの内容は同じです。</p>
       </div>
       <div className="included-sheet">

@@ -1,4 +1,5 @@
 import content from '../../content/circle-content.json';
+import EditorialHeading from './EditorialHeading';
 
 const annotationImages = [
   '/images/circle/studio/hand-note-talk.webp',
@@ -10,8 +11,12 @@ export default function CircleFlow() {
   return (
     <section id="flow" className="flow-section section-frame" aria-labelledby="flow-title">
       <div className="section-heading">
-        <p className="section-index">CIRCLE METHOD / 01—03</p>
-        <h2 id="flow-title">話して、試して、会社に持ち帰る。</h2>
+        <p className="section-index">CIRCLE METHOD / 01–03</p>
+        <EditorialHeading
+          id="flow-title"
+          label="話して、試して、会社に持ち帰る。"
+          desktopLines={['話して、試して、', '会社に持ち帰る。']}
+        />
         <p>新しい知識を増やすことより、自分と会社が変わるところまで。</p>
       </div>
       <svg

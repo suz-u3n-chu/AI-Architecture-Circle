@@ -1,5 +1,6 @@
 import { ArrowRight, LockKeyhole } from 'lucide-react';
 import content from '../../content/circle-content.json';
+import EditorialHeading from './EditorialHeading';
 
 export default function MemberPreview() {
   const preview = content.memberPreview;
@@ -8,7 +9,12 @@ export default function MemberPreview() {
     <section id="member-preview" className="preview-section section-frame" aria-labelledby="preview-title">
       <div className="section-heading preview-heading">
         <p className="section-index">MEMBERS' STUDIO / PREVIEW</p>
-        <h2 id="preview-title">{preview.title}</h2>
+        <EditorialHeading
+          id="preview-title"
+          label={preview.title}
+          desktopLines={['学びも、記録も、使えるものも。', '会員ページに、全部ある。']}
+          mobileLines={['学びも、記録も。', '使えるものも。', '会員ページに、', '全部ある。']}
+        />
         <p>{preview.description}</p>
         <div className="handwritten-image preview-handwritten">
           <span className="sr-only">過去の記録も、検索していつでも見返せる。</span>
