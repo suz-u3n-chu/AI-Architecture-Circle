@@ -39,7 +39,7 @@
 - Modify: `tests/visual-fidelity.test.mjs:49-60`
 
 **Interfaces:**
-- Consumes: existing `content.hero`, `content.flow`, `content.benefits`, and `content.faqs`.
+- Consumes: existing `content.hero`, `content.flow`, `content.planFeatures`, and `content.faqs`.
 - Produces: failing assertions for the approved copy, official-name boundary, semantic hero spans, and clean generated punctuation.
 
 - [ ] **Step 1: Write failing content-contract assertions**
@@ -50,13 +50,13 @@ official-name checks:
 ```js
 assert.equal(content.hero.primaryValue, '月3回、主宰のSenaと話す。');
 assert.match(content.flow[0].copy, /主宰のSenaと整理します。/u);
-assert.match(content.benefits.join('\n'), /主宰のSenaとオンライン面談/u);
+assert.match(content.planFeatures.join('\n'), /主宰のSenaとオンライン面談/u);
 assert.match(content.faqs.map(faq => faq.answer).join('\n'), /主宰のSenaと直接話しながら/u);
 assert.doesNotMatch(
   [
     content.hero.primaryValue,
     ...content.flow.map(item => item.copy),
-    ...content.benefits,
+    ...content.planFeatures,
     ...content.faqs.map(faq => faq.answer),
   ].join('\n'),
   /櫻本聖成と(?:話す|整理|直接)/u,

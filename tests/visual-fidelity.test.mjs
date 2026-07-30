@@ -55,6 +55,24 @@ test('hero keeps the approved two-line headline and exact semantic handwriting',
   assert.match(hero, /一緒に、その場で試す。/);
   assert.match(hero, /hand-note-field\.webp/);
   assert.match(hero, /hand-note-try\.webp/);
+  assert.match(
+    hero,
+    /<span className="value-count">\{valuePrefix\}<\/span>/u,
+  );
+  assert.match(
+    hero,
+    /<strong>\{valuePromise\}<\/strong>/u,
+  );
+
+  const css = read('styles/circle.css');
+  assert.match(
+    css,
+    /\.hero-value \.value-count,[\s\S]*\.hero-value strong[\s\S]*white-space: nowrap;/u,
+  );
+  assert.match(
+    css,
+    /@media \(min-width: 680px\)[\s\S]*\.hero-value[\s\S]*flex-direction: row;/u,
+  );
 });
 
 test('member preview, service shelf, and gathering use exact note assets', () => {

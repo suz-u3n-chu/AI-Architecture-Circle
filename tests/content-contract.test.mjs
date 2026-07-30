@@ -16,7 +16,22 @@ test('service statuses and core offer stay truthful', () => {
     '自分で試す。実務で使う。会社に持ち帰る。',
   );
   assert.equal(content.hero.interviewsPerMonth, 3);
-  assert.equal(content.hero.primaryValue, '月3回、櫻本聖成と話す');
+  assert.equal(content.hero.primaryValue, '月3回、主宰のSenaと話す。');
+  assert.match(content.flow[0].copy, /主宰のSenaと整理します。/u);
+  assert.match(content.planFeatures.join('\n'), /主宰のSenaとオンライン面談/u);
+  assert.match(
+    content.faqs.map(faq => faq.answer).join('\n'),
+    /主宰のSenaと直接話しながら/u,
+  );
+  assert.doesNotMatch(
+    [
+      content.hero.primaryValue,
+      ...content.flow.map(item => item.copy),
+      ...content.planFeatures,
+      ...content.faqs.map(faq => faq.answer),
+    ].join('\n'),
+    /櫻本聖成と(?:話す|整理|直接)/u,
+  );
   assert.deepEqual(
     content.services.available.map(item => item.id),
     ['compass', 'kakome', 'spotpdf', 'mojioko', 'archi-prisma-ar'],
