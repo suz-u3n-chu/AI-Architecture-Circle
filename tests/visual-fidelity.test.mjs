@@ -56,12 +56,12 @@ test('hero keeps the approved two-line headline and exact semantic handwriting',
     /className="hero-supporting-line"[\s\S]*\{line\}/u,
   );
   assert.match(hero, /現場から学ぶ。現場で使う。/);
-  assert.match(hero, /一緒に、その場で試す。/);
+  assert.match(hero, /過去の記録も、検索していつでも見返せる。/);
   assert.match(hero, /hand-note-field\.webp/);
-  assert.match(hero, /hand-note-try\.webp/);
+  assert.match(hero, /hand-note-history\.webp/);
   assert.match(
     hero,
-    /<span className="value-count">\{valuePrefix\}<\/span>/u,
+    /<span className="value-count">\{valueLead\}<\/span>/u,
   );
   assert.match(
     hero,
@@ -99,9 +99,9 @@ test('member preview, service shelf, and gathering use exact note assets', () =>
 test('method annotations are baked as handwriting images', () => {
   const flow = read('components/circle/CircleFlow.tsx');
 
-  assert.match(flow, /hand-note-talk\.webp/);
+  assert.match(flow, /hand-note-history\.webp/);
   assert.match(flow, /hand-note-trial\.webp/);
-  assert.match(flow, /hand-note-takeback\.webp/);
+  assert.match(flow, /hand-note-gathering\.webp/);
   assert.match(flow, /item\.annotation/);
 });
 

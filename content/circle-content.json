@@ -2,28 +2,28 @@
   "site": {
     "name": "AI ARCHITECTURE CIRCLE",
     "issue": "OPEN STUDIO / ISSUE 001",
-    "description": "建築実務でAIを使う人のための、対話・実践・持ち帰りを一つにつないだ月額サークルです。"
+    "description": "建築AIを学び続けたい人のための、知識と仲間がいるサークルです。"
   },
   "hero": {
     "eyebrow": "現場から学ぶ。現場で使う。",
     "headline": "建築AIを、ひとりで学ばない。",
-    "supportingLine": "自分で試す。実務で使う。会社に持ち帰る。",
+    "supportingLine": "建築AIを学ぶ。実務で試す。仲間と進む。",
     "interviewsPerMonth": 3,
-    "primaryValue": "月3回、主宰のSenaと話す。",
-    "description": "記事を読むだけでも、ツールを渡されるだけでもない。今の仕事を持ち込み、話しながら試し、次の実務で使える形にして持ち帰る場所です。",
+    "primaryValue": "知識が増える。仲間が見つかる。",
+    "description": "AIを学びたい。でも、何から追えばいいか分からない。セミナー、News、Tipsで建築AIのリテラシーを高め、同じテーマを学ぶ仲間とつながるサークルです。",
     "portrait": "/images/circle/sena-profile.jpg",
-    "artifact": "/images/circle/compass.png",
+    "artifact": "/images/circle/gathering-group-consent.webp",
     "primaryCta": "サークルに参加する",
     "secondaryCta": "サークルをチラ見する"
   },
   "flow": [
     {
-      "id": "talk",
+      "id": "learn",
       "number": "01",
-      "label": "TALK",
-      "title": "話す",
-      "copy": "月3回のオンライン面談で、いま抱えている業務やAI活用の迷いを主宰のSenaと整理します。",
-      "annotation": "まず、仕事をそのまま持ってくる。"
+      "label": "LEARN",
+      "title": "学ぶ",
+      "copy": "Senaのセミナー、News、Tipsから、建築の実務に必要なAIの考え方と新しい動きをつかみます。",
+      "annotation": "迷わず、今追うべきことが分かる。"
     },
     {
       "id": "try",
@@ -34,22 +34,22 @@
       "annotation": "その場で、一緒に触ってみる。"
     },
     {
-      "id": "take-back",
+      "id": "connect",
       "number": "03",
-      "label": "TAKE BACK",
-      "title": "持ち帰る",
-      "copy": "学びを資料・手順・判断軸に変え、翌日から社内で再現できる状態にします。",
-      "annotation": "会社の成果に変える。"
+      "label": "CONNECT",
+      "title": "つながる",
+      "copy": "同じ建築×AIを学ぶ仲間と経験を共有し、学びを続けながら、自分の仕事と会社へ持ち帰ります。",
+      "annotation": "ひとりではなく、仲間と進む。"
     }
   ],
   "memberPreview": {
     "title": "学びも、記録も、使えるものも。会員ページに全部ある。",
-    "description": "次の面談、最新Tips、アーカイブ、使えるサービスを、ブラウザからいつでも確認できます。",
+    "description": "最新Tips、News、セミナーアーカイブ、使えるサービスを、ブラウザからいつでも確認できます。",
     "publicRows": [
       {
         "date": "2026.07",
-        "type": "NEXT",
-        "title": "今月のオンライン面談と、今回話したいこと"
+        "type": "SEMINAR",
+        "title": "今月のセミナーと、次に学ぶテーマ"
       },
       {
         "date": "2026.07",
@@ -58,7 +58,7 @@
       }
     ],
     "lockedRows": [
-      "過去の面談アーカイブ",
+      "過去のセミナーアーカイブ",
       "実務テンプレートとプロンプト",
       "会員向けサービス一覧"
     ],
@@ -187,7 +187,7 @@
       "price": 5000,
       "period": "月",
       "badge": "STANDARD",
-      "description": "まず一つの仕事から、話して試してみたい方へ。",
+      "description": "まずは、建築AIを学ぶ習慣をつくりたい方へ。",
       "cta": "月額プランで参加する",
       "note": "いつでも解約可能"
     },
@@ -203,17 +203,18 @@
     }
   ],
   "planFeatures": [
-    "月3回、主宰のSenaとオンライン面談",
-    "会員ページのTips・アーカイブ・テンプレート",
+    "Senaのセミナー・News・Tips",
+    "セミナーアーカイブ・実務テンプレート",
+    "同じ建築×AIを学ぶ会員コミュニティ",
     "利用可能な5つの建築AIサービス",
     "今後追加される対象サービス",
-    "会員コミュニティ",
+    "月3回、主宰のSenaとオンライン面談",
     "希望者向けの対面交流会"
   ],
   "faqs": [
     {
       "question": "AIに詳しくなくても参加できますか？",
-      "answer": "はい。詳しさよりも、いまの仕事で何を良くしたいかを一緒に整理するところから始めます。"
+      "answer": "はい。何から学べばよいか迷う人のために、セミナー、News、Tipsで今追うべき内容を整理しています。"
     },
     {
       "question": "オンライン面談はどのように行いますか？",

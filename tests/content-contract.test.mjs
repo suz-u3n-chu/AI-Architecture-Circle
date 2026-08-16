@@ -9,15 +9,16 @@ const content = JSON.parse(
   fs.readFileSync(path.join(projectRoot, 'content', 'circle-content.json'), 'utf8'),
 );
 
-test('service statuses and core offer stay truthful', () => {
+test('service statuses and supporting benefits stay truthful', () => {
   assert.equal(content.hero.headline, '建築AIを、ひとりで学ばない。');
   assert.equal(
     content.hero.supportingLine,
-    '自分で試す。実務で使う。会社に持ち帰る。',
+    '建築AIを学ぶ。実務で試す。仲間と進む。',
   );
   assert.equal(content.hero.interviewsPerMonth, 3);
-  assert.equal(content.hero.primaryValue, '月3回、主宰のSenaと話す。');
-  assert.match(content.flow[0].copy, /主宰のSenaと整理します。/u);
+  assert.equal(content.hero.primaryValue, '知識が増える。仲間が見つかる。');
+  assert.match(content.flow[0].copy, /セミナー、News、Tips/u);
+  assert.match(content.flow[2].copy, /仲間/u);
   assert.match(content.planFeatures.join('\n'), /主宰のSenaとオンライン面談/u);
   assert.match(
     content.faqs.map(faq => faq.answer).join('\n'),
@@ -26,11 +27,10 @@ test('service statuses and core offer stay truthful', () => {
   assert.doesNotMatch(
     [
       content.hero.primaryValue,
+      content.hero.description,
       ...content.flow.map(item => item.copy),
-      ...content.planFeatures,
-      ...content.faqs.map(faq => faq.answer),
     ].join('\n'),
-    /櫻本聖成と(?:話す|整理|直接)/u,
+    /面談|月3回/u,
   );
   assert.deepEqual(
     content.services.available.map(item => item.id),

@@ -7,11 +7,11 @@ function track(location: string) {
 
 export default function CircleHero() {
   const hero = content.hero;
-  const valuePrefix = `月${hero.interviewsPerMonth}回、`;
-  const valuePromise = hero.primaryValue.startsWith(valuePrefix)
-    ? hero.primaryValue.slice(valuePrefix.length)
-    : hero.primaryValue;
-  const supportingLines = hero.supportingLine.split(/(?=会社に)/u);
+  const [valueLead, valuePromise] = hero.primaryValue
+    .split('。')
+    .filter(Boolean)
+    .map(part => `${part}。`);
+  const supportingLines = hero.supportingLine.split(/(?=実務で|仲間と)/u);
 
   return (
     <section className="circle-hero section-frame" aria-labelledby="hero-title">
@@ -37,7 +37,7 @@ export default function CircleHero() {
         </p>
         <p className="hero-description">{hero.description}</p>
         <div className="hero-value">
-          <span className="value-count">{valuePrefix}</span>
+          <span className="value-count">{valueLead}</span>
           <strong>{valuePromise}</strong>
         </div>
         <div className="hero-actions">
@@ -60,7 +60,7 @@ export default function CircleHero() {
         </div>
       </div>
 
-      <div className="hero-artifacts" aria-label="オンライン面談と実務ツールのイメージ">
+      <div className="hero-artifacts" aria-label="建築AIの学びとコミュニティのイメージ">
         <figure className="artifact artifact-portrait">
           <img
             className="studio-texture tape tape-top"
@@ -76,7 +76,7 @@ export default function CircleHero() {
           />
           <figcaption>
             <strong>SAKURAMOTO, KIYONARI</strong>
-            <span>建築AIパートナー</span>
+            <span>AI ARCHITECTURE CIRCLE 主宰</span>
           </figcaption>
         </figure>
         <figure className="artifact artifact-screen">
@@ -88,20 +88,20 @@ export default function CircleHero() {
           />
           <img
             src={hero.artifact}
-            alt="工程管理サービスCOMPASSの実画面"
+            alt="同じ建築とAIを学ぶメンバーの交流会"
             width="1200"
             height="760"
           />
-          <figcaption>実務の画面を、そのまま話題に。</figcaption>
+          <figcaption>同じテーマを学ぶ仲間がいる。</figcaption>
         </figure>
         <div className="artifact memo-card">
-          <p>NEXT MEETING NOTE</p>
-          <strong>AIで検討の幅を広げて、<br />判断の精度を上げる。</strong>
+          <p>NEXT LEARNING NOTE</p>
+          <strong>セミナー・News・Tipsから、<br />今追うべきAIを知る。</strong>
           <div className="handwritten-image memo-handwritten">
-            <span className="sr-only">一緒に、その場で試す。</span>
+            <span className="sr-only">過去の記録も、検索していつでも見返せる。</span>
             <img
               className="studio-texture"
-              src="/images/circle/studio/hand-note-try.webp"
+              src="/images/circle/studio/hand-note-history.webp"
               alt=""
               aria-hidden="true"
             />
