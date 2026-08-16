@@ -28,6 +28,12 @@ test('public Circle offer presents learning and peers before supporting benefits
   assert.match(content.flow[0].copy, /セミナー.*News.*Tips/u);
   assert.match(content.flow[2].copy, /仲間/u);
 
+  assert.match(content.pricing.description, /セミナー.*News.*Tips/u);
+  assert.ok(
+    content.pricing.description.indexOf('セミナー') < content.pricing.description.indexOf('面談'),
+    '料金欄でも継続的な学びを面談より先に伝える',
+  );
+
   const benefits = content.planFeatures.join('\n');
   assert.match(content.planFeatures[0], /セミナー.*News.*Tips/u);
   assert.ok(benefits.indexOf('会員コミュニティ') < benefits.indexOf('オンライン面談'));

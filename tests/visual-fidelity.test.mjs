@@ -81,6 +81,21 @@ test('hero keeps the approved two-line headline and exact semantic handwriting',
     css,
     /\.hero-supporting-line[\s\S]*display: block;[\s\S]*white-space: nowrap;/u,
   );
+  assert.match(
+    css,
+    /@media \(max-width: 679px\)[\s\S]*\.hero-note[\s\S]*width: calc\(100% - 32px\);/u,
+    'スマホでは手書き注釈を安全な余白内に収める',
+  );
+  assert.match(
+    css,
+    /\.hero-description\s*\{[^}]*text-wrap: pretty;/u,
+    'スマホでも本文末尾の一文字だけを次行へ送らない',
+  );
+  assert.match(
+    css,
+    /\.hero-description\s*\{[^}]*word-break: auto-phrase;/u,
+    '日本語の意味のまとまりを優先して改行する',
+  );
 });
 
 test('member preview, service shelf, and gathering use exact note assets', () => {

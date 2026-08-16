@@ -1,8 +1,17 @@
 # AI ARCHITECTURE CIRCLE LP responsive verification
 
-Verified: 2026-07-30
+Verified: 2026-08-16
 
-> Historical visual evidence. The 2026-07-30 screenshots predate the brand hierarchy approved on 2026-08-16. Current copy and value-order acceptance comes from `docs/brand/CIRCLE_BRAND_SOURCE.md`, `content/circle-brand-contract.json`, and the automated tests. Fresh browser screenshots are required before production publication.
+The current copy and value order come from `docs/brand/CIRCLE_BRAND_SOURCE.md`, `content/circle-brand-contract.json`, and the automated tests. Production publication remains a separate approval boundary.
+
+## 2026-08-16 brand pass
+
+| Viewport | Result | Evidence |
+| --- | --- | --- |
+| 390 × 844 | No horizontal overflow or broken image after normal scrolling. The hero keeps the approved two-line promise, semantic Japanese phrase wrapping, and a handwritten image fully inside the safe width. Mobile menu open/close and services anchor navigation passed. Services, gathering, and pricing remain inside the content frame. | `docs/verification/screenshots/brand-20260816-mobile-hero.png`, `docs/verification/screenshots/brand-20260816-mobile-services.png`, `docs/verification/screenshots/brand-20260816-mobile-gathering.png`, `docs/verification/screenshots/brand-20260816-mobile-pricing.png` |
+| 1440 × 1000 | No horizontal overflow or broken hero image. The learning and community promise, CTA pair, Sena portrait, gathering photograph, and record memo remain visible as one deliberate editorial composition. | `docs/verification/screenshots/brand-20260816-desktop-hero.png` |
+
+The pricing introduction now leads with `セミナー・News・Tips` before the member page, interview, and included services. The same ordering is enforced by `tests/brand-contract.test.mjs`.
 
 ## Editorial polish verification
 

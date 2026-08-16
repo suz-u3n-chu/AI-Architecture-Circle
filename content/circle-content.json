@@ -170,6 +170,9 @@
       }
     ]
   },
+  "pricing": {
+    "description": "どのプランでも、セミナー・News・Tips、会員ページ、面談、対象サービスの内容は同じです。"
+  },
   "plans": [
     {
       "id": "yearly",
