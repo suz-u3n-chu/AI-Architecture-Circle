@@ -1,6 +1,17 @@
 # AI ARCHITECTURE CIRCLE LP responsive verification
 
-Verified: 2026-07-30
+Verified: 2026-08-16
+
+The current copy and value order come from `docs/brand/CIRCLE_BRAND_SOURCE.md`, `content/circle-brand-contract.json`, and the automated tests. Production publication remains a separate approval boundary.
+
+## 2026-08-16 brand pass
+
+| Viewport | Result | Evidence |
+| --- | --- | --- |
+| 390 × 844 | No horizontal overflow or broken image after normal scrolling. The hero keeps the approved two-line promise, semantic Japanese phrase wrapping, and a handwritten image fully inside the safe width. Mobile menu open/close and services anchor navigation passed. Services, gathering, and pricing remain inside the content frame. | `docs/verification/screenshots/brand-20260816-mobile-hero.png`, `docs/verification/screenshots/brand-20260816-mobile-services.png`, `docs/verification/screenshots/brand-20260816-mobile-gathering.png`, `docs/verification/screenshots/brand-20260816-mobile-pricing.png` |
+| 1440 × 1000 | No horizontal overflow or broken hero image. The learning and community promise, CTA pair, Sena portrait, gathering photograph, and record memo remain visible as one deliberate editorial composition. | `docs/verification/screenshots/brand-20260816-desktop-hero.png` |
+
+The pricing introduction now leads with `セミナー・News・Tips` before the member page, interview, and included services. The same ordering is enforced by `tests/brand-contract.test.mjs`.
 
 ## Editorial polish verification
 
@@ -13,13 +24,13 @@ The final editorial pass was verified after reusing the current Archi-Prisma HP 
 
 The mobile menu was opened through the visible menu button (`aria-expanded=true`) and a normal tap on the services navigation link closed it again (`aria-expanded=false`).
 
-## User-facing claims checked
+## Current user-facing contract
 
 - Primary promise is `建築AIを、ひとりで学ばない。`
-- The offer leads with `月3回、主宰のSenaと話す。`.
-- The supporting promise uses two intentional lines:
-  `自分で試す。実務で使う。` / `会社に持ち帰る。`.
-- The learning loop is presented as `話す → 試す → 持ち帰る`.
+- The offer leads with `知識が増える。仲間が見つかる。`.
+- The supporting promise is `建築AIを学ぶ。実務で試す。仲間と進む。`.
+- The learning loop is presented as `学ぶ → 試す → つながる`.
+- Online interviews remain included, but are presented after learning and community.
 - Available services are exactly COMPASS, KAKOME, SpotPDF, MOJIOKO, and Archi-Prisma AR.
 - AI Commander, 楽々省エネ計算, KOZO, and SIN are shown only as `準備中`.
 - The gathering is described as optional and irregular, not as a guaranteed event.
@@ -30,8 +41,8 @@ The mobile menu was opened through the visible menu button (`aria-expanded=true`
 
 | Viewport | Result | Evidence |
 | --- | --- | --- |
-| 390 × 844 | No horizontal overflow (`scrollWidth = clientWidth = 390`). The headline stays on `建築AIを、` / `ひとりで学ばない。`; the supporting promise stays on its two semantic lines; the value stays on `月3回、` / `主宰のSenaと話す。`. Both value parts use `white-space: nowrap`, the mobile menu completes its open/close cycle, service and pricing cards remain in bounds, and no visible image is broken. | `outputs/circle-lp-sena-copy-390.png`, `outputs/circle-lp-390-menu.png`, `outputs/circle-lp-390-services.png`, `outputs/circle-lp-390-gathering.png`, `outputs/circle-lp-390-pricing.png` |
-| 1440 × 1000 | No horizontal overflow (`scrollWidth = clientWidth = 1440`). The value uses a desktop row while `主宰のSena` remains unbroken. The supporting promise uses two deliberate semantic lines and no visible image is broken. | `outputs/circle-lp-sena-copy-1440.png` |
+| 390 × 844 | Historical layout evidence only: no horizontal overflow, menu interaction, service cards, pricing cards, and visible images were valid at capture time. Hero copy in this image is superseded and must not be used as current copy evidence. | `outputs/circle-lp-sena-copy-390.png`, `outputs/circle-lp-390-menu.png`, `outputs/circle-lp-390-services.png`, `outputs/circle-lp-390-gathering.png`, `outputs/circle-lp-390-pricing.png` |
+| 1440 × 1000 | Historical layout evidence only: no horizontal overflow and no broken visible image at capture time. Hero copy in this image is superseded. | `outputs/circle-lp-sena-copy-1440.png` |
 | 768 × 1024 | No horizontal overflow. Website-style hamburger navigation is used. Member-preview binder remains legible and the CTA stays full-width. | `outputs/circle-lp-768-member.png` |
 | 1440 × 900 | No horizontal overflow. Desktop navigation, hero CTA pair, gathering collage, and three-column pricing layout remain within the content frame. | `outputs/circle-lp-1440-hero.png`, `outputs/circle-lp-1440-gathering.png`, `outputs/circle-lp-1440-pricing.png` |
 

@@ -14,7 +14,7 @@ export default function CirclePricing() {
           label="ひとりで迷う時間を、実務が進む時間へ。"
           desktopLines={['ひとりで迷う時間を、', '実務が進む時間へ。']}
         />
-        <p>どのプランでも、面談・会員ページ・対象サービスの内容は同じです。</p>
+        <p>{content.pricing.description}</p>
       </div>
       <div className="included-sheet">
         <p>ALL PLANS INCLUDE</p>

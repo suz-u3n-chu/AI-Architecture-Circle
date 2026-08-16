@@ -344,6 +344,13 @@ img {
   transform: rotate(-1.4deg);
 }
 
+@media (max-width: 679px) {
+  .hero-note {
+    width: calc(100% - 32px);
+    margin-left: 16px;
+  }
+}
+
 .hero-copy,
 .hero-artifacts {
   z-index: 1;
@@ -381,6 +388,8 @@ img {
   margin: 20px 0 0;
   color: var(--muted);
   font-size: 0.95rem;
+  text-wrap: pretty;
+  word-break: auto-phrase;
 }
 
 .hero-value {

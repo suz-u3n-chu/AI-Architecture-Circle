@@ -2,9 +2,9 @@ import content from '../../content/circle-content.json';
 import EditorialHeading from './EditorialHeading';
 
 const annotationImages = [
-  '/images/circle/studio/hand-note-talk.webp',
+  '/images/circle/studio/hand-note-history.webp',
   '/images/circle/studio/hand-note-trial.webp',
-  '/images/circle/studio/hand-note-takeback.webp',
+  '/images/circle/studio/hand-note-gathering.webp',
 ] as const;
 
 export default function CircleFlow() {
@@ -14,10 +14,10 @@ export default function CircleFlow() {
         <p className="section-index">CIRCLE METHOD / 01–03</p>
         <EditorialHeading
           id="flow-title"
-          label="話して、試して、会社に持ち帰る。"
-          desktopLines={['話して、試して、', '会社に持ち帰る。']}
+          label="学んで、試して、仲間と進む。"
+          desktopLines={['学んで、試して、', '仲間と進む。']}
         />
-        <p>新しい知識を増やすことより、自分と会社が変わるところまで。</p>
+        <p>AIリテラシーを高め、自分の仕事と会社へ持ち帰る。</p>
       </div>
       <svg
         className="flow-line"

@@ -2,7 +2,7 @@ import { Menu, X } from 'lucide-react';
 import { useRef, useState } from 'react';
 
 const links = [
-  ['#flow', '話す・試す・持ち帰る'],
+  ['#flow', '学ぶ・試す・つながる'],
   ['#member-preview', '会員ページ'],
   ['#services', '使えるサービス'],
   ['#gathering', '交流会'],
