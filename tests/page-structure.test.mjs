@@ -32,9 +32,19 @@ test('app uses the approved focused Circle section tree', () => {
 
 test('header is a normal responsive website menu with section anchors', () => {
   const header = read('components/circle/CircleHeader.tsx');
-  for (const anchor of ['#flow', '#member-preview', '#services', '#gathering', '#pricing']) {
+  for (const anchor of ['#flow', '#services', '#gathering', '#pricing']) {
     assert.match(header, new RegExp(anchor));
   }
+  assert.match(
+    header,
+    /https:\/\/members\.ai-archi-circle\.archi-prisma\.co\.jp\/circle\/login/,
+    '会員ページは既存会員を直接ログインへ案内する',
+  );
+  assert.doesNotMatch(
+    header,
+    /\['#member-preview',\s*'会員ページ'\]/u,
+    '会員ページをLP内プレビューへのアンカーとして扱わない',
+  );
   assert.match(header, /aria-expanded/);
   assert.match(header, /aria-controls/);
   assert.doesNotMatch(header, /bottom-nav|notification|install|ホーム画面/iu);
