@@ -3,7 +3,7 @@ import { useRef, useState } from 'react';
 
 const links = [
   ['#flow', '学ぶ・試す・つながる'],
-  ['#member-preview', '会員ページ'],
+  ['https://members.ai-archi-circle.archi-prisma.co.jp/circle/login', '会員ページ'],
   ['#services', '使えるサービス'],
   ['#gathering', '交流会'],
   ['#pricing', '参加プラン'],
