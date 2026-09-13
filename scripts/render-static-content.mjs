@@ -1,4 +1,5 @@
 import fs from 'node:fs';
+import './render-products.mjs';
 import path from 'node:path';
 import { fileURLToPath } from 'node:url';
 
